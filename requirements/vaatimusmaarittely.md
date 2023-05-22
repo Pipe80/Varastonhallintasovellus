@@ -12,9 +12,12 @@ Sovellus suunnitellaan toimimaan Android ympäristössä, jolloin sitä voidaan 
 
 Sovelluksen tarkoituksena on helpottaa tilausten keräilyprosessia, vähentää virheitä ja parantaa tehokkuutta.
 
-# Kohderyhmä
+# Kaupallinen kohderyhmä
 
-Sovellus on tarkoitettu käytettäväksi logistiikka-alan ammattilaisille ja henkilöille, jotka ovat vastuussa tilausten keräämisestä ja hallinnasta. / Sovelluksen kohderyhmä on varastonhoitohenkilökunta ja logistiikkatyöntekijät. He käyttävät sovellusta päivittäisessä työssään keräillessään tuotteita ja varmistaessaan niiden oikean toimituksen asiakkaille.
+Sovellukella halutaan palvella verkkokauppaliiketoimintaa aloittavien yritysten tarpeita. Yritykset ovat todennäköisesti kohtalaisen pieniä ja mahdollisesti liiketoimintansa digitalisoinnin kanssa alkuvaiheessa.
+
+Näille toimijoille tärkeää on että sovellus on integroitavissa heidän olemassa olevaan verkkokauppaansa sekä varastonhallintajärjestelmään. Helppokäyttöisyys, nopeus ja toimintavarmuus ovat heille tärkeitä. Erityisesti digitalisoinnin kanssa alkuvaiheessa olevilla yrityksillä on varmasti tarvetta myös konsuntoivalle myynnille, koska kokemuksen mukanaan tuomaa ymmärrystä tarvittavista prosesseista ei ole muodostunut.
+
 
 # Sidosryhmäkartta
 
