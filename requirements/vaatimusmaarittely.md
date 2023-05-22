@@ -18,6 +18,14 @@ Sovellukella halutaan palvella verkkokauppaliiketoimintaa aloittavien yritysten 
 
 Näille toimijoille tärkeää on että sovellus on integroitavissa heidän olemassa olevaan verkkokauppaansa sekä varastonhallintajärjestelmään. Helppokäyttöisyys, nopeus ja toimintavarmuus ovat heille tärkeitä. Erityisesti digitalisoinnin kanssa alkuvaiheessa olevilla yrityksillä on varmasti tarvetta myös konsuntoivalle myynnille, koska kokemuksen mukanaan tuomaa ymmärrystä tarvittavista prosesseista ei ole muodostunut.
 
+# Käyttäjärajapinnan kohderyhmät
+
+Verkkoliiketoiminnan alkuvaiheessa sovelluksen käyttäjät ovat luultavasti varastohenkilökuntaa. Pienissä yrityksissä, joissa ei ole erillistä varastohenkilökuntaa, käyttäjänä voivat olla esimerkiksi myyjät. Verkkokauppaliiketoiminnan kehityttyä riittävän isoksi, keräilyyn palkattaneen oma erikoistunut työvoimansa.
+
+Kohderyhmässä huomioitavia asioita ovat:
+
+- käyttäjät eivät ole teknisesti koulutettuja, joten sovelluksen käyttöliittymän tulee olla yksinkertainen ja intuitiivinen
+- käyttäjissä voi olla paljon maahanmuuttajia, joten ainakin englannin kielen lisääminen lienee tarpeellista
 
 # Sidosryhmäkartta
 
