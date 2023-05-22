@@ -41,8 +41,7 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | **Nappi:** Kirjaudu sisään |
 | | **Nappi:** Rekisteröidy |
 | **Perusnäkymä** | **Ominaisuus:** Hae backendistä siirtolistat |
-| | **Lista:** Avoimet siirtolistat |
-| | **Nappi:** Valitse siirtolista (jokaisessa avoimessa siirtolistassa) |
+| | **Lista:** Avoimet siirtolistat<ul><li>**Nappi:** Valitse siirtolista</li></ul> |
 | | Vastaanota siirtolista |
 | | **Nappi / Ominaisuus:** Asetukset |
 | | **Nappi:** Kirjaudu ulos |
