@@ -45,6 +45,11 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | Vastaanota siirtolista |
 | | **Nappi / Ominaisuus:** Asetukset |
 | | **Nappi:** Kirjaudu ulos |
+| **Keräilynäkymä** | **Nappi:** Keskeytä keräily |
+| | **Lista:** Valitun siirtolistan tuotteet<ul><li>**Lista:** Tuotteiden hyllypaikat (jokaiseen tuotteeseen)</li><li>**Nappi:** Tuotetta ei löydy varastosta (jokaiseen tuotteeseen)</li></ul> |
+| | **Ominaisuus:** Lue viivakoodi |
+| | Tarkista onko tuote siirtolistassa |
+| | **Pop-up:** Kaikki tuotteet keräilty<ul><li>**Nappi:** Lähetä valmis siirtolista backendiin</li></ul> |
 | **Suorita keräily** | **Ominaisuus:** Lue viivakoodi |
 | | Tarkista onko tuote siirtolistassa |
 | | **Ominaisuus:** Lisätäänkö tuote siirtolistalle |
