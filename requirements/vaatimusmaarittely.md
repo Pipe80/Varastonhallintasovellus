@@ -59,8 +59,11 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | **Nappi on/off: Pop-up:** Tuote lisätty siirtolistalle |
 | | **Nappi on/off: Pop-up:** Lisätäänkö tuote siirtolistaan? |
 | **Lue viivakoodi** | **Nappi:** Lue viivakoodi |
-| | Aktivoi viivakoodinlukija |
-| | Lue viivakoodi |
+| | Välitä viivakoodin sisältö sovellukseen |
+| | Etsi vastaava tuote siirtolistasta |
+| | **Pop-up:** Ilmoita virheellisestä tuotteesta |
+| | **Pop-up:** Lisätäänkö tuote siirtolistaan?<ul><li>**Nappi:** määrä +</li><li>**Nappi:** määrä -</li><li>**Nappi:** Ei</li><li>**Nappi:** Kyllä</li><li>Lisää keräillyn tuotteen määrää siirtolistassa</li></ul> |
+| | **Pop-up:** Tuote lisätty siirtolistalle |
 <br>
 
 ### Frontend MindMap muodossa
