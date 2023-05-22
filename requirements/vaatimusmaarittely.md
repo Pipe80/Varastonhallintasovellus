@@ -28,34 +28,34 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 
 ## Frontend
 
-| Ominaisuus | Ominaisuuteen liittyvät toiminnot |
+| **Ominaisuus** | **Ominaisuuteen liittyvät toiminnot** |
 | :-: | :-: |
-| Luo uusi käyttäjä | Syöte: käyttäjän nimi |
-| | Syöte: sähköposti
-| | Syöte: salasana |
-| | Syöte: salasana uudelleen |
-| | Nappi: rekisteröidy |
-| | Nappi: kirjaudu sisään |
-| Kirjaudu sisään | Syöte: sähköposti |
-| | Syöte: salasana |
-| | Nappi: kirjaudu sisään |
-| | Nappi: rekisteröidy |
-| Vastaanota ja kuittaa siirtolista | Ilmoitus: Vastaanota ilmoitus uudesta siirtolistasta |
-| | Nappi: Kuittaa kyseinen siirtolista tälle päätteelle |
+| **Luo uusi käyttäjä** | **Syöte:** Käyttäjän nimi |
+| | **Syöte:** Sähköposti
+| | **Syöte:** Salasana |
+| | **Syöte:** Salasana uudelleen |
+| | **Nappi:** Rekisteröidy |
+| | **Nappi:** Kirjaudu sisään |
+| **Kirjaudu sisään** | **Syöte:** Sähköposti |
+| | **Syöte:** Salasana |
+| | **Nappi:** Kirjaudu sisään |
+| | **Nappi:** Rekisteröidy |
+| **Vastaanota ja kuittaa siirtolista** | **Ilmoitus:** Vastaanota ilmoitus uudesta siirtolistasta |
+| | **Nappi:** Kuittaa kyseinen siirtolista tälle päätteelle |
 | | Vastaanota siirtolista |
-| | Lista: Listaa kerättävät tuotteet |
-| Suorita keräily | Ominaisuus: Lue viivakoodi |
+| | **Lista:** Listaa kerättävät tuotteet |
+| **Suorita keräily** | **Ominaisuus:** Lue viivakoodi |
 | | Tarkista onko tuote siirtolistassa |
-| | Ominaisuus: Lisätäänkö tuote siirtolistalle |
-| | Pop-up: Ilmoita virheellisestä tuotteesta |
-| | Pop-up: Vahvista kun kaikki tuotteet on keräilty |
-| | Nappi: Lähetä valmis siirtolista backendiin |
-| Lisätäänkö tuote siirtolistalle | Pop-up: Lisätäänkö tuote siirtolistalle |
-| | Nappi: Lisää tuote siirtolistalle |
-| | Nappi: Hylkää luettu viivakoodi |
+| | **Ominaisuus:** Lisätäänkö tuote siirtolistalle |
+| | **Pop-up:** Ilmoita virheellisestä tuotteesta |
+| | **Pop-up:** Vahvista kun kaikki tuotteet on keräilty |
+| | **Nappi:** Lähetä valmis siirtolista backendiin |
+| **Lisätäänkö tuote siirtolistalle** | **Pop-up:** Lisätäänkö tuote siirtolistalle |
+| | **Nappi:** Lisää tuote siirtolistalle |
+| | **Nappi:** Hylkää luettu viivakoodi |
 | | Lisää tuotteen saldoa siirtolistassa |
 | | Hylkää luettu viivakoodi |
-| Lue viivakoodi | Nappi: Lue viivakoodi |
+| **Lue viivakoodi** | **Nappi:** Lue viivakoodi |
 | | Aktivoi viivakoodinlukija |
 | | Lue viivakoodi |
 <br>
@@ -104,26 +104,26 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 
 ## Backend
 
-| Ominaisuus | Ominaisuuteen liittyvät toiminnot |
+| **Ominaisuus** | **Ominaisuuteen liittyvät toiminnot** |
 | :-: | :-: |
-| Luo uusi käyttäjä | Ota vastaan käyttäjän nimi, sähköposti ja salasana |
+| **Luo uusi käyttäjä** | Ota vastaan käyttäjän nimi, sähköposti ja salasana |
 | | Tarkista että sähköposti on uniikki |
 | | Tee salasanasta hash |
 | | Tallenna tietokantaan uusi käyttäjä |
-| Tarkista sisäänkirjautuminen | Ota vastaan sähköposti ja salasana |
+| **Tarkista sisäänkirjautuminen** | Ota vastaan sähköposti ja salasana |
 | | Tarkista vastaako salana tietokantaan tallennettua hashia |
 | | Validoi käyttäjän sessio |
-| Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin | Ota siirtotiedosto vastaan nettikaupasta |
+| **Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin** | Ota siirtotiedosto vastaan nettikaupasta |
 | | Lähetä viesti kaikkiin päätteisiin uudesta siirtolistasta |
 | | Vastaanota vahvistus keräilyn aloittamisesta |
 | | Lähetä siirtotiedosto |
-| Lähetä viesti asiakkaalle keräilyn aloittamisesta | Vastaanota kuittaus keräilyn aloittamisesta |
+| **Lähetä viesti asiakkaalle keräilyn aloittamisesta** | Vastaanota kuittaus keräilyn aloittamisesta |
 | | Poimi tilausnumero siirtolistasta |
 | | Poimi asiakkaan sähköpostiosoite siirtolistasta |
 | | Poimi tilauksen sisältö siirtolistasta |
 | | Luo sähköpostiviesti valmiilla pohjalla |
 | | Lähetä sähköposti asiakkaalle |
-| Lähetä rahtitilaus rahtiyhtiön API:iin | Ota siirtolista vastaan frontendistä |
+| **Lähetä rahtitilaus rahtiyhtiön API:iin** | Ota siirtolista vastaan frontendistä |
 | | Poimi asiakkaan yhteystiedot siirtolistasta |
 | | Ominaisuus: Laske tilauksen paino ja tilavuus |
 | | Poimi tilauksen paino ja tilavuus siirtolistasta |
@@ -131,12 +131,12 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | Lähetä rahtitilaus rahtiyhtiön API:iin |
 | | Vastaanota rahtikirjan numero |
 | | Linkitä rahtikirjan numero ja siirtolista toisiinsa |
-| Lähetä viesti asiakkaalle rahtitilauksesta | Vastaanota rahtiyhtiön vahvistus rahtitilauksesta |
+| **Lähetä viesti asiakkaalle rahtitilauksesta** | Vastaanota rahtiyhtiön vahvistus rahtitilauksesta |
 | | Poimi rahtikirjan numero ja siihen liittyvä siirtolistan numero |
 | | Poimi asiakkaan sähköpostiosoite siirtolistasta |
 | | Luo sähköpostiviesti valmiilla pohjalla |
 | | Lähetä sähköposti asiakkaalle |
-| Laske tilauksen paino ja tilavuus | Hae tuotekuvauksesta paino |
+| **Laske tilauksen paino ja tilavuus** | Hae tuotekuvauksesta paino |
 | | Hae tuotekuvauksesta tilavuus |
 | | Laske kpl * paino ja kpl* tilavuus |
 | | Lisää tilauksen paino ja tilavuus siirtolistaan |
