@@ -27,6 +27,16 @@ Kohderyhmässä huomioitavia asioita ovat:
 - käyttäjät eivät ole teknisesti koulutettuja, joten sovelluksen käyttöliittymän tulee olla yksinkertainen ja intuitiivinen
 - käyttäjissä voi olla paljon maahanmuuttajia, joten ainakin englannin kielen lisääminen lienee tarpeellista
 
+# Sidosryhmät
+
+Sovellus auttaa tilauksen keräilystä vastaavia henkilöitä tekemään työnsä. Tällä työllä he palvelevat tilauksen tehneitä asiakkaita, varmistaen että tilaukset toimitetaan ripeästi, varmasti ja oikein.
+
+Sovelluksen hankkinut yritys on myös sidosryhmä. Yrityksen kannalta kyse on asiakaspalvelun varmistamisesta, työntekijöiden resursoinnista ja keräilyn kustannuksen minimoinnista sekä laadun maksinoinnista.
+
+Kolmas merkittävä sidosryhmä ovat kuljetusyritykset, joiden kuljetuspalveluita tilataan sovelluksen tuottaman tiedon pohjalta.
+
+Neljäntenä sidosryhmänä on ID Systems IDS Oy, jonka tuotekatalogiin sovellus tulee.
+
 # Sidosryhmäkartta
 
 Sovellus liittyy kiinteästi varastonhallintaan ja logistiikkaan, joten sen sidosryhmäkartoissa ovat varastonhoitohenkilökunta, logistiikka- ja kuljetusyritykset sekä asiakkaat. / 
