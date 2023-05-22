@@ -45,10 +45,6 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | Vastaanota siirtolista |
 | | **Nappi / Ominaisuus:** Asetukset |
 | | **Nappi:** Kirjaudu ulos |
-| **Vastaanota ja kuittaa siirtolista** | **Ilmoitus:** Vastaanota ilmoitus uudesta siirtolistasta |
-| | **Nappi:** Kuittaa kyseinen siirtolista tälle päätteelle |
-| | Vastaanota siirtolista |
-| | **Lista:** Listaa kerättävät tuotteet |
 | **Suorita keräily** | **Ominaisuus:** Lue viivakoodi |
 | | Tarkista onko tuote siirtolistassa |
 | | **Ominaisuus:** Lisätäänkö tuote siirtolistalle |
