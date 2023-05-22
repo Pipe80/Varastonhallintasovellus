@@ -122,7 +122,7 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | **Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin** | Ota siirtotiedosto vastaan nettikaupasta |
 | | Lähetä viesti kaikkiin päätteisiin uudesta siirtolistasta |
 | | Vastaanota vahvistus keräilyn aloittamisesta |
-| | Lähetä siirtotiedosto |
+| | Lähetä siirtolista |
 | **Lähetä viesti asiakkaalle keräilyn aloittamisesta** | Vastaanota kuittaus keräilyn aloittamisesta |
 | | Poimi tilausnumero siirtolistasta |
 | | Poimi asiakkaan sähköpostiosoite siirtolistasta |
