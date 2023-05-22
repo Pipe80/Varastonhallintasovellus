@@ -92,13 +92,15 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 +++[#LightBlue] Tarkista onko tuote siirtolistassa
 +++[#LightBlue] Pop-up: Kaikki tuotteet keräilty
 ++++[#LightBlue] Nappi: Lähetä valmis siirtolista backendiin
-++[#Salmon] Suorita keräily
-+++[#Salmon] Ominaisuus: Lue viivakoodi
-+++[#Salmon] Tarkista onko tuote siirtolistassa
-+++[#Salmon] Ominaisuus: Lisätäänkö tuote siirtolistalle
-+++[#Salmon] Pop-up: Ilmoita virheellisestä tuotteesta
-+++[#Salmon] Pop-up: Vahvista kun kaikki tuotteet on keräilty
-+++[#Salmon] Nappi: Lähetä valmis siirtolista backendiin
+++[#Salmon] Asetukset näkymä
++++[#Salmon] Syöte: Kirjoita uusi salasana
++++[#Salmon] Syöte: Kirjoita uusi salasana uudelleen
++++[#Salmon] Nappi: Vaihda salasana
++++[#Salmon] Dropdown menu: Valitse kieli 1. Suomi, 2.Englanti, 3. Ruotsi
++++[#Salmon] Nappi on/off: Pop-up: Kaikki tuotteet keräilty
++++[#Salmon] Nappi on/off: Pop-up: Ilmoita virheellisestä tuotteesta
++++[#Salmon] Nappi on/off: Pop-up: Tuote lisätty siirtolistalle
++++[#Salmon] Nappi on/off: Pop-up: Lisätäänkö tuote siirtolistaan?
 ++[#LightBlue] Lisätäänkö tuote siirtolistalle
 +++[#LightBlue] Pop-up: Lisätäänkö tuote siirtolistalle
 +++[#LightBlue] Nappi: Lisää tuote siirtolistalle
