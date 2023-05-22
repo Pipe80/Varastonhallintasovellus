@@ -101,16 +101,18 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 +++[#Salmon] Nappi on/off: Pop-up: Ilmoita virheellisestä tuotteesta
 +++[#Salmon] Nappi on/off: Pop-up: Tuote lisätty siirtolistalle
 +++[#Salmon] Nappi on/off: Pop-up: Lisätäänkö tuote siirtolistaan?
-++[#LightBlue] Lisätäänkö tuote siirtolistalle
-+++[#LightBlue] Pop-up: Lisätäänkö tuote siirtolistalle
-+++[#LightBlue] Nappi: Lisää tuote siirtolistalle
-+++[#LightBlue] Nappi: Hylkää luettu viivakoodi
-+++[#LightBlue] Lisää tuotteen saldoa siirtolistassa
-+++[#LightBlue] Hylkää luettu viivakoodi
-++[#Salmon] Lue viivakoodi
-+++[#Salmon] Nappi: Lue viivakoodi
-+++[#Salmon] Aktivoi viivakoodinlukija
-+++[#Salmon] Lue viivakoodi
+++[#LightBlue] Lue viivakoodi
++++[#LightBlue] Lue viivakoodi
++++[#LightBlue] Välitä viivakoodin sisältö sovellukseen
++++[#LightBlue] Etsi vastaava tuote siirtolistasta
++++[#LightBlue] Pop-up: Ilmoita virheellisestä tuotteesta
++++[#LightBlue] Pop-up: Lisätäänkö tuote siirtolistaan?
+++++[#LightBlue] Nappi: määrä +
+++++[#LightBlue] Nappi: määrä -
+++++[#LightBlue] Nappi: Ei
+++++[#LightBlue] Nappi: Kyllä
+++++[#LightBlue] Lisää keräillyn tuotteen määrää siirtolistassa
++++[#LightBlue] Pop-up: Tuote lisätty siirtolistalle
 @endmindmap
 ```
 
