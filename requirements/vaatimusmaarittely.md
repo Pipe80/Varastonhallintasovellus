@@ -58,11 +58,6 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | **Nappi on/off: Pop-up:** Ilmoita virheellisestä tuotteesta |
 | | **Nappi on/off: Pop-up:** Tuote lisätty siirtolistalle |
 | | **Nappi on/off: Pop-up:** Lisätäänkö tuote siirtolistaan? |
-| **Lisätäänkö tuote siirtolistalle** | **Pop-up:** Lisätäänkö tuote siirtolistalle |
-| | **Nappi:** Lisää tuote siirtolistalle |
-| | **Nappi:** Hylkää luettu viivakoodi |
-| | Lisää tuotteen saldoa siirtolistassa |
-| | Hylkää luettu viivakoodi |
 | **Lue viivakoodi** | **Nappi:** Lue viivakoodi |
 | | Aktivoi viivakoodinlukija |
 | | Lue viivakoodi |
