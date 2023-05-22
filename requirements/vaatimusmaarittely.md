@@ -2,7 +2,15 @@
 
 # Johdanto
 
-Tämä vaatimusmäärittely kuvailee mobiilisovelluksen ominaisuuksia ja toimintoja, joka auttaa keräämään tilauksia ja hallinnoimaan keräilyn prosessia. Sovelluksen tarkoituksena on helpottaa tilausten keräilyprosessia, vähentää virheitä ja parantaa tehokkuutta.
+Tässä vaatimusmäärittelyssä kuvataan verkkokaupan keräilysovellus.
+
+Sovellus on tarkoitettu matalan kynnyksen keräilysovellukseksi verkkokauppaliiketoiminnan aloittaville yrityksille.
+
+Tavoitteena on tehdä sovellus, joka on helppokäyttöinen ja integroitavissa toimimaan erilaisten verkkokauppa-alustojen sekä varastokirjanpitojärjestelmien kanssa. 
+
+Sovellus suunnitellaan toimimaan Android ympäristössä, jolloin sitä voidaan käyttää Zebra Technologiesin toimittamilla viivakoodinlukijoilla.
+
+Sovelluksen tarkoituksena on helpottaa tilausten keräilyprosessia, vähentää virheitä ja parantaa tehokkuutta.
 
 # Kohderyhmä
 
