@@ -83,11 +83,15 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 +++[#Salmon] Syöte: salasana
 +++[#Salmon] Nappi: kirjaudu sisään
 +++[#Salmon] Nappi: rekisteröidy
-++[#LightBlue] Vastaanota ja kuittaa siirtolista
-+++[#LightBlue] Ilmoitus: Vastaanota ilmoitus uudesta siirtolistasta
-+++[#LightBlue] Nappi: Kuittaa kyseinen siirtolista tälle päätteelle
-+++[#LightBlue] Vastaanota siirtolista
-+++[#LightBlue] Lista: Listaa kerättävät tuotteet
+++[#LightBlue] Keräilynäkymä
++++[#LightBlue] Nappi: Keskeytä keräily
++++[#LightBlue] Lista: Valitun siirtolistan tuotteet
+++++[#LightBlue] Lista: Tuotteiden hyllypaikat
+++++[#LightBlue] Nappi: Tuotetta ei löydy varastosta
++++[#LightBlue] Ominaisuus: Lue viivakoodi
++++[#LightBlue] Tarkista onko tuote siirtolistassa
++++[#LightBlue] Pop-up: Kaikki tuotteet keräilty
+++++[#LightBlue] Nappi: Lähetä valmis siirtolista backendiin
 ++[#Salmon] Suorita keräily
 +++[#Salmon] Ominaisuus: Lue viivakoodi
 +++[#Salmon] Tarkista onko tuote siirtolistassa
