@@ -29,7 +29,7 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 ## Frontend
 
 | **Ominaisuus** | **Ominaisuuteen liittyvät toiminnot** |
-| :-: | :-: |
+| -: | :- |
 | **Luo uusi käyttäjä** | **Syöte:** Käyttäjän nimi |
 | | **Syöte:** Sähköposti
 | | **Syöte:** Salasana |
@@ -40,6 +40,12 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | **Syöte:** Salasana |
 | | **Nappi:** Kirjaudu sisään |
 | | **Nappi:** Rekisteröidy |
+| **Perusnäkymä** | **Ominaisuus:** Hae backendistä siirtolistat |
+| | **Lista:** Avoimet siirtolistat |
+| | **Nappi:** Valitse siirtolista (jokaisessa avoimessa siirtolistassa) |
+| | Vastaanota siirtolista |
+| | **Nappi / Ominaisuus:** Asetukset |
+| | **Nappi:** Kirjaudu ulos |
 | **Vastaanota ja kuittaa siirtolista** | **Ilmoitus:** Vastaanota ilmoitus uudesta siirtolistasta |
 | | **Nappi:** Kuittaa kyseinen siirtolista tälle päätteelle |
 | | Vastaanota siirtolista |
@@ -105,7 +111,7 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 ## Backend
 
 | **Ominaisuus** | **Ominaisuuteen liittyvät toiminnot** |
-| :-: | :-: |
+| -: | :- |
 | **Luo uusi käyttäjä** | Ota vastaan käyttäjän nimi, sähköposti ja salasana |
 | | Tarkista että sähköposti on uniikki |
 | | Tee salasanasta hash |
