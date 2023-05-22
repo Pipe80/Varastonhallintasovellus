@@ -50,6 +50,14 @@ Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen
 | | **Ominaisuus:** Lue viivakoodi |
 | | Tarkista onko tuote siirtolistassa |
 | | **Pop-up:** Kaikki tuotteet keräilty<ul><li>**Nappi:** Lähetä valmis siirtolista backendiin</li></ul> |
+| **Asetukset näkymä** | **Syöte:** Kirjoita uusi salasana |
+| | **Syöte:** Kirjoita uusi salasana uudelleen |
+| | **Nappi:** Vaihda salasana |
+| | **Dropdown menu:** Valitse kieli 1. Suomi, 2.Englanti, 3. Ruotsi |
+| | **Nappi on/off: Pop-up:** Kaikki tuotteet keräilty |
+| | **Nappi on/off: Pop-up:** Ilmoita virheellisestä tuotteesta |
+| | **Nappi on/off: Pop-up:** Tuote lisätty siirtolistalle |
+| | **Nappi on/off: Pop-up:** Lisätäänkö tuote siirtolistaan? |
 | **Suorita keräily** | **Ominaisuus:** Lue viivakoodi |
 | | Tarkista onko tuote siirtolistassa |
 | | **Ominaisuus:** Lisätäänkö tuote siirtolistalle |
