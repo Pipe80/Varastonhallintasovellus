@@ -37,13 +37,26 @@ Kolmas merkittävä sidosryhmä ovat kuljetusyritykset, joiden kuljetuspalveluit
 
 Neljäntenä sidosryhmänä on ID Systems IDS Oy, jonka tuotekatalogiin sovellus tulee.
 
+Viides sidosryhmä ovat verkkokaupan asiakkaat, joiden tilauksen keräily suoritetaan sovelluksella.
+
 # Sidosryhmäkartta
 
-Sovellus liittyy kiinteästi varastonhallintaan ja logistiikkaan, joten sen sidosryhmäkartoissa ovat varastonhoitohenkilökunta, logistiikka- ja kuljetusyritykset sekä asiakkaat. / 
-Asiakkaat: tilaavat tuotteita verkkokaupasta
-Kerääjät: vastuussa tilausten keräämisestä
-Kuljetusliikkeet: noutavat ja toimittavat tilaukset
-Sovelluskehittäjät: vastuussa sovelluksen kehittämisestä ja ylläpidosta
+```plantuml
+@startmindmap
+skinparam defaultFontSize 30
++[#LightGreen] Keräilysovellus
+--[#LightBlue] Keräilyn kustannusten minimoiminen
+---[#IndianRed] Sovellusta käyttävä yritys
+--[#LightBlue] Työnhelpottaminen
+---[#IndianRed] Sovellusta käyttävät työntekijät
+++[#LightBlue] Oikeat tiedot kuljetustilaukseen
++++[#IndianRed] Kuljetusyritykset
+++++[#LightBlue] Oikein ja ripeästi toimitettu tilaus
++++++[#IndianRed] Verkkokaupan asiakkaat
+++[#LightBlue] Liiketoimintamahdollisuudet
++++[#IndianRed] ID Systems IDS Oy
+@endmindmap
+```
 
 # Palveluun liittyvät asiakaspolut
 
