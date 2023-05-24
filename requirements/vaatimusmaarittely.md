@@ -58,13 +58,49 @@ skinparam defaultFontSize 30
 @endmindmap
 ```
 
+<br>
+
 # Palveluun liittyvät asiakaspolut
 
-Sovelluksen käyttäjät aloittavat sovelluksen kirjautumalla sisään ja siirtymällä sen etusivulle. Siellä he voivat aloittaa uuden keräilytoimeksiannon, joka luo uuden keräilytehtävän. He voivat skannata tuotteen viivakoodin, tarkistaa sen tiedot ja merkitä sen kerätyksi.
+```plantuml
+state Askel1 #LawnGreen
+state Askel2 #LawnGreen
+state Askel3 #LawnGreen
+state Askel4 #LawnGreen
+state Askel5 #LawnGreen
+state Askel6 #Red
+state Askel7 #LawnGreen
+state Askel8 #LawnGreen
+state Askel9 #LawnGreen
+state Exit #LawnGreen
+Askel1: Keräilijä kirjautuu sovellukseen
+Askel2: Keräilijä valitsee keräiltävän tilauksen
+Askel3: Keräilijä lukee viivakoodin
+Askel4: Keräilijä kuittaa tuotteen ja määrän
+Askel5: Kaikki tuotteet keräilty
+Askel6: Luettua viivakoodia ei löydy tilauksesta
+Askel7: Tilauksen toimittaminen pakkaamoon
+Askel8: Rahtitilaus keräillyille tuotteille
+Askel9: Rahtiyhtiö noutaa tilauksen
+Exit: Verkkokaupan asiakas saa tilauksensa
 
-Tilauksen kerääminen: kerääjä kirjautuu sisään sovellukseen, valitsee tilauksen, skannaa tuotteiden viivakoodit ja tallentaa keräilyn tuloksen.
-Tilauksen kuittaaminen: kuljetusliike kirjautuu sisään sovellukseen, valitsee tilauksen, kirjaa tilauksen vastaanotetuksi ja tallentaa kuljetuksen tiedot.
-Tilauksen seuranta: kerääjä tai kuljetusliike kirjautuu sisään sovellukseen, etsii tilauksen ja tarkistaa sen tilan.
+
+[*] --> Askel1
+Askel1 -[#Green]-> Askel2
+  Askel2 -[#Green]-> Askel3
+    Askel3 -[#Green]-> Askel4
+      Askel3 -[#Gold]-> Askel6
+      Askel6 -[#Gold]-> Askel3
+    Askel4 -[#Green]-> Askel3
+      Askel4 -[#Green]-> Askel5                      
+        Askel5 -[#Green]-> Askel7
+        Askel5 -[#Green]-> Askel8
+            Askel8 -[#Red]-> Askel9
+            Askel7 -[#Red]-> Askel9
+              Askel9 -[#Red]-> Exit
+```
+
+<br>
 
 # Palvelun ominaisuudet ja toiminnot
 
