@@ -37,7 +37,7 @@ Kolmas merkittävä sidosryhmä ovat kuljetusyritykset, joiden kuljetuspalveluit
 
 Neljäntenä sidosryhmänä on ID Systems IDS Oy, jonka tuotekatalogiin sovellus tulee.
 
-Viides sidosryhmä ovat verkkokaupan asiakkaat, joiden tilauksen keräily suoritetaan sovelluksella.
+Viides sidosryhmä ovat verkkokaupan asiakkaat, joiden tilaus keräillään sovelluksella.
 
 # Sidosryhmäkartta
 
