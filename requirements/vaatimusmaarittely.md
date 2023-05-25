@@ -344,15 +344,67 @@ Askel1 -[#Green]-> Askel2
 
 # Käyttöliittymänäkymä
 
-
+<br>
+<br>
+<br>
+<br>
 
 # Ketterän kehittämisen käyttötarinat
 
 Käyttäjänä haluan voida kirjautua sovellukseen, jotta voin aloittaa keräilyn.
-Käyttäjänä haluan voida luoda uuden keräilytehtävän, jotta voin aloittaa keräilyn.
+
+Käyttäjänä haluan voida kuitata uuden keräilytehtävän, jotta voin aloittaa keräilyn.
+
+Käyttäjänä haluan voida keskeyttää keräilyn tarvittaessa.
+
+Käyttäjänä haluan voida valita, että tuotetta ei löydy varastosta, jos näin on.
+
+Yrityksen omistajana haluan, että tilauksessa olevan tuotteen puuttuminen varastosta aiheuttaa automaattisen ilmoituksen haluttuun sähköpostiin.
+
 Käyttäjänä haluan voida skannata tuotteen viivakoodin, jotta voin varmistaa keräilyn oikeellisuuden.
+
 Käyttäjänä haluan voida seurata keräilyn tilaa, jotta voin varmistaa sen onnistuneen suorittamisen.
-Käyttäjänä haluan voida kuitata tilauksen kuljetusliikkeelle
+
+Käyttäjänä haluan, että sovellus ilmoittaa kun kaikki tuotteet on keräilty.
+
+Käyttäjänä haluan, että sovellus ilmoittaa jos luen väärän tuotteen viivakoodin.
+
+Käyttäjänä haluan voida lähettää kuljetustilauksen kuljetusliikkeelle.
+
+Käyttäjänä haluan että sovellus kertoo keräiltävien tuotteiden hyllypaikat.
+
+Käyttäjänä haluan että voin määrittää sovelluksen pop-up viestit halutessani pois päältä.
+
+As a user I wan't to be able to change language to english.
+
+Käyttäjänä haluan että sovellus listaa siirtää keräillyt tuotteet kerättävien listan pohjalle.
+
+Käyttäjänä haluan että sovellus järjestää keräiltävien tuotteiden listan, tuotteiden hyllypaikan mukaan, minimoiden kuljetun matkan.
+
+# Tekniset vaatimukset
+
+Käyttöjärjestelmätuki: Sovelluksen tulee toimia Android-ympäristössä. Sovellus tehdään ensisijaisesti Zebra Technologiesin viivakoodinlukijoille, joissa on tällä hetkellä Android 10 käyttöjärjestelmä.
+
+Kehitystyökalut: Kotlin-ohjelmointikieli ja Android Studio kehitysympäristö tai React Native.
+
+Tietokanta: Tietokanta tallennetaan ulkoiseen palveluun ja sitä käytetään REST-rajapinnan avulla. Käytettävä tietokantasovellus on valittavissa vapaasti.
+
+Ulkoiset rajapinnat: Mahdollisuus käyttää REST-rajapintoja verkkopalveluiden käyttämiseen.
+
+Käyttöliittymäsuunnittelu: Käyttöliittymäsuunnittelu toteutetaan Material Design -ohjeiden mukaisesti.
+
+Dokumentaatio: Palvelun tulee sisältää kattava dokumentaatio, joka sisältää käyttöohjeet, tekniset tiedot ja sovelluksen arkkitehtuurikuvauksen.
+
+Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus.
+
+Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datamääriä.
+
+<br>
+<br>
+<br>
+<br>
+
+# Mahdollisesti jonkin otsikon alle tuleva Chat GPT:n diibadaaba :)
 
 Sprinttien suunnittelu ja toteutus: Jokaisessa sprintissä sovitaan kehitettävistä ominaisuuksista, priorisoidaan tehtävät ja jaetaan työt kehittäjien kesken. 
 
@@ -377,21 +429,3 @@ Jatkuva kehittäminen: Ketterän kehityksen periaatteisiin kuuluu jatkuva kehitt
 Kehitystiimi seuraa jatkuvasti sovelluksen käyttöä ja kerää palautetta käyttäjiltä. 
 
 Palautteen perusteella sovellusta kehitetään edelleen ja pyritään parantamaan sen toimivuutta ja käyttökokemusta.
-
-# Tekniset vaatimukset
-
-Käyttöjärjestelmätuki: Sovelluksen tulee toimia Android-ympäristössä. Sovellus tehdään ensisijaisesti Zebra Technologiesin viivakoodinlukijoille, joissa on tällä hetkellä Android 10 käyttöjärjestelmä.
-
-Kehitystyökalut: Kotlin-ohjelmointikieli ja Android Studio kehitysympäristö tai React Native.
-
-Tietokanta: Tietokanta tallennetaan ulkoiseen palveluun ja sitä käytetään REST-rajapinnan avulla. Käytettävä tietokantasovellus on valittavissa vapaasti.
-
-Ulkoiset rajapinnat: Mahdollisuus käyttää REST-rajapintoja verkkopalveluiden käyttämiseen.
-
-Käyttöliittymäsuunnittelu: Käyttöliittymäsuunnittelu toteutetaan Material Design -ohjeiden mukaisesti.
-
-Dokumentaatio: Palvelun tulee sisältää kattava dokumentaatio, joka sisältää käyttöohjeet, tekniset tiedot ja sovelluksen arkkitehtuurikuvauksen.
-
-Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus.
-
-Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datamääriä.
