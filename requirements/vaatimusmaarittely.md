@@ -29,6 +29,7 @@
 
 [**Tekniset vaatimukset**](#tekniset-vaatimukset)
 
+<br>
 
 # Johdanto
 
@@ -177,6 +178,7 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 | | **Pop-up:** Ilmoita virheellisestä tuotteesta |
 | | **Pop-up:** Lisätäänkö tuote siirtolistaan?<ul><li>**Nappi:** määrä +</li><li>**Nappi:** määrä -</li><li>**Nappi:** Ei</li><li>**Nappi:** Kyllä</li><li>Lisää keräillyn tuotteen määrää siirtolistassa</li></ul> |
 | | **Pop-up:** Tuote lisätty siirtolistalle |
+
 <br>
 
 ## Frontend MindMap muodossa
@@ -229,6 +231,8 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 @endmindmap
 ```
 
+<br>
+
 ## Backend
 
 | **Ominaisuus** | **Ominaisuuteen liittyvät toiminnot** |
@@ -267,6 +271,7 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 | | Hae tuotekuvauksesta tilavuus |
 | | Laske kpl * paino ja kpl* tilavuus |
 | | Lisää tilauksen paino ja tilavuus siirtolistaan |
+
 <br>
 
 ## Backend MindMap muodossa
@@ -379,6 +384,7 @@ Alla olevassa taulukossa on esitetty käyttötarinat ja niiden prioriteetti kehi
 | P5 | Käyttäjänä haluan että sovellus listaa siirtää keräillyt tuotteet kerättävien listan pohjalle. |
 | P5 | Käyttäjänä haluan että sovellus järjestää keräiltävien tuotteiden listan, tuotteiden hyllypaikan mukaan, minimoiden kuljetun matkan. |
 
+<br>
 
 # Tekniset vaatimukset
 
