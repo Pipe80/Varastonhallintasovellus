@@ -17,9 +17,9 @@
 [Palvelun ominaisuudet ja toiminnot](#palvelun-ominaisuudet-ja-toiminnot)
 
 - [Frontend](#frontend)
-  - [Frontend MindMap muodossa](#frontend-mindmap-muodossa)
+- [Frontend MindMap muodossa](#frontend-mindmap-muodossa)
 - [Backend](#backend)
-  - [Backend MindMap muodossa](#backend-mindmap-muodossa)
+- [Backend MindMap muodossa](#backend-mindmap-muodossa)
 
 [Toiminnalliset vaatimukset](#toiminnalliset-vaatimukset)
 
@@ -173,7 +173,7 @@ Askel1 -[#Green]-> Askel2
 | | **Pop-up:** Tuote lisätty siirtolistalle |
 <br>
 
-### Frontend MindMap muodossa
+## Frontend MindMap muodossa
 
 ```plantuml
 @startmindmap
@@ -263,8 +263,7 @@ Askel1 -[#Green]-> Askel2
 | | Lisää tilauksen paino ja tilavuus siirtolistaan |
 <br>
 
-### Backend MindMap muodossa
-
+## Backend MindMap muodossa
 
 ```plantuml
 @startmindmap
