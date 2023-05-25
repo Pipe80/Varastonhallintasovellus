@@ -369,11 +369,11 @@ Palautteen perusteella sovellusta kehitetään edelleen ja pyritään parantamaa
 
 # Palveluun liittyvät tekniset vaatimukset:
 
-Käyttöjärjestelmätuki: Android-käyttöjärjestelmäversiot 5.0 ja uudemmat.
+Käyttöjärjestelmätuki: Sovelluksen tulee toimia Android-ympäristössä. Sovellus tehdään ensisijaisesti Zebra Technologiesin viivakoodinlukijoille, joissa on tällä hetkellä Android 10 käyttöjärjestelmä.
 
-Kehitystyökalut: Kotlin-ohjelmointikieli, Android Studio kehitysympäristö.
+Kehitystyökalut: Kotlin-ohjelmointikieli ja Android Studio kehitysympäristö tai React Native.
 
-Tietokanta: ?
+Tietokanta: Tietokanta tallennetaan ulkoiseen palveluun ja sitä käytetään REST-rajapinnan avulla. Käytettävä tietokantasovellus on valittavissa vapaasti.
 
 Ulkoiset rajapinnat: Mahdollisuus käyttää REST-rajapintoja verkkopalveluiden käyttämiseen.
 
@@ -381,5 +381,6 @@ Käyttöliittymäsuunnittelu: Käyttöliittymäsuunnittelu toteutetaan Material 
 
 Dokumentaatio: Palvelun tulee sisältää kattava dokumentaatio, joka sisältää käyttöohjeet, tekniset tiedot ja sovelluksen arkkitehtuurikuvauksen.
 
-Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus. 
+Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus.
+ 
 Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datamääriä.
