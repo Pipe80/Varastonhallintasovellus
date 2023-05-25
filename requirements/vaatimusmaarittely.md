@@ -367,7 +367,7 @@ Kehitystiimi seuraa jatkuvasti sovelluksen käyttöä ja kerää palautetta käy
 
 Palautteen perusteella sovellusta kehitetään edelleen ja pyritään parantamaan sen toimivuutta ja käyttökokemusta.
 
-# Palveluun liittyvät tekniset vaatimukset:
+# Tekniset vaatimukset
 
 Käyttöjärjestelmätuki: Sovelluksen tulee toimia Android-ympäristössä. Sovellus tehdään ensisijaisesti Zebra Technologiesin viivakoodinlukijoille, joissa on tällä hetkellä Android 10 käyttöjärjestelmä.
 
@@ -382,5 +382,5 @@ Käyttöliittymäsuunnittelu: Käyttöliittymäsuunnittelu toteutetaan Material 
 Dokumentaatio: Palvelun tulee sisältää kattava dokumentaatio, joka sisältää käyttöohjeet, tekniset tiedot ja sovelluksen arkkitehtuurikuvauksen.
 
 Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus.
- 
+
 Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datamääriä.
