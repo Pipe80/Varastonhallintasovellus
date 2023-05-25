@@ -2,21 +2,32 @@
 
 # Sisältö
 
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-  []()
-    []()
-  []()
-    []()
-[]()
-[]()
-[]()
-[]()
+[Johdanto](#johdanto)
+
+[Kaupallinen kohderyhmä](#kaupallinen-kohderyhmä)
+
+[Käyttäjärajapinnan kohderyhmät](#käyttäjärajapinnan-kohderyhmät)
+
+[Sidosryhmät](#sidosryhmät)
+
+[Sidosryhmäkartta](#sidosryhmäkartta)
+
+[Palveluun liittyvät asiakaspolut](#palveluun-liittyvät-asiakaspolut)
+
+[Palvelun ominaisuudet ja toiminnot](#palvelun-ominaisuudet-ja-toiminnot)
+
+- [Frontend](#frontend)
+  - [Frontend MindMap muodossa](#frontend-mindmap-muodossa)
+- [Backend](#backend)
+  - [Backend MindMap muodossa](#backend-mindmap-muodossa)
+
+[Toiminnalliset vaatimukset](#toiminnalliset-vaatimukset)
+
+[Käyttöliittymänäkymä](#käyttöliittymänäkymä)
+
+[Ketterän kehittämisen käyttötarinat](#ketterän-kehittämisen-käyttötarinat)
+
+[Tekniset vaatimukset](#tekniset-vaatimukset)
 
 
 # Johdanto
