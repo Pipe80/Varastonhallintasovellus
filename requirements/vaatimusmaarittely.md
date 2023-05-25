@@ -351,35 +351,23 @@ Askel1 -[#Green]-> Askel2
 
 # Ketterän kehittämisen käyttötarinat
 
-Käyttäjänä haluan voida kirjautua sovellukseen, jotta voin aloittaa keräilyn.
-
-Käyttäjänä haluan voida kuitata uuden keräilytehtävän, jotta voin aloittaa keräilyn.
-
-Käyttäjänä haluan voida keskeyttää keräilyn tarvittaessa.
-
-Käyttäjänä haluan voida valita, että tuotetta ei löydy varastosta, jos näin on.
-
-Yrityksen omistajana haluan, että tilauksessa olevan tuotteen puuttuminen varastosta aiheuttaa automaattisen ilmoituksen haluttuun sähköpostiin.
-
-Käyttäjänä haluan voida skannata tuotteen viivakoodin, jotta voin varmistaa keräilyn oikeellisuuden.
-
-Käyttäjänä haluan voida seurata keräilyn tilaa, jotta voin varmistaa sen onnistuneen suorittamisen.
-
-Käyttäjänä haluan, että sovellus ilmoittaa kun kaikki tuotteet on keräilty.
-
-Käyttäjänä haluan, että sovellus ilmoittaa jos luen väärän tuotteen viivakoodin.
-
-Käyttäjänä haluan voida lähettää kuljetustilauksen kuljetusliikkeelle.
-
-Käyttäjänä haluan että sovellus kertoo keräiltävien tuotteiden hyllypaikat.
-
-Käyttäjänä haluan että voin määrittää sovelluksen pop-up viestit halutessani pois päältä.
-
-As a user I wan't to be able to change language to english.
-
-Käyttäjänä haluan että sovellus listaa siirtää keräillyt tuotteet kerättävien listan pohjalle.
-
-Käyttäjänä haluan että sovellus järjestää keräiltävien tuotteiden listan, tuotteiden hyllypaikan mukaan, minimoiden kuljetun matkan.
+| Prioriteetti | Käyttötarina |
+| -: | :- |
+| P1 | Käyttäjänä haluan voida kirjautua sovellukseen, jotta voin aloittaa keräilyn. |
+| P1 | Käyttäjänä haluan voida kuitata uuden keräilytehtävän, jotta voin aloittaa keräilyn. |
+| P1 | Käyttäjänä haluan voida skannata tuotteen viivakoodin, jotta voin varmistaa keräilyn oikeellisuuden. |
+| P1 | Käyttäjänä haluan voida seurata keräilyn tilaa, jotta voin varmistaa sen onnistuneen suorittamisen. |
+| P2 | Käyttäjänä haluan voida keskeyttää keräilyn tarvittaessa. |
+| P2 | Käyttäjänä haluan voida valita, että tuotetta ei löydy varastosta, jos näin on. |
+| P2 | Käyttäjänä haluan, että sovellus ilmoittaa kun kaikki tuotteet on keräilty. |
+| P2 | Käyttäjänä haluan, että sovellus ilmoittaa jos luen väärän tuotteen viivakoodin. | 
+| P3 | Yrityksen omistajana haluan, että tilauksessa olevan tuotteen puuttuminen varastosta aiheuttaa automaattisen ilmoituksen haluttuun sähköpostiin. |
+| P4 | Käyttäjänä haluan voida lähettää kuljetustilauksen kuljetusliikkeelle. |
+| P4 | Käyttäjänä haluan että sovellus kertoo keräiltävien tuotteiden hyllypaikat. |
+| P5 | Käyttäjänä haluan että voin määrittää sovelluksen pop-up viestit halutessani pois päältä. |
+| P4 | As a user I wan't to be able to change language to english. |
+| P5 | Käyttäjänä haluan että sovellus listaa siirtää keräillyt tuotteet kerättävien listan pohjalle. |
+| P5 | Käyttäjänä haluan että sovellus järjestää keräiltävien tuotteiden listan, tuotteiden hyllypaikan mukaan, minimoiden kuljetun matkan. |
 
 # Tekniset vaatimukset
 
