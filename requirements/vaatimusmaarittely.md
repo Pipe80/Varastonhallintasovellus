@@ -2,32 +2,32 @@
 
 ## Sisältö
 
-[Johdanto](#johdanto)
+[**Johdanto**](#johdanto)
 
-[Kaupallinen kohderyhmä](#kaupallinen-kohderyhmä)
+[**Kaupallinen kohderyhmä**](#kaupallinen-kohderyhmä)
 
-[Käyttäjärajapinnan kohderyhmät](#käyttäjärajapinnan-kohderyhmät)
+[**Käyttäjärajapinnan kohderyhmät**](#käyttäjärajapinnan-kohderyhmät)
 
-[Sidosryhmät](#sidosryhmät)
+[**Sidosryhmät**](#sidosryhmät)
 
-[Sidosryhmäkartta](#sidosryhmäkartta)
+[**Sidosryhmäkartta**](#sidosryhmäkartta)
 
-[Palveluun liittyvät asiakaspolut](#palveluun-liittyvät-asiakaspolut)
+[**Palveluun liittyvät asiakaspolut**](#palveluun-liittyvät-asiakaspolut)
 
-[Palvelun ominaisuudet ja toiminnot](#palvelun-ominaisuudet-ja-toiminnot)
+[**Palvelun ominaisuudet ja toiminnot**](#palvelun-ominaisuudet-ja-toiminnot)
 
 - [Frontend](#frontend)
 - [Frontend MindMap muodossa](#frontend-mindmap-muodossa)
 - [Backend](#backend)
 - [Backend MindMap muodossa](#backend-mindmap-muodossa)
 
-[Toiminnalliset vaatimukset](#toiminnalliset-vaatimukset)
+[**Toiminnalliset vaatimukset**](#toiminnalliset-vaatimukset)
 
-[Käyttöliittymänäkymä](#käyttöliittymänäkymä)
+[**Käyttöliittymänäkymä**](#käyttöliittymänäkymä)
 
-[Ketterän kehittämisen käyttötarinat](#ketterän-kehittämisen-käyttötarinat)
+[**Ketterän kehittämisen käyttötarinat**](#ketterän-kehittämisen-käyttötarinat)
 
-[Tekniset vaatimukset](#tekniset-vaatimukset)
+[**Tekniset vaatimukset**](#tekniset-vaatimukset)
 
 
 # Johdanto
