@@ -84,7 +84,6 @@ Askel8: Rahtitilaus keräillyille tuotteille
 Askel9: Rahtiyhtiö noutaa tilauksen
 Exit: Verkkokaupan asiakas saa tilauksensa
 
-
 [*] --> Askel1
 Askel1 -[#Green]-> Askel2
   Askel2 -[#Green]-> Askel3
@@ -284,33 +283,35 @@ Askel1 -[#Green]-> Askel2
 @endmindmap
 ```
 
+<br>
+
 # Toiminnalliset vaatimukset
 
-Sovelluksen tulee toimia sujuvasti ja virheettömästi
-Sovelluksen tulee olla yhteensopiva eri mobiilialustojen kanssa
-Sovelluksen tulee pystyä synkronoimaan tietoja muiden järjestelmien kanssa
-Sovelluksen tulee käyttää turvallista kirjautumista ja tietojen tallennusta
-Kirjautuminen järjestelmään
-Keräilytehtävän luominen
-Tuotetietojen näyttäminen
-Tuotteen skannaaminen
-Keräilyn tilan seuranta
-Tilauksen kuitkaus kuljetusliikkeelle
+| Toiminnallisen vaatimuksen kuvaus | Toiminnallinen ominaisuus |
+| -: | :- |
+| Käyttäjä voi kirjautua henkilökortilla | [Kirjaudu sisään](#Frontend) |
+| Käyttäjä voi kirjautua salasanalla ja | [Kirjaudu sisään](#Frontend) |
+| Sovellus vastaanottaa xml-tiedoston verkkokaupasta | [Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin](#backend) |
+| Sovellus ilmoitta uudesta siirtolistasta | [Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin](#backend) |
+| Sovelluksella pitää voida kuitata siirtolista työnalle | [Perusnäkymä](#frontend) |
+| Sovelluksella pitää voida keräillä tilaus | [Keräilynäkymä](#frontend) |
+| Sovellus tuottaa keräilystä siirtotiedoston XML-muodossa | [Keräilynäkymä](#frontend) |
+| Tuotteiden keräilyssä pitää käyttää viivakoodeja | [Lue viivakoodi](#frontend) |
+| Sovelluksessa tulee olla mahdollisuus vaihtaa kieltä | [Asetukset näkymä](#frontend) |
+| Salasana pitää voida vaihtaa | [Asetukset näkymä](#frontend) |
+| Sovelluksen pop-upeille on/off vaihtoehto | [Asetukset näkymä](#frontend) |
+| Keräily pitää voida keskeyttää | [Keräilynäkymä](#frontend) |
+| Sovelluksen pitää kertoa keräiltävän tuotteen hyllypaikka | [Keräilynäkymä](#frontend) |
+| Jos tuotetta ei löydy, siitä pitää voida ilmoittaa | [Keräilynäkymä](#frontend) |
+| Sovelluksen pitää ilmoittaa jos viivakoodin tuotetta ei löydy siirtolistasta | [Lue viivakoodi](#frontend) |
+| Sovelluksen tulee ilmoittaa kun kaikki tuotteet on keräilty | [Keräilynäkymä](#frontend) |
+| Sovelluksen pitää lähettää tilaajalle viesti keräilyn aloittamisesta | [Lähetä viesti asiakkaalle keräilyn aloittamisesta](#backend) |
+| Kun tilaus on keräilty, sovellus tilaa rahdin | [Lähetä rahtitilaus rahtiyhtiön API:iin](#backend) |
+| Sovelluksen tulee lähettää tilaajalle viesti rahtitilauksesta | [Lähetä viesti asiakkaalle rahtitilauksesta](#backend) |
+| Sovelluksen tulee nostaa keräämättömät tuotteet listauksen alkuun | [Keräilynäkymä](#frontend) |
+| Sovelluksen tulee järjestää keräiltävät tuotteet hyllypaikan sijainnin mukaan | [Keräilynäkymä](#frontend) |
 
-Kirjautuminen: Käyttäjän on voitava kirjautua sisään sovellukseen käyttäjätunnuksella ja salasanalla.
-Tilausten luominen: Käyttäjä voi luoda uuden tilauksen syöttämällä tuotetietoja ja määrän. Tilaukseen voi liittää myös toimitusosoitteen ja maksutiedot.
-
-Tilauksen muokkaaminen: Käyttäjä voi muokata luomaansa tilausta, esimerkiksi lisäämällä tai poistamalla tuotteita tai muuttamalla toimitusosoitetta.
-
-Tilausten tarkastelu: Käyttäjä voi tarkastella luomiaan tilauksia ja niiden tilaa (esim. "vahvistettu", "lähetetty").
-
-Tilausten poistaminen: Käyttäjä voi poistaa tilauksen, jos se ei ole vielä vahvistettu.
-
-Tilauksen maksaminen: Käyttäjä voi maksaa tilauksen sovelluksen kautta.
-
-Ostosten tallentaminen: Käyttäjä voi tallentaa suosikkituotteitaan sovellukseen, jolloin niitä ei tarvitse etsiä uudelleen jokaisen tilauksen yhteydessä.
-
-Asiakaspalvelun yhteydenotto: Käyttäjä voi ottaa yhteyttä asiakaspalveluun chatin tai sähköpostin välityksellä.
+<br>
 
 # Käyttöliittymänäkymä
 
