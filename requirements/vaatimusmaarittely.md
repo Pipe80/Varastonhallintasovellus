@@ -71,6 +71,8 @@ Viides sidosryhmä ovat verkkokaupan asiakkaat, joiden tilaus keräillään sove
 
 # Sidosryhmäkartta
 
+Sidosryhmäkartassa on esitetty edellä määritetyt sidosryhmät kuvan muodossa. Kuvasta näkee mitä sidosryhmät haluavat sovellukselta ja kuinka eri sidosryhmät linkittyvät toisiinsa.
+
 ```plantuml
 @startmindmap
 skinparam defaultFontSize 30
@@ -91,6 +93,8 @@ skinparam defaultFontSize 30
 <br>
 
 # Palveluun liittyvät asiakaspolut
+
+Tässä on esitetty keräilysovelluksen käyttötapahtuma asiakaspolun muodossa.
 
 ```plantuml
 state Askel1 #LawnGreen
@@ -132,6 +136,8 @@ Askel1 -[#Green]-> Askel2
 <br>
 
 # Palvelun ominaisuudet ja toiminnot
+
+Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Esitys on jaettu frontend ja backend osioihin. Kummassakin osiossa on ensin listattu taulukossa ominaisuudet ja toiminnot ja tämän jälkeen sama asia vielä mindmap muodossa.
 
 ## Frontend
 
@@ -316,6 +322,8 @@ Askel1 -[#Green]-> Askel2
 
 # Toiminnalliset vaatimukset
 
+Alla olevassa taulukossa on esitetty sovellukseen kohdistuvat toiminnalliset vaatimukset sekä ominaisuudet, joissa ne toteutuvat.
+
 | Toiminnallisen vaatimuksen kuvaus | Toiminnallinen ominaisuus |
 | -: | :- |
 | Käyttäjä voi kirjautua henkilökortilla | [Kirjaudu sisään](#Frontend) |
@@ -351,6 +359,8 @@ Askel1 -[#Green]-> Askel2
 
 # Ketterän kehittämisen käyttötarinat
 
+Alla olevassa taulukossa on esitetty käyttötarinat ja niiden prioriteetti kehityksessä. Prioriteetti P1 on korkeimman prioriteetin luokka ja P5 on matalimman prioriteetin luokka.
+
 | Prioriteetti | Käyttötarina |
 | -: | :- |
 | P1 | Käyttäjänä haluan voida kirjautua sovellukseen, jotta voin aloittaa keräilyn. |
@@ -368,6 +378,7 @@ Askel1 -[#Green]-> Askel2
 | P4 | As a user I wan't to be able to change language to english. |
 | P5 | Käyttäjänä haluan että sovellus listaa siirtää keräillyt tuotteet kerättävien listan pohjalle. |
 | P5 | Käyttäjänä haluan että sovellus järjestää keräiltävien tuotteiden listan, tuotteiden hyllypaikan mukaan, minimoiden kuljetun matkan. |
+
 
 # Tekniset vaatimukset
 
