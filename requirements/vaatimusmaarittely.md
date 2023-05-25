@@ -185,49 +185,49 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 
 ```plantuml
 @startmindmap
-+[#Bisque] FRONTEND
-++[#LightBlue] Luo uusi käyttäjä
-+++[#LightBlue] Syöte: käyttäjän nimi
-+++[#LightBlue] Syöte: sähköposti
-+++[#LightBlue] Syöte: salasana
-+++[#LightBlue] Syöte: salasana uudelleen
-+++[#LightBlue] Nappi: rekisteröidy
-+++[#LightBlue] Nappi: kirjaudu sisään
-++[#Salmon] Kirjaudu sisään
-+++[#Salmon] Syöte: sähköposti
-+++[#Salmon] Syöte: salasana
-+++[#Salmon] Nappi: kirjaudu sisään
-+++[#Salmon] Nappi: rekisteröidy
-++[#LightBlue] Keräilynäkymä
-+++[#LightBlue] Nappi: Keskeytä keräily
-+++[#LightBlue] Lista: Valitun siirtolistan tuotteet
-++++[#LightBlue] Lista: Tuotteiden hyllypaikat
-++++[#LightBlue] Nappi: Tuotetta ei löydy varastosta
-+++[#LightBlue] Ominaisuus: Lue viivakoodi
-+++[#LightBlue] Tarkista onko tuote siirtolistassa
-+++[#LightBlue] Pop-up: Kaikki tuotteet keräilty
-++++[#LightBlue] Nappi: Lähetä valmis siirtolista backendiin
-++[#Salmon] Asetukset näkymä
-+++[#Salmon] Syöte: Kirjoita uusi salasana
-+++[#Salmon] Syöte: Kirjoita uusi salasana uudelleen
-+++[#Salmon] Nappi: Vaihda salasana
-+++[#Salmon] Dropdown menu: Valitse kieli 1. Suomi, 2.Englanti, 3. Ruotsi
-+++[#Salmon] Nappi on/off: Pop-up: Kaikki tuotteet keräilty
-+++[#Salmon] Nappi on/off: Pop-up: Ilmoita virheellisestä tuotteesta
-+++[#Salmon] Nappi on/off: Pop-up: Tuote lisätty siirtolistalle
-+++[#Salmon] Nappi on/off: Pop-up: Lisätäänkö tuote siirtolistaan?
-++[#LightBlue] Lue viivakoodi
-+++[#LightBlue] Lue viivakoodi
-+++[#LightBlue] Välitä viivakoodin sisältö sovellukseen
-+++[#LightBlue] Etsi vastaava tuote siirtolistasta
-+++[#LightBlue] Pop-up: Ilmoita virheellisestä tuotteesta
-+++[#LightBlue] Pop-up: Lisätäänkö tuote siirtolistaan?
-++++[#LightBlue] Nappi: määrä +
-++++[#LightBlue] Nappi: määrä -
-++++[#LightBlue] Nappi: Ei
-++++[#LightBlue] Nappi: Kyllä
-++++[#LightBlue] Lisää keräillyn tuotteen määrää siirtolistassa
-+++[#LightBlue] Pop-up: Tuote lisätty siirtolistalle
++[#White] FRONTEND
+--[#Salmon] Luo uusi käyttäjä
+---[#Salmon] Syöte: käyttäjän nimi
+---[#Salmon] Syöte: sähköposti
+---[#Salmon] Syöte: salasana
+---[#Salmon] Syöte: salasana uudelleen
+---[#Salmon] Nappi: rekisteröidy
+---[#Salmon] Nappi: kirjaudu sisään
+--[#LightBlue] Kirjaudu sisään
+---[#LightBlue] Syöte: sähköposti
+---[#LightBlue] Syöte: salasana
+---[#LightBlue] Nappi: kirjaudu sisään
+---[#LightBlue] Nappi: rekisteröidy
+--[#PaleVioletRed] Keräilynäkymä
+---[#PaleVioletRed] Nappi: Keskeytä keräily
+---[#PaleVioletRed] Lista: Valitun siirtolistan tuotteet
+----[#PaleVioletRed] Lista: Tuotteiden hyllypaikat
+----[#PaleVioletRed] Nappi: Tuotetta ei löydy varastosta
+---[#PaleVioletRed] Ominaisuus: Lue viivakoodi
+---[#PaleVioletRed] Tarkista onko tuote siirtolistassa
+---[#PaleVioletRed] Pop-up: Kaikki tuotteet keräilty
+----[#PaleVioletRed] Nappi: Lähetä valmis siirtolista backendiin
+++[#DarkSeaGreen] Lue viivakoodi
++++[#DarkSeaGreen] Lue viivakoodi
++++[#DarkSeaGreen] Välitä viivakoodin sisältö sovellukseen
++++[#DarkSeaGreen] Etsi vastaava tuote siirtolistasta
++++[#DarkSeaGreen] Pop-up: Ilmoita virheellisestä tuotteesta
++++[#DarkSeaGreen] Pop-up: Lisätäänkö tuote siirtolistaan?
+++++[#DarkSeaGreen] Nappi: määrä +
+++++[#DarkSeaGreen] Nappi: määrä -
+++++[#DarkSeaGreen] Nappi: Ei
+++++[#DarkSeaGreen] Nappi: Kyllä
+++++[#DarkSeaGreen] Lisää keräillyn tuotteen määrää siirtolistassa
++++[#DarkSeaGreen] Pop-up: Tuote lisätty siirtolistalle
+++[#GoldenRod] Asetukset näkymä
++++[#GoldenRod] Syöte: Kirjoita uusi salasana
++++[#GoldenRod] Syöte: Kirjoita uusi salasana uudelleen
++++[#GoldenRod] Nappi: Vaihda salasana
++++[#GoldenRod] Dropdown menu: Valitse kieli 1. Suomi, 2.Englanti, 3. Ruotsi
++++[#GoldenRod] Nappi on/off: Pop-up: Kaikki tuotteet keräilty
++++[#GoldenRod] Nappi on/off: Pop-up: Ilmoita virheellisestä tuotteesta
++++[#GoldenRod] Nappi on/off: Pop-up: Tuote lisätty siirtolistalle
++++[#GoldenRod] Nappi on/off: Pop-up: Lisätäänkö tuote siirtolistaan?
 @endmindmap
 ```
 
@@ -278,48 +278,55 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 
 ```plantuml
 @startmindmap
-+[#Bisque] BACKEND
-++[#LightBlue] Luo uusi käyttäjä
-+++[#LightBlue] Ota vastaan käyttäjän nimi, sähköposti ja salasana
-+++[#LightBlue] Tarkista että sähköposti on uniikki
-+++[#LightBlue] Tee salasanasta hash
-+++[#LightBlue] Tallenna tietokantaan uusi käyttäjä
-++[#Salmon] Tarkista sisäänkirjautuminen
-+++[#Salmon] Ota vastaan sähköposti ja salasana
-+++[#Salmon] Tarkista vastaako salana tietokantaan tallennettua hashia
-+++[#Salmon] Validoi käyttäjän sessio
-++[#LightBlue] Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin
-+++[#LightBlue] Ota siirtotiedosto vastaan nettikaupasta
-+++[#LightBlue] Lähetä viesti kaikkiin päätteisiin uudesta siirtolistasta
-+++[#LightBlue] Vastaanota vahvistus keräilyn aloittamisesta
-+++[#LightBlue] Lähetä siirtotiedosto
-++[#Salmon] Lähetä viesti asiakkaalle keräilyn aloittamisesta
-+++[#Salmon] Vastaanota kuittaus keräilyn aloittamisesta
-+++[#Salmon] Poimi tilausnumero siirtolistasta
-+++[#Salmon] Poimi asiakkaan sähköpostiosoite siirtolistasta
-+++[#Salmon] Poimi tilauksen sisältö siirtolistasta
-+++[#Salmon] Luo sähköpostiviesti valmiilla pohjalla
-+++[#Salmon] Lähetä sähköposti asiakkaalle
-++[#LightBlue] Lähetä rahtitilaus rahtiyhtiön API:iin
-+++[#LightBlue] Ota siirtolista vastaan frontendistä
-+++[#LightBlue] Poimi asiakkaan yhteystiedot siirtolistasta
-+++[#LightBlue] Ominaisuus: Laske tilauksen paino ja tilavuus
-+++[#LightBlue] Poimi tilauksen paino ja tilavuus siirtolistasta
-+++[#LightBlue] Luo rahtitilaus
-+++[#LightBlue] Lähetä rahtitilaus rahtiyhtiön API:iin
-+++[#LightBlue] Vastaanota rahtikirjan numero
-+++[#LightBlue] Linkitä rahtikirjan numero ja siirtolista toisiinsa
-++[#Salmon] Lähetä viesti asiakkaalle rahtitilauksesta
-+++[#Salmon] Vastaanota rahtiyhtiön vahvistus rahtitilauksesta
-+++[#Salmon] Poimi rahtikirjan numero ja siihen liittyvä siirtolistan numero
-+++[#Salmon] Poimi asiakkaan sähköpostiosoite siirtolistasta
-+++[#Salmon] Luo sähköpostiviesti valmiilla pohjalla
-+++[#Salmon] Lähetä sähköposti asiakkaalle
-++[#LightBlue] Laske tilauksen paino ja tilavuus
-+++[#LightBlue] Hae tuotekuvauksesta paino
-+++[#LightBlue] Hae tuotekuvauksesta tilavuus
-+++[#LightBlue] Laske kpl * paino ja kpl* tilavuus
-+++[#LightBlue] Lisää tilauksen paino ja tilavuus siirtolistaan
+<style>
+mindmapDiagram {
+  rootStyle {
+    FontColor blue
+  }
+}
+</style>
++_ BACKEND <<rootStyle>>
+--[#Salmon] Luo uusi käyttäjä
+---[#Salmon] Ota vastaan käyttäjän nimi, sähköposti ja salasana
+---[#Salmon] Tarkista että sähköposti on uniikki
+---[#Salmon] Tee salasanasta hash
+---[#Salmon] Tallenna tietokantaan uusi käyttäjä
+--[#LightBlue] Tarkista sisäänkirjautuminen
+---[#LightBlue] Ota vastaan sähköposti ja salasana
+---[#LightBlue] Tarkista vastaako salana tietokantaan tallennettua hashia
+---[#LightBlue] Validoi käyttäjän sessio
+--[#PaleVioletRed] Lähetä ilmoitus uudesta siirtolistasta kaikkiin keräilypäätteisiin
+---[#PaleVioletRed] Ota siirtotiedosto vastaan nettikaupasta
+---[#PaleVioletRed] Lähetä viesti kaikkiin päätteisiin uudesta siirtolistasta
+---[#PaleVioletRed] Vastaanota vahvistus keräilyn aloittamisesta
+---[#PaleVioletRed] Lähetä siirtotiedosto
+--[#DarkSeaGreen] Lähetä viesti asiakkaalle keräilyn aloittamisesta
+---[#DarkSeaGreen] Vastaanota kuittaus keräilyn aloittamisesta
+---[#DarkSeaGreen] Poimi tilausnumero siirtolistasta
+---[#DarkSeaGreen] Poimi asiakkaan sähköpostiosoite siirtolistasta
+---[#DarkSeaGreen] Poimi tilauksen sisältö siirtolistasta
+---[#DarkSeaGreen] Luo sähköpostiviesti valmiilla pohjalla
+---[#DarkSeaGreen] Lähetä sähköposti asiakkaalle
+++[#Ivory] Lähetä rahtitilaus rahtiyhtiön API:iin
++++[#Ivory] Ota siirtolista vastaan frontendistä
++++[#Ivory] Poimi asiakkaan yhteystiedot siirtolistasta
++++[#Ivory] Ominaisuus: Laske tilauksen paino ja tilavuus
++++[#Ivory] Poimi tilauksen paino ja tilavuus siirtolistasta
++++[#Ivory] Luo rahtitilaus
++++[#Ivory] Lähetä rahtitilaus rahtiyhtiön API:iin
++++[#Ivory] Vastaanota rahtikirjan numero
++++[#Ivory] Linkitä rahtikirjan numero ja siirtolista toisiinsa
+++[#GoldenRod] Lähetä viesti asiakkaalle rahtitilauksesta
++++[#GoldenRod] Vastaanota rahtiyhtiön vahvistus rahtitilauksesta
++++[#GoldenRod] Poimi rahtikirjan numero ja siihen liittyvä siirtolistan numero
++++[#GoldenRod] Poimi asiakkaan sähköpostiosoite siirtolistasta
++++[#GoldenRod] Luo sähköpostiviesti valmiilla pohjalla
++++[#GoldenRod] Lähetä sähköposti asiakkaalle
+++[#Gainsboro] Laske tilauksen paino ja tilavuus
++++[#Gainsboro] Hae tuotekuvauksesta paino
++++[#Gainsboro] Hae tuotekuvauksesta tilavuus
++++[#Gainsboro] Laske kpl * paino ja kpl* tilavuus
++++[#Gainsboro] Lisää tilauksen paino ja tilavuus siirtolistaan
 @endmindmap
 ```
 
