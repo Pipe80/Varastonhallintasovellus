@@ -185,7 +185,23 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 
 ```plantuml
 @startmindmap
-+[#White] FRONTEND
+<style>
+mindmapDiagram {
+  node {
+    FontColor darkblue
+    FontSize 50    
+  }
+}
+</style>
++_ Frontend
+<style>
+mindmapDiagram {
+  node {
+    FontColor black
+    FontSize 20
+  }
+}
+</style>
 --[#Salmon] Luo uusi käyttäjä
 ---[#Salmon] Syöte: käyttäjän nimi
 ---[#Salmon] Syöte: sähköposti
@@ -280,12 +296,21 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 @startmindmap
 <style>
 mindmapDiagram {
-  rootStyle {
-    FontColor blue
+  node {
+    FontColor darkblue
+    FontSize 50    
   }
 }
 </style>
-+_ BACKEND <<rootStyle>>
++_ Backend
+<style>
+mindmapDiagram {
+  node {
+    FontColor black
+    FontSize 20
+  }
+}
+</style>
 --[#Salmon] Luo uusi käyttäjä
 ---[#Salmon] Ota vastaan käyttäjän nimi, sähköposti ja salasana
 ---[#Salmon] Tarkista että sähköposti on uniikki
