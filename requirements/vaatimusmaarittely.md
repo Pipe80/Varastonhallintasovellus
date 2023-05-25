@@ -315,25 +315,7 @@ Askel1 -[#Green]-> Askel2
 
 # Käyttöliittymänäkymä
 
-Kirjautumisnäkymä
-Etusivu
-Keräilynäkymä
-Tuotetietojen näyttö
-Tilauksen kuitkausnäkymä
 
-Kirjautumisnäkymä: Käyttäjä syöttää kirjautumistietonsa ja pääsee sen jälkeen etusivulle.
-
-Etusivu: Käyttäjä näkee suosituimmat tuotteet, viimeisimmät tarjoukset ja pääsee luomaan uuden tilauksen.
-
-Tilauksen luomisen näkymä: Käyttäjä syöttää tilauksen tiedot (tuotteet, määrät, toimitusosoite, maksutiedot).
-
-Tilauksen tarkastelunäkymä: Käyttäjä näkee tilauksen tiedot ja tilan.
-
-Suosikit-näkymä: Käyttäjä näkee tallentamansa suosikkituotteet.
-
-Asiakaspalvelun chat-näkymä: Käyttäjä voi lähettää viestejä asiakaspalveluun.
-
-Asiakaspalvelun sähköpostilomake: Käyttäjä voi täyttää lomakkeen ja lähettää viestin asiakaspalveluun.
 
 # Ketterän kehittämisen käyttötarinat
 
