@@ -220,11 +220,17 @@ mindmapDiagram {
 ---[#PaleVioletRed] Nappi / Ominaisuus: Asetukset
 ---[#PaleVioletRed] Nappi: Kirjaudu ulos
 ++[#DarkSeaGreen] Keräilynäkymä
++++[#DarkSeaGreen] Ominaisuus: Lue viivakoodi
 +++[#DarkSeaGreen] Nappi: Keskeytä keräily
+++++[#DarkSeaGreen] Pop-up: Oletko varma
++++++[#DarkSeaGreen] Nappi: Kyllä
++++++[#DarkSeaGreen] Nappi: Ei
 +++[#DarkSeaGreen] Lista: Valitun siirtolistan tuotteet
+++++[#DarkSeaGreen] Lista: Keräilty määrä
+++++[#DarkSeaGreen] Nappi: määrä +
+++++[#DarkSeaGreen] Nappi: määrä -
 ++++[#DarkSeaGreen] Lista: Tuotteiden hyllypaikat
 ++++[#DarkSeaGreen] Nappi: Tuotetta ei löydy varastosta
-+++[#DarkSeaGreen] Ominaisuus: Lue viivakoodi
 +++[#DarkSeaGreen] Tarkista onko tuote siirtolistassa
 +++[#DarkSeaGreen] Pop-up: Kaikki tuotteet keräilty
 ++++[#DarkSeaGreen] Nappi: Lähetä valmis siirtolista backendiin
