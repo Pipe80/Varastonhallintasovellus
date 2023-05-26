@@ -158,9 +158,9 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 | | **Lista:** Avoimet siirtolistat<ul><li>**Nappi:** Valitse siirtolista</li></ul> |
 | | **Nappi / Ominaisuus:** Asetukset |
 | | **Nappi:** Kirjaudu ulos |
-| **Keräilynäkymä** | **Nappi:** Keskeytä keräily |
-| | **Lista:** Valitun siirtolistan tuotteet<ul><li>**Lista:** Tuotteiden hyllypaikat (jokaiseen tuotteeseen)</li><li>**Nappi:** Tuotetta ei löydy varastosta (jokaiseen tuotteeseen)</li></ul> |
-| | **Ominaisuus:** Lue viivakoodi |
+| **Keräilynäkymä** | **Ominaisuus:** Lue viivakoodi |
+| | **Nappi:** Keskeytä keräily<ul><li>**Pop-up:** Oletko varma</li><ul><li>**Nappi:** Kyllä</li><li>**Nappi:** Ei</li></ul></ul> |
+| | **Lista:** Valitun siirtolistan tuotteet<ul><li>**Lista:** Keräilty määrä</li><li>**Nappi:** määrä +</li><li>**Nappi:** määrä -</li><li>**Lista:** Tuotteiden hyllypaikat (jokaiseen tuotteeseen)</li><li>**Nappi:** Tuotetta ei löydy varastosta (jokaiseen tuotteeseen)</li></ul> |
 | | Tarkista onko tuote siirtolistassa |
 | | **Pop-up:** Kaikki tuotteet keräilty<ul><li>**Nappi:** Lähetä valmis siirtolista backendiin</li></ul> |
 | **Asetukset näkymä** | **Syöte:** Kirjoita uusi salasana |
