@@ -156,7 +156,6 @@ Seuraavaksi esitetään palvelun ominaisuudet ja niihin liittyvät toiminnot. Es
 | | **Nappi:** Rekisteröidy |
 | **Perusnäkymä** | **Ominaisuus:** Hae backendistä siirtolistat |
 | | **Lista:** Avoimet siirtolistat<ul><li>**Nappi:** Valitse siirtolista</li></ul> |
-| | Vastaanota siirtolista |
 | | **Nappi / Ominaisuus:** Asetukset |
 | | **Nappi:** Kirjaudu ulos |
 | **Keräilynäkymä** | **Nappi:** Keskeytä keräily |
@@ -214,27 +213,33 @@ mindmapDiagram {
 ---[#LightBlue] Syöte: salasana
 ---[#LightBlue] Nappi: kirjaudu sisään
 ---[#LightBlue] Nappi: rekisteröidy
---[#PaleVioletRed] Keräilynäkymä
----[#PaleVioletRed] Nappi: Keskeytä keräily
----[#PaleVioletRed] Lista: Valitun siirtolistan tuotteet
-----[#PaleVioletRed] Lista: Tuotteiden hyllypaikat
-----[#PaleVioletRed] Nappi: Tuotetta ei löydy varastosta
----[#PaleVioletRed] Ominaisuus: Lue viivakoodi
----[#PaleVioletRed] Tarkista onko tuote siirtolistassa
----[#PaleVioletRed] Pop-up: Kaikki tuotteet keräilty
-----[#PaleVioletRed] Nappi: Lähetä valmis siirtolista backendiin
-++[#DarkSeaGreen] Lue viivakoodi
-+++[#DarkSeaGreen] Lue viivakoodi
-+++[#DarkSeaGreen] Välitä viivakoodin sisältö sovellukseen
-+++[#DarkSeaGreen] Etsi vastaava tuote siirtolistasta
-+++[#DarkSeaGreen] Pop-up: Ilmoita virheellisestä tuotteesta
-+++[#DarkSeaGreen] Pop-up: Lisätäänkö tuote siirtolistaan?
-++++[#DarkSeaGreen] Nappi: määrä +
-++++[#DarkSeaGreen] Nappi: määrä -
-++++[#DarkSeaGreen] Nappi: Ei
-++++[#DarkSeaGreen] Nappi: Kyllä
-++++[#DarkSeaGreen] Lisää keräillyn tuotteen määrää siirtolistassa
-+++[#DarkSeaGreen] Pop-up: Tuote lisätty siirtolistalle
+--[#PaleVioletRed] Perusnäkymä
+---[#PaleVioletRed] Ominaisuus: Hae backendistä siirtolistat
+---[#PaleVioletRed] Lista: Avoimet siirtolistat
+----[#PaleVioletRed] Nappi: Valitse siirtolista
+---[#PaleVioletRed] Nappi / Ominaisuus: Asetukset
+---[#PaleVioletRed] Nappi: Kirjaudu ulos
+++[#DarkSeaGreen] Keräilynäkymä
++++[#DarkSeaGreen] Nappi: Keskeytä keräily
++++[#DarkSeaGreen] Lista: Valitun siirtolistan tuotteet
+++++[#DarkSeaGreen] Lista: Tuotteiden hyllypaikat
+++++[#DarkSeaGreen] Nappi: Tuotetta ei löydy varastosta
++++[#DarkSeaGreen] Ominaisuus: Lue viivakoodi
++++[#DarkSeaGreen] Tarkista onko tuote siirtolistassa
++++[#DarkSeaGreen] Pop-up: Kaikki tuotteet keräilty
+++++[#DarkSeaGreen] Nappi: Lähetä valmis siirtolista backendiin
+++[#Ivory] Lue viivakoodi
++++[#Ivory] Lue viivakoodi
++++[#Ivory] Välitä viivakoodin sisältö sovellukseen
++++[#Ivory] Etsi vastaava tuote siirtolistasta
++++[#Ivory] Pop-up: Ilmoita virheellisestä tuotteesta
++++[#Ivory] Pop-up: Lisätäänkö tuote siirtolistaan?
+++++[#Ivory] Nappi: määrä +
+++++[#Ivory] Nappi: määrä -
+++++[#Ivory] Nappi: Ei
+++++[#Ivory] Nappi: Kyllä
+++++[#Ivory] Lisää keräillyn tuotteen määrää siirtolistassa
++++[#Ivory] Pop-up: Tuote lisätty siirtolistalle
 ++[#GoldenRod] Asetukset näkymä
 +++[#GoldenRod] Syöte: Kirjoita uusi salasana
 +++[#GoldenRod] Syöte: Kirjoita uusi salasana uudelleen
