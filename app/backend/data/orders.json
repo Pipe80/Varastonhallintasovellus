@@ -1,0 +1,80 @@
+{
+  "orders": [
+    {
+      "orderID": 1,
+      "customer": "Pentti",
+      "address": "Pentinkatu 1",
+      "item1": {
+        "name": "Nappi",
+        "productID": 1
+      },
+      "item2": {
+        "name": "Lanka",
+        "productID": 2
+      },
+      "item3": {
+        "name": "Ohje",
+        "productID": 3
+      } 
+    },
+    {
+      "orderID": 2,
+      "customer": "Sari",
+      "address": "Sarinkatu 1",
+      "item1": {
+        "name": "Auto",
+        "productID": 4
+      },
+      "item2":  {
+        "name": "Mopo",
+        "productID": 5
+      },
+      "item3":  {
+        "name": "Kevari",
+        "productID": 6
+      },
+      "item4":  {
+        "name": "Suklaalevy",
+        "productID": 7
+      }
+    },
+    {
+      "orderID": 3,
+      "customer": "Jouko",
+      "address": "Joukonkatu 1",
+      "item1":  {
+        "name": "Tietokone",
+        "productID": 8
+      },
+      "item2":  {
+        "name": "Hiiri",
+        "productID": 9
+      }
+    },
+    {
+      "orderID": 4,
+      "customer": "Taina",
+      "address": "Tainankatu 1",
+      "item1":  {
+        "name": "Johto",
+        "productID": 10
+      },
+      "item2": {
+        "name": "Nappi",
+        "productID": 1
+      },
+      "item3": {
+        "name": "Lanka",
+        "productID": 2
+      },
+      "item4": {
+        "name": "Ohje",
+        "productID": 3
+      },
+      "item5": {
+        "name": "Kevari",
+        "productID": 6
+      }
+    }
+  ]
+}
