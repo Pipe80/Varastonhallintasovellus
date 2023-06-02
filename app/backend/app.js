@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
+const morgan = require('morgan')
 const { orders } = require('./data/orders')
 PORT = 3000
 
 app.use(express.json())
+app.use(morgan('combined'))
 
 // Frontpage with some text
 app.get('/', (req, res) => {
