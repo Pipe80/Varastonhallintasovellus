@@ -1,7 +1,20 @@
 const express = require('express')
 const app = express()
+// XML => JSON and JSON => XML
+const { XMLParser, XMLBuilder } = require('fast-xml-parser');
+const parser = new XMLParser
+// Read files
+const { readFileSync } = require('fs')
 const morgan = require('morgan')
-const { orders } = require('./data/orders')
+
+// orders from a JSON-file
+//const { orders } = require('./data/orders')
+
+// orders from an XML-file
+const xmlOrders = readFileSync('./data/orders.xml')
+// parse XML order to JSON-object
+let jsonOrders = parser.parse(xmlOrders)
+
 PORT = 3000
 
 app.use(express.static('./public'))
@@ -16,7 +29,10 @@ app.get('/', (req, res) => {
 
 // Route that serves all open orders
 app.get('/api/openOrders', (req, res) => {
-  res.json(orders)
+  // use this if data is received in XML
+  res.json(jsonOrders)
+  // use this if data is receiced as JSON
+  //res.json(orders)
 })
 
 app.listen(PORT, () => {
