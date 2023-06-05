@@ -4,7 +4,9 @@ const morgan = require('morgan')
 const { orders } = require('./data/orders')
 PORT = 3000
 
+app.use(express.static('./public'))
 app.use(express.json())
+// Logger middleware
 app.use(morgan('combined'))
 
 // Frontpage with some text
