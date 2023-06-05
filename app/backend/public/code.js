@@ -6,7 +6,10 @@ async function loadOrders() {
 
 async function showOrders(orders) {
   let orderList = document.getElementById('orderList')
-  orders.forEach(order => {
+  // use this if backend is using XML format
+  orders.orders.order.forEach(order => {
+  // use this if backend is using JSON format
+  //orders.forEach(order => {
     let liNode = document.createElement('li')
     let txtNode = document.createTextNode(`Customer: ${order.customer}, OrderID: ${order.orderID}`)
     liNode.appendChild(txtNode)
