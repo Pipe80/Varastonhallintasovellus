@@ -22,11 +22,6 @@ app.use(express.json())
 // Logger middleware
 app.use(morgan('combined'))
 
-// Frontpage with some text
-app.get('/', (req, res) => {
-  res.status(200).send('Backend for IDS collector app.')
-})
-
 // Route that serves all open orders
 app.get('/api/openOrders', (req, res) => {
   // use this if data is received in XML
