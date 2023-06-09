@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 
 const orders = require('./routes/orders')
+const errorHandler = require('./middleware/errorHandler')
 const notFound = require('./middleware/notFound')
 
 PORT = 3000
@@ -18,6 +19,7 @@ app.use(morgan('combined'))
 app.use('/api', orders)
 
 app.use(notFound)
+app.use(errorHandler)
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)
