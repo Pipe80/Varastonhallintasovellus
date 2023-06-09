@@ -18,8 +18,6 @@ const orders = require('./routes/orders')
 
 PORT = 3000
 
-const morgan = require('morgan')
-
 app.use(express.static('./public'))
 app.use(express.json())
 // Logger middleware
