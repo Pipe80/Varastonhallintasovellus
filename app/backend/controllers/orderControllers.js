@@ -1,3 +1,6 @@
+const Order = require('../models/Order')
+const { StatusCodes } = require('http-status-codes')
+
 // XML => JSON and JSON => XML
 const { XMLParser, XMLBuilder } = require('fast-xml-parser');
 const parser = new XMLParser
@@ -16,6 +19,12 @@ const getOrders = async (_req, res, next) => {
   })
 }
 
+const createOrder = async (req, res, next) => {
+  const order = await Order.create(req.body)
+  res.status(StatusCodes.CREATED).json({order})
+}
+
 module.exports = {
   getOrders,
+  createOrder
 }
