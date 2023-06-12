@@ -19,7 +19,15 @@ const getOrders = async (_req, res, next) => {
   })
 }
 
-const createOrder = async (req, res, next) => {
+const createOrder = async (req, res, _next) => {
+  if (Object.keys(req.body).length === 0) {
+    return res
+      .status(StatusCodes.BAD_REQUEST)
+      .json({
+        success: false,
+        message: "No data in body"
+      })
+  }
   const order = await Order.create(req.body)
   res.status(StatusCodes.CREATED).json({order})
 }
