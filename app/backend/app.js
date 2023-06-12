@@ -3,8 +3,12 @@ require('express-async-errors')
 
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT
 const orders = require('./routes/orders')
+const PORT = process.env.PORT
+const mongoDB = process.env.MONGO_URI
+const connectMongoDB = require('./db/mongoDB')
+const mongoose = require('mongoose')
+
 const errorHandler = require('./middleware/errorHandler')
 const notFound = require('./middleware/notFound')
 
@@ -20,6 +24,13 @@ app.use('/api', orders)
 app.use(notFound)
 app.use(errorHandler)
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`)
-})
+async function start() {
+  connectMongoDB(mongoDB)
+  app.listen(PORT, () => console.log(`Server listening to port: ${PORT}`))
+
+  const db = mongoose.connection
+  db.on('error', console.error.bind(console, 'Connection error: '))
+  db.once('open', () => console.log('Database "IDS" connected.'))
+}
+
+start()
