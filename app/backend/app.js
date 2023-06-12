@@ -1,13 +1,12 @@
+require('dotenv').config()
 require('express-async-errors')
 
 const express = require('express')
 const app = express()
-
+const PORT = process.env.PORT
 const orders = require('./routes/orders')
 const errorHandler = require('./middleware/errorHandler')
 const notFound = require('./middleware/notFound')
-
-PORT = 3000
 
 const morgan = require('morgan')
 
