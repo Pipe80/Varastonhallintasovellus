@@ -3,10 +3,17 @@ const router = express.Router()
 
 const {
   getOrders,
-  createOrder,
+  createJSONOrder,
+  sendXML,
+  createXMLOrderFromFile,
+  createXMLOrder
 } = require('../controllers/orderControllers.js')
 
 router.get('/openOrders', getOrders)
-router.post('/createOrder', createOrder)
+router.get('/sendXML', sendXML)
+router.post('/createJSONOrder', createJSONOrder)
+
+router.post('/XMLOrderFromFile', createXMLOrderFromFile)
+router.post('/XMLOrder', createXMLOrder)
 
 module.exports = router
