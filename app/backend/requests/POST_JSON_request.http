@@ -1,0 +1,26 @@
+POST http://localhost:3000/api/createJSONOrder
+Content-Type: application/json
+
+{
+  "orderID": 2,
+  "customer": "Sari",
+  "address": "Sarinkatu 1",
+  "items": [ 
+    {
+      "name": "Auto",
+      "productID": 4
+    },  
+    {
+      "name": "Mopo",
+      "productID": 5
+    }, 
+    {
+      "name": "Kevari",
+      "productID": 6
+    },
+    {
+      "name": "Suklaalevy",
+      "productID": 7
+    }  
+  ]  
+}
