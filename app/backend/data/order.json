@@ -1,0 +1,23 @@
+{
+  "orderID": 2,
+  "customer": "Sari",
+  "address": "Sarinkatu 1",
+  "items": [ 
+    {
+      "name": "Auto",
+      "productID": 4
+    },  
+    {
+      "name": "Mopo",
+      "productID": 5
+    }, 
+    {
+      "name": "Kevari",
+      "productID": 6
+    },
+    {
+      "name": "Suklaalevy",
+      "productID": 7
+    }  
+  ]  
+}

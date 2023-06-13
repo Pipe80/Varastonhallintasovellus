@@ -1,0 +1,28 @@
+<order>
+  <orderID>2</orderID>
+  <orderStatus>In collection</orderStatus>
+  <customer>Sari</customer>
+  <address>Sarinkatu 1</address>
+  <items>
+    <item>
+      <name>Auto</name>
+      <productID>4</productID>
+      <itemStatus>Collected</itemStatus>
+    </item>
+    <item>
+      <name>Mopo</name>
+      <productID>5</productID>
+      <itemStatus>Collected</itemStatus>
+    </item>
+    <item>
+      <name>Kevari</name>
+      <productID>6</productID>
+      <itemStatus>Collected</itemStatus>
+    </item>
+    <item>
+      <name>Suklaalevy</name>
+      <productID>7</productID>
+      <itemStatus>Not collected</itemStatus>
+    </item>
+  </items>
+</order>
