@@ -1,0 +1,31 @@
+POST http://localhost:3000/api/XMLOrder
+Content-Type: text/xml
+
+<order>
+  <order_id>2</order_id>
+  <order_status>In collection</order_status>
+  <customer>Sari</customer>
+  <address>Sarinkatu 1</address>
+  <items>
+    <item>
+      <name>Auto</name>
+      <product_id>4</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Mopo</name>
+      <product_id>5</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Kevari</name>
+      <product_id>6</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Suklaalevy</name>
+      <product_id>7</product_id>
+      <item_status>Not collected</item_status>
+    </item>
+  </items>
+</order>
