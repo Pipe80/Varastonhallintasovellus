@@ -11,17 +11,19 @@ const { readFile } = require('fs')
 // This reads XML from a file and returns it in response
 // This works
 const sendXML = async (req, res, next) => {
-  readFile('./data/order.xml', (err, data) => {
-    let JSONOrder = parser.parse(data)
-    res.json(JSONOrder)
-  })
-  
+  readFile('./data/order.xm', (err, data) => {
+    if (err) {
+      next(err)
+    } else {
+      let JSONOrder = parser.parse(data)
+      res.json(JSONOrder)
+    }    
+  })  
 }
 
 // This stores one order from XML-file to MongoDB
 // This works
 const createXMLOrderFromFile = async (req, res, next) => {
-  //let JSONOrder
   readFile('./data/order.xml', (err, data) => {
     if (err) {
       next(err)
@@ -37,10 +39,22 @@ const createXMLOrderFromFile = async (req, res, next) => {
 // This takes XML from req.body and stores it to MongoDB
 // This works
 const createXMLOrder = async (req, res, next) => {
+  // Check that body has data
+  if (Object.keys(req.body).length === 0) {
+    // If no data throw error
+    throw new APIError('No data in body', StatusCodes.BAD_REQUEST)
+  }
+  // If body has data store it to variable
   let XMLOrder = req.body        
   console.log(XMLOrder)
-  Order.create(XMLOrder)
-  res.status(StatusCodes.CREATED).json(XMLOrder)  
+  // Try catch for error handling
+  try {
+    // Asyncronic call to create a new Order to mongo
+    await Order.create(XMLOrder)
+    res.status(StatusCodes.CREATED).json(XMLOrder)
+  } catch (err) {
+    next(err)
+  }  
 }
 
 // This reads XML from a file and returns it in response
