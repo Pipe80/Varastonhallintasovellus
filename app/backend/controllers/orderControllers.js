@@ -51,8 +51,7 @@ const createXMLOrder = async (req, res, next) => {
 
 
 // This reads XML from a file and returns it in response
-const getOrders = async (_req, res, next) => {
-  // use this if data is received in XML
+const getOrders = async (_req, res, next) => {  
   readFile('./data/orders.xml', (err, data) => {
     if (err) {
       next(err)
@@ -64,7 +63,7 @@ const getOrders = async (_req, res, next) => {
 }
 
 // This takes JSON in req.body and stores it to MongoDB
-// This needs a new model as Order is modified for XML
+// This works
 const createJSONOrder = async (req, res, _next) => {
   if (Object.keys(req.body).length === 0) {
     throw new APIError('No data in body', StatusCodes.BAD_REQUEST)
