@@ -34,23 +34,17 @@ const createXMLOrderFromFile = async (req, res, next) => {
   })
 }
 
-// At the moment this takes XML from req.body
+// This takes XML from req.body and stores it to MongoDB
+// This works
 const createXMLOrder = async (req, res, next) => {
-  let XMLOrder = req.body
+  let XMLOrder = req.body        
   console.log(XMLOrder)
-  let JSONOrder = JSON.stringify(req.body)
-  //JSON.parse(JSONOrder)
-  console.log(JSONOrder)
-  const order = await Order2.create(JSONOrder)
-  //console.log(order)  
-  res.status(StatusCodes.OK).json(JSONOrder)
+  let order = Order.create(XMLOrder)
+  res.status(StatusCodes.CREATED).json(XMLOrder)  
 }
 
-
-
-
-
 // This reads XML from a file and returns it in response
+// This works
 const getOrders = async (_req, res, next) => {  
   readFile('./data/orders.xml', (err, data) => {
     if (err) {
