@@ -3,6 +3,7 @@ require('express-async-errors')
 
 const express = require('express')
 const xmlparser = require('express-xml-bodyparser')
+// Option for express-xml-bodyparser
 const xmlparserOptions = {
   explicitArray: false  
 }
@@ -20,6 +21,7 @@ const morgan = require('morgan')
 
 app.use(express.static('./public'))
 app.use(express.json())
+// Express-xml-bodyparser to parse req.body to JSON
 app.use(xmlparser(xmlparserOptions))
 // Logger middleware
 app.use(morgan('combined'))
