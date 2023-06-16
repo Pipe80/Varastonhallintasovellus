@@ -3,6 +3,9 @@ require('express-async-errors')
 
 const express = require('express')
 const xmlparser = require('express-xml-bodyparser')
+const xmlparserOptions = {
+  explicitArray: false  
+}
 const app = express()
 const orders = require('./routes/orders')
 const PORT = process.env.PORT
@@ -17,7 +20,7 @@ const morgan = require('morgan')
 
 app.use(express.static('./public'))
 app.use(express.json())
-app.use(xmlparser())
+app.use(xmlparser(xmlparserOptions))
 // Logger middleware
 app.use(morgan('combined'))
 
