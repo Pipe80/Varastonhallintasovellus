@@ -1,0 +1,31 @@
+POST http://localhost:3000/api/createJSONOrder
+Content-Type: application/json
+
+{
+  "order_id": "2",
+  "order_status": "In collection",
+  "customer": "Sari",
+  "address": "Sarinkatu 1",
+  "items": [ 
+    {
+      "name": "Auto",
+      "product_id": 4,
+      "item_status": "Collected"
+    },  
+    {
+      "name": "Mopo",
+      "product_id": 5,
+      "item_status": "Collected"
+    }, 
+    {
+      "name": "Kevari",
+      "product_id": 6,
+      "item_status": "Collected"
+    },
+    {
+      "name": "Suklaalevy",
+      "product_id": 7,
+      "item_status": "Not collected"
+    }  
+  ]  
+}
