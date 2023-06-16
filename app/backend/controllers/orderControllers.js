@@ -50,7 +50,7 @@ const createXMLOrder = async (req, res, next) => {
 
 
 
-// This reads XML from a file and returns it in responce
+// This reads XML from a file and returns it in response
 const getOrders = async (_req, res, next) => {
   // use this if data is received in XML
   readFile('./data/orders.xml', (err, data) => {
@@ -69,7 +69,7 @@ const createJSONOrder = async (req, res, _next) => {
   if (Object.keys(req.body).length === 0) {
     throw new APIError('No data in body', StatusCodes.BAD_REQUEST)
   }
-  const order = await Order.create(req.body)
+  const order = await Order2.create(req.body)
   res.status(StatusCodes.CREATED).json({order})
 }
 
