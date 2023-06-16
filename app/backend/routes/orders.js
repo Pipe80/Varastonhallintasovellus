@@ -12,8 +12,8 @@ const {
 router.get('/openOrders', getOrders)
 router.get('/sendXML', sendXML)
 router.post('/createJSONOrder', createJSONOrder)
-
 router.post('/XMLOrderFromFile', createXMLOrderFromFile)
+
 router.post('/XMLOrder', createXMLOrder)
 
 module.exports = router
