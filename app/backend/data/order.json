@@ -1,23 +1,28 @@
 {
-  "orderID": 2,
+  "order_id": "2",
+  "order_status": "In collection",
   "customer": "Sari",
   "address": "Sarinkatu 1",
   "items": [ 
     {
       "name": "Auto",
-      "productID": 4
+      "product_id": 4,
+      "item_status": "Collected"
     },  
     {
       "name": "Mopo",
-      "productID": 5
+      "product_id": 5,
+      "item_status": "Collected"
     }, 
     {
       "name": "Kevari",
-      "productID": 6
+      "product_id": 6,
+      "item_status": "Collected"
     },
     {
       "name": "Suklaalevy",
-      "productID": 7
+      "product_id": 7,
+      "item_status": "Not collected"
     }  
   ]  
 }
