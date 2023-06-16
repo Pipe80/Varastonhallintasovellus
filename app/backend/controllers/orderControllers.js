@@ -39,7 +39,7 @@ const createXMLOrderFromFile = async (req, res, next) => {
 const createXMLOrder = async (req, res, next) => {
   let XMLOrder = req.body        
   console.log(XMLOrder)
-  let order = Order.create(XMLOrder)
+  Order.create(XMLOrder)
   res.status(StatusCodes.CREATED).json(XMLOrder)  
 }
 
