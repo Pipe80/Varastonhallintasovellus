@@ -33,7 +33,6 @@ const getOpenOrders = async (req, res, next) => {
   console.log(req)
 }
 
-
 // Commented controller down from here were just for testing.
 /* 
 // This reads XML from a file and returns it in response
