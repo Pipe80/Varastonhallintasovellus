@@ -8,10 +8,38 @@ const parser = new XMLParser
 // Read files
 const { readFile } = require('fs')
 
+// This takes XML from req.body and stores it to MongoDB
+// This works
+const createOrderFromXML = async (req, res, next) => {
+  // Check that body has data
+  if (Object.keys(req.body).length === 0) {
+    // If no data throw error
+    throw new APIError('No data in body', StatusCodes.BAD_REQUEST)
+  }
+  // If body has data store it to variable
+  let JSONOrder = req.body        
+  console.log(JSONOrder)
+  // Try catch for error handling
+  try {
+    // Asyncronic call to create a new Order to MongoDB
+    await Order.create(JSONOrder)
+    res.status(StatusCodes.CREATED).json(JSONOrder)
+  } catch (err) {
+    next(err)
+  }  
+}
+
+const getOpenOrders = async (req, res, next) => {
+  console.log(req)
+}
+
+
+// Commented controller down from here were just for testing.
+/* 
 // This reads XML from a file and returns it in response
 // This works
 const sendXML = async (req, res, next) => {
-  readFile('./data/order.xm', (err, data) => {
+  readFile('./data/order.xml', (err, data) => {
     if (err) {
       next(err)
     } else {
@@ -36,26 +64,7 @@ const createXMLOrderFromFile = async (req, res, next) => {
   })
 }
 
-// This takes XML from req.body and stores it to MongoDB
-// This works
-const createXMLOrder = async (req, res, next) => {
-  // Check that body has data
-  if (Object.keys(req.body).length === 0) {
-    // If no data throw error
-    throw new APIError('No data in body', StatusCodes.BAD_REQUEST)
-  }
-  // If body has data store it to variable
-  let XMLOrder = req.body        
-  console.log(XMLOrder)
-  // Try catch for error handling
-  try {
-    // Asyncronic call to create a new Order to mongo
-    await Order.create(XMLOrder)
-    res.status(StatusCodes.CREATED).json(XMLOrder)
-  } catch (err) {
-    next(err)
-  }  
-}
+
 
 // This reads XML from a file and returns it in response
 // This works
@@ -80,10 +89,10 @@ const createJSONOrder = async (req, res, _next) => {
   res.status(StatusCodes.CREATED).json({order})
 }
 
+*/
+
+
 module.exports = {
-  getOrders,
-  createJSONOrder,
-  sendXML,
-  createXMLOrderFromFile,
-  createXMLOrder
+  createOrderFromXML,
+  getOpenOrders
 }
