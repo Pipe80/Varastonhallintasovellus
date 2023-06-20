@@ -29,9 +29,16 @@ const createOrderFromXML = async (req, res, next) => {
   }  
 }
 
-const getOpenOrders = async (req, res, next) => {
-  console.log(req)
+// This controller returns all orders stored in database
+// This works
+const getAllOrders = async (req, res, next) => {
+  const orders = await Order.find({})
+  console.log(orders)
+  if (orders) res.status(StatusCodes.OK).json(orders)
+  if (!orders) throw new APIError('No orders in database', StatusCodes.NOT_FOUND)
 }
+
+
 
 // Commented controller down from here were just for testing.
 /* 
@@ -93,5 +100,6 @@ const createJSONOrder = async (req, res, _next) => {
 
 module.exports = {
   createOrderFromXML,
+  getAllOrders,
   getOpenOrders
 }
