@@ -18,46 +18,59 @@ const Navigation = ()  => {
     <NavigationContainer>
       <Tab.Navigator
        screenOptions={{
+        headerStyle: { 
+          backgroundColor: '#fff',
+          height: 100,
+        },
+        headerTintColor: '#000',
         tabBarActiveTintColor: '#02718D',
+        tabBarInactiveTintColor: 'gray',
+        tabBarStyle:{
+          paddingVertical: 5,
+          borderTopLeftRadius:15,
+          borderTopRightRadius:15,
+          backgroundColor:'white',
+          position:'absolute',
+          height:100,
+        },
+        tabBarLabelStyle: {
+          display: "none"
+        },
       }}>
         <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-            <Feather name ="home" color={color} size={size} />
-          ),
+          name="Home"
+          component={HomeScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Feather name ="home" color={color} size={size} />
+            ),
         }}
         />
         <Tab.Screen
-        name="Notifications"
-        component={NotificationsScreen}
-        options={{
-          tabBarLabel: 'Notifications',
-          tabBarIcon: ({ color, size }) => (
-            <Feather name="bell" color={color} size={size} />
-          ),
+          name="Notifications"
+          component={NotificationsScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Feather name="bell" color={color} size={size} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Orders"
+          component={OrdersScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Feather name="package" color={color} size={size} />
+            ),
         }}
         />
         <Tab.Screen
-        name="Orders"
-        component={OrdersScreen}
-        options={{
-          tabBarLabel: 'Orders',
-          tabBarIcon: ({ color, size }) => (
-            <Feather name="package" color={color} size={size} />
-          ),
-        }}
-        />
-        <Tab.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{
-          tabBarLabel: 'Settings',
-          tabBarIcon: ({ color, size }) => (
-            <Feather name="settings" color={color} size={size} />
-          ),
+          name="Settings"
+          component={SettingsScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <Feather name="settings" color={color} size={size} />
+            ),
         }}
         />
       </Tab.Navigator>
