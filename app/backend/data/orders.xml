@@ -1,102 +1,116 @@
 <orders>
   <order>
-    <orderID>1</orderID>
-    <orderStatus>Open</orderStatus>
+    <order_id>1</order_id>
+    <order_status>Open</order_status>
     <customer>Pentti</customer>
     <address>Pentinkatu 1</address>
     <items>
       <item>
         <name>Nappi</name>
-        <productID>1</productID>
+        <pcs>10</pcs>
+        <product_id>1</product_id>
         <itemStatus>Not collected</itemStatus>
       </item>
       <item>
         <name>Lanka</name>
-        <productID>2</productID>
+        <pcs>1</pcs>
+        <product_id>2</product_id>
         <itemStatus>Not collected</itemStatus>
       </item>
       <item>
         <name>Ohje</name>
-        <productID>3</productID>
+        <pcs>1</pcs>
+        <product_id>3</product_id>
         <itemStatus>Not collected</itemStatus>
       </item>
     </items>
   </order>
   <order>
-    <orderID>2</orderID>
-    <orderStatus>In collection</orderStatus>
+    <order_id>2</order_id>
+    <order_status>In collection</order_status>
     <customer>Sari</customer>
     <address>Sarinkatu 1</address>
     <items>
       <item>
         <name>Auto</name>
-        <productID>4</productID>
+        <pcs>1</pcs>
+        <product_id>4</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Mopo</name>
-        <productID>5</productID>
+        <pcs>1</pcs>
+        <product_id>5</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Kevari</name>
-        <productID>6</productID>
+        <pcs>1</pcs>
+        <product_id>6</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Suklaalevy</name>
-        <productID>7</productID>
+        <pcs>3</pcs>
+        <product_id>7</product_id>
         <itemStatus>Not collected</itemStatus>
       </item>
     </items>
   </order>
   <order>
-    <orderID>3</orderID>
-    <orderStatus>Collected</orderStatus>
+    <order_id>3</order_id>
+    <order_status>Collected</order_status>
     <customer>Jouko</customer>
     <address>Joukonkatu 1</address>
     <items>
       <item>
         <name>Tietokone</name>
-        <productID>8</productID>
+        <pcs>1</pcs>
+        <product_id>8</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Hiiri</name>
-        <productID>9</productID>
+        <pcs>1</pcs>
+        <product_id>9</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
     </items>
   </order>
   <order>
-    <orderID>4</orderID>
-    <orderStatus>Collected</orderStatus>
+    <order_id>4</order_id>
+    <order_status>Collected</order_status>
     <customer>Taina</customer>
     <address>Tainankatu 1</address>
     <items>
       <item>
         <name>Johto</name>
-        <productID>10</productID>
+        <pcs>3</pcs>
+        <product_id>10</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Nappi</name>
-        <productID>1</productID>
+        <pcs>74</pcs>
+        <product_id>1</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Lanka</name>
-        <productID>2</productID>
+        <pcs>15</pcs>
+        <product_id>2</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Ohje</name>
-        <productID>3</productID>
+        <pcs>2</pcs>
+        <product_id>3</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
       <item>
         <name>Kevari</name>
-        <productID>6</productID>
+        <pcs>1</pcs>
+        <product_id>6</product_id>
         <itemStatus>Collected</itemStatus>
       </item>
     </items> 
