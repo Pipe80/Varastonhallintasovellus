@@ -31,7 +31,7 @@ const createOrderFromXML = async (req, res, next) => {
 
 // This controller returns all orders stored in database
 // This works
-const getAllOrders = async (req, res, next) => {
+const getAllOrders = async (_req, res, _next) => {
   const orders = await Order.find({})
   console.log(orders)
   if (orders.length === 0) throw new APIError('No orders in database', StatusCodes.NOT_FOUND)
@@ -40,13 +40,23 @@ const getAllOrders = async (req, res, next) => {
 
 // This controller returns all orders that are marked as open
 // This works
-const getOpenOrders = async (req, res, next) => {
+const getOpenOrders = async (_req, res, _next) => {
   const queryObject = {}
   queryObject.order_status = "In collection"
   const orders = await Order.find({'order.order_status': 'Open'})
   console.log(orders)
   if (orders.length === 0) throw new APIError('No open orders in database', StatusCodes.NOT_FOUND)
   res.status(StatusCodes.OK).json(orders)  
+}
+
+const editOrder = async (req, res) => {
+  console.log(req.params.id)
+  const newInformation = req.body
+  const editedOrder = await Order.findByIdAndUpdate(req.params.id, newInformation)
+  res.status(StatusCodes.OK).json({
+    success: true,
+    message: `Order updated!`
+  })
 }
 
 // Commented controller down from here were just for testing.
@@ -110,5 +120,6 @@ const createJSONOrder = async (req, res, _next) => {
 module.exports = {
   createOrderFromXML,
   getAllOrders,
-  getOpenOrders
+  getOpenOrders,
+  editOrder
 }
