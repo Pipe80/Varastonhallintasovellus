@@ -45,6 +45,7 @@ const getOpenOrders = async (req, res, next) => {
   queryObject.order_status = "In collection"
   const orders = await Order.find({'order.order_status': 'Open'})
   console.log(orders)
+  if (orders.length === 0) throw new APIError('No open orders in database', StatusCodes.NOT_FOUND)
   res.status(StatusCodes.OK).json(orders)  
 }
 
