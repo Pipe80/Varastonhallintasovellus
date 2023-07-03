@@ -35,7 +35,7 @@ const getAllOrders = async (req, res, next) => {
   const orders = await Order.find({})
   console.log(orders)
   if (orders.length === 0) throw new APIError('No orders in database', StatusCodes.NOT_FOUND)
-  if (orders) res.status(StatusCodes.OK).json(orders)  
+  res.status(StatusCodes.OK).json(orders)  
 }
 
 // This controller returns all orders that are marked as open
