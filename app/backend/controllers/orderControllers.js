@@ -34,8 +34,8 @@ const createOrderFromXML = async (req, res, next) => {
 const getAllOrders = async (req, res, next) => {
   const orders = await Order.find({})
   console.log(orders)
-  if (orders) res.status(StatusCodes.OK).json(orders)
-  if (!orders) throw new APIError('No orders in database', StatusCodes.NOT_FOUND)
+  if (orders.length === 0) throw new APIError('No orders in database', StatusCodes.NOT_FOUND)
+  if (orders) res.status(StatusCodes.OK).json(orders)  
 }
 
 // This controller returns all orders that are marked as open
@@ -45,8 +45,7 @@ const getOpenOrders = async (req, res, next) => {
   queryObject.order_status = "In collection"
   const orders = await Order.find({'order.order_status': 'Open'})
   console.log(orders)
-  res.status(StatusCodes.OK).json(orders)
-  
+  res.status(StatusCodes.OK).json(orders)  
 }
 
 // Commented controller down from here were just for testing.
