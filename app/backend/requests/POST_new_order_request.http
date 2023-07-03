@@ -2,34 +2,40 @@ POST http://localhost:3000/api/createOrderFromXML
 Content-Type: text/xml
 
 <order>
-  <order_id>2</order_id>
-  <order_status>In collection</order_status>
-  <customer>Sari</customer>
-  <address>Sarinkatu 1</address>
-  <items>
-    <item>
-      <name>Auto</name>
-      <pcs>1</pcs>
-      <product_id>4</product_id>
-      <item_status>Collected</item_status>
-    </item>
-    <item>
-      <name>Mopo</name>
-      <pcs>1</pcs>
-      <product_id>5</product_id>
-      <item_status>Collected</item_status>
-    </item>
-    <item>
-      <name>Kevari</name>
-      <pcs>1</pcs>
-      <product_id>6</product_id>
-      <item_status>Collected</item_status>
-    </item>
-    <item>
-      <name>Suklaalevy</name>
-      <pcs>3</pcs>
-      <product_id>7</product_id>
-      <item_status>Not collected</item_status>
-    </item>
-  </items>
-</order>
+    <order_id>4</order_id>
+    <order_status>Collected</order_status>
+    <customer>Taina</customer>
+    <address>Tainankatu 1</address>
+    <items>
+      <item>
+        <name>Johto</name>
+        <pcs>3</pcs>
+        <product_id>10</product_id>
+        <item_status>Collected</item_status>
+      </item>
+      <item>
+        <name>Nappi</name>
+        <pcs>74</pcs>
+        <product_id>1</product_id>
+        <item_status>Collected</item_status>
+      </item>
+      <item>
+        <name>Lanka</name>
+        <pcs>15</pcs>
+        <product_id>2</product_id>
+        <item_status>Collected</item_status>
+      </item>
+      <item>
+        <name>Ohje</name>
+        <pcs>2</pcs>
+        <product_id>3</product_id>
+        <item_status>Collected</item_status>
+      </item>
+      <item>
+        <name>Kevari</name>
+        <pcs>1</pcs>
+        <product_id>6</product_id>
+        <item_status>Collected</item_status>
+      </item>
+    </items> 
+  </order>
