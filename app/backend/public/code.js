@@ -5,6 +5,11 @@ async function loadOrders() {
 }
 
 async function showOrders(orders) {
+  if (orders.message) {
+    let errorMessage = document.getElementById('errorMessage')
+    let errorText = document.createTextNode(orders.message)
+    errorMessage.appendChild(errorText)
+  }
   let orderList = document.getElementById('orderList')  
   orders.forEach(order => {    
     let liNode = document.createElement('li')
