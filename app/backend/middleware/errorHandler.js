@@ -10,6 +10,7 @@ const errorHandler = (err, _req, res, _next) => {
     return res.status(StatusCodes.BAD_REQUEST).send({ success: false, message: err.message})
   }
   if (err instanceof APIError) {
+    console.log('Error code: ' + err.statusCode + ', error message: ' + err.message)
     return res.status(err.statusCode).json({ message: err.message})
   }  
   if (err.code === 'ENOENT') {
