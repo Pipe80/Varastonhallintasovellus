@@ -9,19 +9,19 @@
         <name>Nappi</name>
         <pcs>10</pcs>
         <product_id>1</product_id>
-        <itemStatus>Not collected</itemStatus>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
         <pcs>1</pcs>
         <product_id>2</product_id>
-        <itemStatus>Not collected</itemStatus>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
         <pcs>1</pcs>
         <product_id>3</product_id>
-        <itemStatus>Not collected</itemStatus>
+        <item_status>Not collected</item_status>
       </item>
     </items>
   </order>
@@ -35,25 +35,25 @@
         <name>Auto</name>
         <pcs>1</pcs>
         <product_id>4</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Mopo</name>
         <pcs>1</pcs>
         <product_id>5</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Kevari</name>
         <pcs>1</pcs>
         <product_id>6</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Suklaalevy</name>
         <pcs>3</pcs>
         <product_id>7</product_id>
-        <itemStatus>Not collected</itemStatus>
+        <item_status>Not collected</item_status>
       </item>
     </items>
   </order>
@@ -67,13 +67,13 @@
         <name>Tietokone</name>
         <pcs>1</pcs>
         <product_id>8</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Hiiri</name>
         <pcs>1</pcs>
         <product_id>9</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
     </items>
   </order>
@@ -87,31 +87,31 @@
         <name>Johto</name>
         <pcs>3</pcs>
         <product_id>10</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Nappi</name>
         <pcs>74</pcs>
         <product_id>1</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
         <pcs>15</pcs>
         <product_id>2</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
         <pcs>2</pcs>
         <product_id>3</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
       <item>
         <name>Kevari</name>
         <pcs>1</pcs>
         <product_id>6</product_id>
-        <itemStatus>Collected</itemStatus>
+        <item_status>Collected</item_status>
       </item>
     </items> 
   </order>
