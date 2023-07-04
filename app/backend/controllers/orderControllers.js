@@ -55,7 +55,7 @@ const editOrder = async (req, res) => {
   console.log(req.params.id)   
   const idOfOrder = req.params.id  
   const newInformation = req.body 
-  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation)
+  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation, { runValidators: true })
   // If no document is found throw new APIError
   if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
   // Respond that request was succesfull if document is found with
