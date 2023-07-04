@@ -50,9 +50,11 @@ const getOpenOrders = async (_req, res, _next) => {
 }
 
 const editOrder = async (req, res) => {
-  console.log(req.params.id)
-  const newInformation = req.body
-  const editedOrder = await Order.findByIdAndUpdate(req.params.id, newInformation)
+  console.log(req.params.id)  
+  const idOfOrder = req.params.id
+  const newInformation = req.body  
+  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation)
+  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
   res.status(StatusCodes.OK).json({
     success: true,
     message: `Order updated!`
