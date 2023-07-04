@@ -19,9 +19,6 @@ const errorHandler = (err, _req, res, _next) => {
     console.log('Error code: ' + err.statusCode + ', error message: ' + err.message)
     return res.status(err.statusCode).json({ message: err.message})
   }
-  if (err.code === 'ENOENT') {
-    return res.status(StatusCodes.NOT_FOUND).json( {message: 'No file found in path: ' + err.path })
-  } 
   // If error is not handled by earlier if statements => 500
   return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(err)
 }
