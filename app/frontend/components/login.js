@@ -1,13 +1,12 @@
 import React from 'react';
-import Styles from './styles';
-import { Text, View } from 'react-native';
+import HomeScreen from './HomeScreen';
+import Login from './components/login';
 
-const Login = ()  => {
+export default function App() {
   return (
-    <View style={Styles.container}>
-      <Text>Hello World! :)</Text>
-    </View>
+    <>
+      <HomeScreen />
+      <Login />
+    </>
   );
-};
-
-export default Login;
+}
