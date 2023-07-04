@@ -8,11 +8,11 @@ const itemSchema = new mongoose.Schema({
 })
 const orderSchema = new mongoose.Schema({
   order: {
-    order_id: { type: String, required: true },
+    order_id: { type: String, required: true, unique: true },
     order_status: { type: String, required: true },
     customer: { type: String, required: true },
     address: { type: String, required: true },
-    items: {item: [itemSchema]}
+    items: { item: [itemSchema] }
   }
 })
 
