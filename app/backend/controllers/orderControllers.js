@@ -49,12 +49,17 @@ const getOpenOrders = async (_req, res, _next) => {
   res.status(StatusCodes.OK).json(orders)  
 }
 
+// This controller is used to edit documents stored in MongoDB
+// This works
 const editOrder = async (req, res) => {
-  console.log(req.params.id)  
-  const idOfOrder = req.params.id
-  const newInformation = req.body  
+  console.log(req.params.id)   
+  const idOfOrder = req.params.id  
+  const newInformation = req.body 
   const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation)
+  // If no document is found throw new APIError
   if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
+  // Respond that request was succesfull if document is found with
+  // provided id.
   res.status(StatusCodes.OK).json({
     success: true,
     message: `Order updated!`
