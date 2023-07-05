@@ -3,6 +3,10 @@
   <order_status>In collection</order_status>
   <customer>Sari</customer>
   <address>Sarinkatu 1</address>
+  <postal_code>3456</postal_code>
+  <city>SariPolis</city>
+  <phone>345678912</phone>
+  <email>sari@sari.com</email>
   <items>
     <item>
       <name>Auto</name>

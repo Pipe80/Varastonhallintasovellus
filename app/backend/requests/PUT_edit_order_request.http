@@ -1,41 +1,33 @@
-PUT http://localhost:3000/api/editOrder/64a2ac7b802ade2b3b62571c
+PUT http://localhost:3000/api/editOrder/64a5416ef28dac47a925b14f
 Content-Type: text/xml
 
 <order>
-    <order_id>4</order_id>
-    <order_status>Collected</order_status>
-    <customer>Taina</customer>
-    <address>Tainankatu 1</address>
+    <order_id>1</order_id>
+    <order_status>Open</order_status>
+    <customer>Pentti</customer>
+    <address>Pentinkatu 2</address>
+    <postal_code>4567</postal_code>
+    <city>PenttiPolis</city>
+    <phone>456789123</phone>
+    <email>pentti@pentti.com</email>
     <items>
       <item>
-        <name>Johto</name>
-        <pcs>3</pcs>
-        <product_id>10</product_id>
-        <item_status>Collected</item_status>
-      </item>
-      <item>
         <name>Nappi</name>
-        <pcs>74</pcs>
+        <pcs>10</pcs>
         <product_id>1</product_id>
-        <item_status>Collected</item_status>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
-        <pcs>15</pcs>
+        <pcs>1</pcs>
         <product_id>2</product_id>
-        <item_status>Collected</item_status>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
-        <pcs>2</pcs>
-        <product_id>3</product_id>
-        <item_status>Collected</item_status>
-      </item>
-      <item>
-        <name>Kevari</name>
         <pcs>1</pcs>
-        <product_id>6</product_id>
-        <item_status>Collected</item_status>
+        <product_id>3</product_id>
+        <item_status>Not collected</item_status>
       </item>
-    </items> 
-  </order>
+    </items>
+</order>

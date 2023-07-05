@@ -4,6 +4,10 @@
     <order_status>Open</order_status>
     <customer>Pentti</customer>
     <address>Pentinkatu 1</address>
+    <postal_code>4567</postal_code>
+    <city>PenttiPolis</city>
+    <phone>456789123</phone>
+    <email>pentti@pentti.com</email>
     <items>
       <item>
         <name>Nappi</name>
@@ -30,6 +34,10 @@
     <order_status>In collection</order_status>
     <customer>Sari</customer>
     <address>Sarinkatu 1</address>
+    <postal_code>3456</postal_code>
+    <city>SariPolis</city>
+    <phone>345678912</phone>
+    <email>sari@sari.com</email>
     <items>
       <item>
         <name>Auto</name>
@@ -62,6 +70,10 @@
     <order_status>Collected</order_status>
     <customer>Jouko</customer>
     <address>Joukonkatu 1</address>
+    <postal_code>2345</postal_code>
+    <city>JoukoPolis</city>
+    <phone>234567891</phone>
+    <email>jouko@jouko.com</email>
     <items>
       <item>
         <name>Tietokone</name>
@@ -82,6 +94,10 @@
     <order_status>Collected</order_status>
     <customer>Taina</customer>
     <address>Tainankatu 1</address>
+    <postal_code>1234</postal_code>
+    <city>TainaPolis</city>
+    <phone>123456789</phone>
+    <email>taina@taina.com</email>
     <items>
       <item>
         <name>Johto</name>
