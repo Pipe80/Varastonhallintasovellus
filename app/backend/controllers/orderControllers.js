@@ -1,7 +1,10 @@
+require('dotenv').config()
 const Order = require('../models/Order')
 const Order2 = require('../models/Order2')
 const APIError = require('../errors/apierror')
 const { StatusCodes } = require('http-status-codes')
+// middleware for sending emails
+const nodemailer = require('nodemailer');
 // XML => JSON and JSON => XML
 const { XMLParser, XMLBuilder } = require('fast-xml-parser');
 const parser = new XMLParser
@@ -66,14 +69,43 @@ const editOrder = async (req, res) => {
   })
 }
 
+// This controller is used to receive a fully collected order
+// This still needs connection to freight API
 const collectedOrder = async (req, res) => {
   const idOfOrder = req.params.id  
   const newInformation = req.body 
   const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation, { runValidators: true })
   // If no document is found throw new APIError
-  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
+  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)  
   
-  // Respond that request was succesfull if document is found with
+  // Create transport for email
+  let transport = nodemailer.createTransport({
+    host: 'smtp.mailtrap.io',
+    port: 2525,
+    auth: {
+      user: process.env.EMAIL_USERNAME,
+      pass: process.env.EMAIL_PASSWORD
+    }
+  })
+
+  // Options for email
+  const mailOptions = {
+    from: process.env.SENDER_EMAIL, // Sender address
+    to: `${newInformation.order.email}`, // List of recipients
+    subject: 'Keräily on suoritettu', // Subject line
+    text: `Terve ${newInformation.order.customer}`, // Plain text body
+  };
+
+  // Send email with given options
+  transport.sendMail(mailOptions, function(err, info) {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log(info);
+    }
+  });
+
+  // Respond that request was succesful if document is found with
   // provided id.
   res.status(StatusCodes.OK).json({
     success: true,
