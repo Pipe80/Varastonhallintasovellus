@@ -1,44 +1,13 @@
-require('dotenv').config()
 const Order = require('../models/Order')
 const Order2 = require('../models/Order2')
 const APIError = require('../errors/apierror')
 const { StatusCodes } = require('http-status-codes')
-// middleware for sending emails
-const nodemailer = require('nodemailer');
+const sendEmail = require('../middleware/sendEmail')
 // XML => JSON and JSON => XML
 const { XMLParser, XMLBuilder } = require('fast-xml-parser');
 const parser = new XMLParser
 // Read files
 const { readFile } = require('fs')
-
-const sendEmail = (recipient, emailHeader, emailText) => {
-   // Create transport for email
-   let transport = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
-    auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD
-    }
-  })
-
-  // Options for email
-  const mailOptions = {
-    from: process.env.SENDER_EMAIL, // Sender address
-    to: recipient, // List of recipients
-    subject: emailHeader, // Subject line
-    text: emailText, // Plain text body
-  };
-
-  // Send email with given options
-  transport.sendMail(mailOptions, function(err, info) {
-    if (err) {
-      console.log(err)
-    } else {
-      console.log(info);
-    }
-  });
-}
 
 // This takes XML from req.body and stores it to MongoDB
 // This works
@@ -98,7 +67,8 @@ const editOrder = async (req, res) => {
   })
 }
 
-// This controller is used to change the state of order
+// This controller is used to change 
+// the state of an order (Open => In Collection)
 // This works
 const collectingStarted = async (req, res) => {
   console.log(req.params.id)   
@@ -110,7 +80,7 @@ const collectingStarted = async (req, res) => {
 
   // Let's create information for email
   const recipient = newInformation.order.email
-  const emailHeader = 'Keräily aloitettu'
+  const emailHeader = 'Keräily on aloitettu'
   const emailText = `
     Terve ${newInformation.order.customer}!
     
@@ -120,7 +90,7 @@ const collectingStarted = async (req, res) => {
     Verkkokauppa
     `
 
-  // Call sendEmail function with email information
+  // Call sendEmail middleware with email information
   sendEmail(recipient, emailHeader, emailText)
 
   // Respond that request was succesfull if document is found with
@@ -140,32 +110,24 @@ const collectedOrder = async (req, res) => {
   // If no document is found throw new APIError
   if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)  
   
-  // Create transport for email
-  let transport = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
-    auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD
-    }
-  })
+  // Let's create information for email
+  const recipient = newInformation.order.email
+  const emailHeader = 'Keräily on suoritettu'
+  const emailText = `
+    Terve ${newInformation.order.customer}!
+    
+    Tilauksesi keräily on suoritettu.
 
-  // Options for email
-  const mailOptions = {
-    from: process.env.SENDER_EMAIL, // Sender address
-    to: `${newInformation.order.email}`, // List of recipients
-    subject: 'Keräily on suoritettu', // Subject line
-    text: `Terve ${newInformation.order.customer}`, // Plain text body
-  };
+    Saat hetken kuluttua rahtiyhtiöltä viestin, jossa on tilauksesi seurantakoodi.
+    
+    Kiitos tilauksesta!
 
-  // Send email with given options
-  transport.sendMail(mailOptions, function(err, info) {
-    if (err) {
-      console.log(err)
-    } else {
-      console.log(info);
-    }
-  });
+    Ystävällisin terveisin
+    Verkkokauppa
+    `
+
+  // Call sendEmail middleware with email information
+  sendEmail(recipient, emailHeader, emailText)
 
   // Respond that request was succesful if document is found with
   // provided id.
