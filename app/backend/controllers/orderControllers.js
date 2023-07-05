@@ -50,25 +50,9 @@ const getOpenOrders = async (_req, res, _next) => {
   res.status(StatusCodes.OK).json(orders)  
 }
 
-// This controller is used to edit documents stored in MongoDB
-// This works
-const editOrder = async (req, res) => {
-  console.log(req.params.id)   
-  const idOfOrder = req.params.id  
-  const newInformation = req.body 
-  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation, { runValidators: true })
-  // If no document is found throw new APIError
-  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
-  // Respond that request was succesfull if document is found with
-  // provided id.
-  res.status(StatusCodes.OK).json({
-    success: true,
-    message: `Order updated!`
-  })
-}
-
-// This controller is used to change 
-// the state of an order (Open => In Collection)
+// This controller is used to change the state of an order 
+// (Open => In Collection).
+// Use this controller when user selects an order for collecting
 // This works
 const collectingStarted = async (req, res) => {
   console.log(req.params.id)   
@@ -101,7 +85,26 @@ const collectingStarted = async (req, res) => {
   })
 }
 
+// This controller is used to edit documents stored in MongoDB
+// Use this controller to update each item that is collected
+// This works
+const editOrder = async (req, res) => {
+  console.log(req.params.id)   
+  const idOfOrder = req.params.id  
+  const newInformation = req.body 
+  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation, { runValidators: true })
+  // If no document is found throw new APIError
+  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
+  // Respond that request was succesfull if document is found with
+  // provided id.
+  res.status(StatusCodes.OK).json({
+    success: true,
+    message: `Order updated!`
+  })
+}
+
 // This controller is used to receive a fully collected order
+// Use this controller when user confirms that collecting is complete
 // This still needs connection to freight API
 const collectedOrder = async (req, res) => {
   const idOfOrder = req.params.id  
@@ -137,11 +140,19 @@ const collectedOrder = async (req, res) => {
   })
 }
 
+// This controller is used if all the items in order can't be found
+// Use this route if something can't be found from warehouse
+const itemsMissing = (req, res) => {
+  const idOfOrder = req.params.id  
+  const newInformation = req.body
+}
+
 module.exports = {
   createOrderFromXML,
   getAllOrders,
   getOpenOrders,
   editOrder,
   collectingStarted,
-  collectedOrder
+  collectedOrder,
+  itemsMissing
 }
