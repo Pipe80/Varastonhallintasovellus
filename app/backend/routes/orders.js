@@ -6,6 +6,7 @@ const {
   getAllOrders,
   getOpenOrders,
   editOrder,
+  collectingStarted,
   collectedOrder,
 } = require('../controllers/orderControllers.js')
 
@@ -17,6 +18,8 @@ router.get('/getAllOrders', getAllOrders)
 router.get('/getOpenOrders', getOpenOrders)
 // route for editing an order in database
 router.put('/editOrder/:id', editOrder)
+// route for starting collecting
+router.put('/collectingStarted/:id', collectingStarted)
 // route for completelly collected orders
 router.put('/collectedOrder/:id', collectedOrder)
 
