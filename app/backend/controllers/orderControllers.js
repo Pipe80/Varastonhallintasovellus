@@ -66,6 +66,21 @@ const editOrder = async (req, res) => {
   })
 }
 
+const collectedOrder = async (req, res) => {
+  const idOfOrder = req.params.id  
+  const newInformation = req.body 
+  const editedOrder = await Order.findByIdAndUpdate(idOfOrder, newInformation, { runValidators: true })
+  // If no document is found throw new APIError
+  if (!editedOrder) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
+  
+  // Respond that request was succesfull if document is found with
+  // provided id.
+  res.status(StatusCodes.OK).json({
+    success: true,
+    message: `Order updated!`
+  })
+}
+
 // Commented controller down from here were just for testing.
 /* 
 // This reads XML from a file and returns it in response
@@ -128,5 +143,6 @@ module.exports = {
   createOrderFromXML,
   getAllOrders,
   getOpenOrders,
-  editOrder
+  editOrder,
+  collectedOrder
 }

@@ -5,12 +5,14 @@ const {
   createOrderFromXML,
   getAllOrders,
   getOpenOrders,
-  editOrder
+  editOrder,
+  collectedOrder,
 } = require('../controllers/orderControllers.js')
 
 router.post('/createOrderFromXML', createOrderFromXML)
 router.get('/getAllOrders', getAllOrders)
 router.get('/getOpenOrders', getOpenOrders)
 router.put('/editOrder/:id', editOrder)
+router.put('/collectedOrder/:id', collectedOrder)
 
 module.exports = router
