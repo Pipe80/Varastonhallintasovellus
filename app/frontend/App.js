@@ -1,16 +1,20 @@
 import React from 'react';
-import Login from './components/login';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Button } from 'react-native';
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('./ids.jpeg')}
+        source={require('./ids2.png')}
       />
-      <Text style={styles.title}>Tervetuloa!:)</Text>
-      <Text style={styles.subtitle}>Etusivu testi</Text>
+  
+      <View style={styles.buttonContainer}>
+        <Button title="Kirjaudu sisään" onPress={() => console.log('Kirjaudu sisään')} />
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button title="Luo tili" onPress={() => console.log('Luo tili')} />
+      </View>
     </View>
   );
 };
@@ -20,18 +24,24 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#bde0fe',
   },
   logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
+    width: 200,
+    height: 200,
+    marginBottom: 90,
+
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
-    marginBottom: 10,
+    fontFamily: 'Lato',
+    marginBottom: 20,
   },
+  buttonContainer: {
+    width: '60%', 
+    marginVertical: 10,},
+
   subtitle: {
     fontSize: 18,
     color: '#888',
