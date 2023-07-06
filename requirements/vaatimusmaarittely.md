@@ -446,3 +446,11 @@ Dokumentaatio: Palvelun tulee sisältää kattava dokumentaatio, joka sisältä�
 Palvelun tulee myös täyttää Android-sovelluksille asetetut turvavaatimukset, kuten käyttäjätietojen suojaus ja tietojen salaus.
 
 Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datamääriä.
+
+# Graafinen ohjeistus
+
+Värit: Sovelluksessa käytetyt värit tulee käyttää annetulla tavalla seuraavasti:
+
+  * #FFFFFF (Sovelluksen pohja väri)
+  * #BAE7F7 (Taustaväri)
+  * #02718D (Sovelluksen header, footer ja painikkeet)
