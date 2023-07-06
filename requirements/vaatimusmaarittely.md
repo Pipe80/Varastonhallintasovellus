@@ -449,8 +449,9 @@ Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datam
 
 # Graafinen ohjeistus
 
-Värit: Sovelluksessa käytetyt värit tulee käyttää annetulla tavalla seuraavasti:
+Väri: Sovelluksessa käytetyt värikoodit tulee käyttää annetulla tavalla seuraavasti:
 
-  * #FFFFFF (Sovelluksen pohja väri)
+  * #FFFFFF (Sovelluksen pohjalle sekä kuvakkeita varten käytetty väri)
   * #BAE7F7 (Taustaväri)
   * #02718D (Sovelluksen header, footer ja painikkeet)
+  * #8D0101 (Toinen väri headeria varten, kun sovellus havaitsee virheen QR koodin skannauksen yhteydessä)
