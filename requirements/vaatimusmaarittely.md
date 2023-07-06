@@ -451,7 +451,16 @@ Palvelun tulee myös olla skaalautuva ja kykenevä käsittelemään suuria datam
 
 Väri: Sovelluksessa käytetyt värikoodit tulee käyttää annetulla tavalla seuraavasti:
 
-  * #FFFFFF (Sovelluksen pohjalle sekä kuvakkeita varten käytetty väri)
+  * #FFFFFF (Sovelluksen pohja, tekstikentät sekä kuvakkeita varten käytetty väri)
   * #BAE7F7 (Taustaväri)
   * #02718D (Sovelluksen header, footer ja painikkeet)
   * #8D0101 (Toinen väri headeria varten, kun sovellus havaitsee virheen QR koodin skannauksen yhteydessä)
+
+Mitat: Nämä mitat on otettava huomioon seuraaville elementeille:
+
+  * Kirjautuminen/ Luo tili painike (292x52)
+  * Tekstikentät (292x52)
+  * Header/ Footer (360x74) 
+  * Logo (229x162)
+  * Pienpainikkeet (24x24)
+  * Teksti (Lato),(18)
