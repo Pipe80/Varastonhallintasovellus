@@ -29,6 +29,8 @@
 
 [**Tekniset vaatimukset**](#tekniset-vaatimukset)
 
+[**Graafinen ohjeistus**](#graafinen-ohjeistus)
+
 <br>
 
 # Johdanto
