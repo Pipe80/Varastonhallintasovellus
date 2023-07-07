@@ -1,30 +1,26 @@
 async function loadOrders() {
-  let result = await fetch('http://localhost:3000/api/openOrders')
+  let result = await fetch('http://localhost:3000/api/getAllOrders')
   let orders = await result.json()
   showOrders(orders)
 }
 
 async function showOrders(orders) {
-  let orderList = document.getElementById('orderList')
-  
-  // use this if backend is using XML format
-  orders.orders.order.forEach(order => {
-  // use this if backend is using JSON format
-  //orders.forEach(order => {
+  if (orders.message) {
+    let errorMessage = document.getElementById('errorMessage')
+    let errorText = document.createTextNode(orders.message)
+    errorMessage.appendChild(errorText)
+  }
+  let orderList = document.getElementById('orderList')  
+  orders.forEach(order => {    
     let liNode = document.createElement('li')
-    let txtNode = document.createTextNode(`Customer: ${order.customer}, OrderID: ${order.orderID}`)
+    let txtNode = document.createTextNode(`Customer: ${order.order.customer}, OrderID: ${order.order.order_id}`)
     liNode.appendChild(txtNode)
     orderList.appendChild(liNode)
   })
 
   // HTML table => variable 'tableNode'
   let tableNode = document.getElementById('orderTable')  
-
-  // use this if backend is using XML format
-  orders.orders.order.forEach(order => {
-  // use this if backend is using JSON format  
-  //orders.forEach(order => {
-
+  orders.forEach(order => {
     // First we create headers for orderID, customer and address
     // Let's create headers for each order
     let th1Node = document.createElement('th')
@@ -48,7 +44,7 @@ async function showOrders(orders) {
     tableNode.appendChild(th4Node) 
 
     // Then we create headers for items
-    for (let i = 0; i < order.items.item.length; i++) {
+    for (let i = 0; i < order.order.items.item.length; i++) {
       let itemNro = i + 1
       // Create a header for each item.name
       let th1Node = document.createElement('th')
@@ -82,10 +78,10 @@ async function showOrders(orders) {
     let td3Node = document.createElement('td')
     let td4Node = document.createElement('td')
     // Order number, customer name and customer address
-    let th1TxtNode = document.createTextNode(`${order.orderID}`)
-    let th2TxtNode = document.createTextNode(`${order.orderStatus}`)
-    let th3TxtNode = document.createTextNode(`${order.customer}`)
-    let th4TxtNode = document.createTextNode(`${order.address}`)
+    let th1TxtNode = document.createTextNode(`${order.order.order_id}`)
+    let th2TxtNode = document.createTextNode(`${order.order.order_status}`)
+    let th3TxtNode = document.createTextNode(`${order.order.customer}`)
+    let th4TxtNode = document.createTextNode(`${order.order.address}`)
     // Add order number, customer name and 
     // customer address to data shells
     td1Node.appendChild(th1TxtNode)
@@ -101,19 +97,19 @@ async function showOrders(orders) {
     tableNode.appendChild(trNode)
 
     // Lastly we create data shells for item names
-    for (let i = 0; i < order.items.item.length; i++) {
+    for (let i = 0; i < order.order.items.item.length; i++) {
       // Create data shell for item.name
       let td1Node = document.createElement('td')
       // Create txt node for item.name
-      let td1TxtNode = document.createTextNode(order.items.item[i].name)
+      let td1TxtNode = document.createTextNode(order.order.items.item[i].name)
       // Create data shell for item.productID
       let td2Node = document.createElement('td')
       // Create txt node for item.productID
-      let td2TxtNode = document.createTextNode(order.items.item[i].productID)
+      let td2TxtNode = document.createTextNode(order.order.items.item[i].product_id)
        // Create data shell for item.itemStatus
        let td3Node = document.createElement('td')
        // Create txt node for item.itemStatus
-       let td3TxtNode = document.createTextNode(order.items.item[i].itemStatus)
+       let td3TxtNode = document.createTextNode(order.order.items.item[i].item_status)
       // Add item.name to data shell
       td1Node.appendChild(td1TxtNode)      
       // Add item.name data shell to table row

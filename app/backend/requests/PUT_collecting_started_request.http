@@ -1,0 +1,33 @@
+PUT http://localhost:3000/api/collectingStarted/64a550ad189b5d629f56282b
+Content-Type: text/xml
+
+<order>
+    <order_id>1</order_id>
+    <order_status>In collection</order_status>
+    <customer>Pentti</customer>
+    <address>Pentinkatu 1</address>
+    <postal_code>4567</postal_code>
+    <city>PenttiPolis</city>
+    <phone>456789123</phone>
+    <email>pentti@pentti.com</email>
+    <items>
+      <item>
+        <name>Nappi</name>
+        <pcs>10</pcs>
+        <product_id>1</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Lanka</name>
+        <pcs>1</pcs>
+        <product_id>2</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Ohje</name>
+        <pcs>1</pcs>
+        <product_id>3</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+    </items>
+  </order>
