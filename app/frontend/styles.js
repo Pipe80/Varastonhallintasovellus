@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#BAE7F7',
   },
   logo: {
-    width: 200,
+    width: 229,
     height: 200,
     marginBottom: 10,
   },
@@ -21,9 +21,12 @@ const styles = StyleSheet.create({
 
   buttonContainer: {
     backgroundColor: '#02718D',
-    width: '50%',
-    height: 37,
+    width: 292,
+    height: 52,
     marginVertical: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
   },
 
   header: {
@@ -32,6 +35,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 20,
     backgroundColor: '#02718D',
+    width: 360,
+    height: 74,
   },
   backButton: {
     marginRight: 10,
@@ -42,8 +47,8 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   input: {
-    width: '80%',
-    height: 40,
+    width: 292,
+    height: 52,
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 5,
@@ -61,10 +66,12 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     backgroundColor: '#02718D',
-    paddingHorizontal: 20,
+    paddingHorizontal: 60,
     paddingVertical: 10,
     borderRadius: 5,
     alignSelf: 'center',
+    width: 200, 
+    height: 50, 
   },
   loginButtonText: {
     color: '#fff',
