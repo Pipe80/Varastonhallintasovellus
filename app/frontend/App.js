@@ -1,22 +1,21 @@
 import React from 'react';
-import { View, Text, Image, Button } from 'react-native';
-import styles from './styles.js';
+import { View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './homescreen';
+import LoginScreen from './LoginScreen';
 
-const HomeScreen = () => {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.logo}
-        source={require('./ids.jpeg')}
-      />
-      <View style={styles.buttonContainer}>
-        <Button title="Kirjaudu sisään" onPress={() => console.log('Kirjaudu sisään')} color="#02718D" />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Luo tili" onPress={() => console.log('Luo tili')} color="#02718D" />
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
-export default HomeScreen;
+export default App;
