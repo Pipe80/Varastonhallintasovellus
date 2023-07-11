@@ -4,12 +4,12 @@ import { Text, View } from 'react-native';
 // Styled-components
 import { Container } from '../styles';
 
-const OrdersScreen = () => {
+const NotificationsScreen = () => {
     return (
             <Container>
-                <Text>Orders</Text>
+                <Text>Notifications screen content</Text>
             </Container>
         );
 };
 
-export default OrdersScreen;
+export default NotificationsScreen;

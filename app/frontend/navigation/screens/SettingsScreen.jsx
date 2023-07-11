@@ -7,7 +7,7 @@ import { Container } from '../styles';
 const SettingsScreen = () => {
     return (
             <Container>
-                <Text>Settings</Text>
+                <Text>Settings screen content</Text>
             </Container>
         );
 };

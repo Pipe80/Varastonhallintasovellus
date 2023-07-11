@@ -7,7 +7,7 @@ import { Container } from '../styles';
 const HomeScreen = () => {
     return (
             <Container>
-                <Text>Home</Text>
+                <Text>Home screen content</Text>
             </Container>
         );
 };
