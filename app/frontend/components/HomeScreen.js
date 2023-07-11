@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from '../Login/styles';
-import logo from '../../assets/logo.png';
+import styles from '../styles/Login';
+import logo from '../assets/logo.png';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
