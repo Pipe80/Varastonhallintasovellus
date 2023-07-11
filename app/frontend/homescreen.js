@@ -14,7 +14,7 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Image
         style={styles.logo}
-        source={require('./ids2.png')}
+        source={require('./logo.png')}
       />
       <View style={styles.buttonContainer}>
         <Button title="Kirjaudu sisään" onPress={handleLogin} color="#02718D" />

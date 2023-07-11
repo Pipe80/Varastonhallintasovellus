@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#BAE7F7',
   },
   logo: {
-    width: 229,
+    width: 300,
     height: 200,
     marginBottom: 10,
   },
