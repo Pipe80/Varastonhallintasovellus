@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 
 // Styled-components
-import { Container } from '../styles';
+import { Container } from '../../styles/Navigation';
 
 const HomeScreen = () => {
     return (
             <Container>
-                <Text>Home</Text>
+                <Text>Home screen content</Text>
             </Container>
         );
 };

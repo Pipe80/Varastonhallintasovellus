@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-//import Navigation from './navigation/AppNavigator';
+import React from 'react';
+//import Navigation from './navigation/AppNavigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './components/HomeScreen';
-import LoginScreen from './components/LoginScreen';
-import { StyleSheet } from 'react-native';
+import HomeScreen from './components/Home';
+import LoginScreen from './components/Login';
 
 const Stack = createStackNavigator();
 
