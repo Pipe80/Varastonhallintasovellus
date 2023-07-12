@@ -29,6 +29,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
 
+  button: {
+    backgroundColor: 'white',
+    color: 'white',
+  },
+
   header: {
     flexDirection: 'row',
     alignItems: 'center',

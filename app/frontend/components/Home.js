@@ -18,10 +18,18 @@ const HomeScreen = () => {
         source={logo}
       />
       <View style={styles.buttonContainer}>
-        <Button title="Kirjaudu sisään" onPress={handleLogin} color="#ffffff" />
+        <Button title="Kirjaudu sisään" 
+                onPress={handleLogin} 
+                backgroundColor='#02718D'
+                color='#fff'
+        />
       </View>
       <View style={styles.buttonContainer}>
-        <Button title="Luo tili" onPress={() => console.log('Luo tili')} color="#ffffff" />
+        <Button title="Luo tili" 
+                onPress={() => console.log('Luo tili')} 
+                backgroundColor='#02718D'
+                color='#fff'
+        />
       </View>
     </View>
   );
