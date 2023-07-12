@@ -6,10 +6,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
 // Screens
-import HomeScreen from './screens/HomeScreen';
-import NotificationsScreen from './screens/NotificationsScreen';
-import OrdersScreen from './screens/OrdersScreen';
-import SettingsScreen from './screens/SettingsScreen';
+import HomeScreen from './Screens/HomeScreen';
+import NotificationsScreen from './Screens/NotificationsScreen';
+import OrdersScreen from './Screens/OrdersScreen';
+import SettingsScreen from './Screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 
