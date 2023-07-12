@@ -8,8 +8,6 @@ import LoginScreen from './components/Login';
 const Stack = createStackNavigator();
 
 const App = () => {
-  const [text, onChangeText] = useState('Terve!')
-
   return (
     //<Navigation/ >
     <NavigationContainer>      
@@ -20,12 +18,5 @@ const App = () => {
     </NavigationContainer>    
   );
 };
-
-const styles = StyleSheet.create({
-  input: {
-    marginTop: 40,
-    marginLeft: 20,
-  },
-})
 
 export default App;
