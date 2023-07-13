@@ -1,7 +1,10 @@
 import React from 'react';
-//import Navigation from './navigation/AppNavigation';
+
+// Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+// Screens
 import HomeScreen from './components/Home';
 import LoginScreen from './components/Login';
 
@@ -9,7 +12,6 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    //<Navigation/ >
     <NavigationContainer>      
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
