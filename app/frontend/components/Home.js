@@ -20,15 +20,15 @@ const HomeScreen = () => {
       <View style={styles.buttonContainer}>
         <Button title="Kirjaudu sisään" 
                 onPress={handleLogin} 
-                backgroundColor='#02718D'
-                color='#fff'
+                // backgroundColor='#02718D'
+                color='#02718D'
         />
       </View>
       <View style={styles.buttonContainer}>
         <Button title="Luo tili" 
                 onPress={() => console.log('Luo tili')} 
-                backgroundColor='#02718D'
-                color='#fff'
+                // backgroundColor='#02718D'
+                color='#02718D'
         />
       </View>
     </View>
