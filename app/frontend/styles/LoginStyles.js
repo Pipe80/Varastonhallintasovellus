@@ -14,12 +14,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontFamily: 'Lato',
-    fontWeight: 'bold',
-    marginBottom: 20,
+    color: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-
-  buttonContainer: {
+  button: {
     backgroundColor: '#02718D',
     width: 292,
     height: 52,
@@ -28,7 +27,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 5,
   },
-
   header: {
     flexDirection: 'row',
     alignItems: 'center',

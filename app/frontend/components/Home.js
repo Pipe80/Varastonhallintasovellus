@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Image, Button } from 'react-native';
+import { View, Image, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from '../styles/Login';
+import styles from '../styles/LoginStyles';
 import logo from '../assets/logo.png';
 
 const HomeScreen = () => {
@@ -17,12 +17,16 @@ const HomeScreen = () => {
         style={styles.logo}
         source={logo}
       />
-      <View style={styles.buttonContainer}>
-        <Button title="Kirjaudu sisään" onPress={handleLogin} color="#ffffff" />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button title="Luo tili" onPress={() => console.log('Luo tili')} color="#ffffff" />
-      </View>
+      <TouchableOpacity style={styles.button}
+                        onPress={handleLogin} 
+      >
+        <Text style={styles.title}>Kirjaudu sisään</Text> 
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}
+                        onPress={() => console.log('Luo tili')}
+      >
+        <Text style={styles.title}>Luo tili</Text>
+      </TouchableOpacity>
     </View>
   );
 };
