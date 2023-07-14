@@ -1,0 +1,2 @@
+GET http://localhost:3000/api/getOrderById/64a550ad189b5d629f56282b
+Content-Type: application/xml

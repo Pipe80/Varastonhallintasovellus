@@ -50,6 +50,14 @@ const getOpenOrders = async (_req, res, _next) => {
   res.status(StatusCodes.OK).json(orders)  
 }
 
+// This controller returns an order by id
+const getOrderById = async (req, res) => {
+  const idOfOrder = req.params.id
+  const order = await Order.findById(idOfOrder)
+  if (!order) throw new APIError(`No orders with id ${idOfOrder}`, StatusCodes.NOT_FOUND)
+  res.status(StatusCodes.OK).json(order)
+}
+
 // This controller is used to change the state of an order 
 // (Open => In Collection).
 // Use this controller when user selects an order for collecting
@@ -151,6 +159,7 @@ module.exports = {
   createOrderFromXML,
   getAllOrders,
   getOpenOrders,
+  getOrderById,
   editOrder,
   collectingStarted,
   collectedOrder,
