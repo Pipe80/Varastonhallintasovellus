@@ -28,12 +28,12 @@ const Navigation = () => (
         },
         tabBarStyle: [
           {
-            "display": "flex"
+            display: "flex",
+            height: 100
           },
           null
         ]
-      })}
-      >
+      })}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Orders" component={OrdersScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
