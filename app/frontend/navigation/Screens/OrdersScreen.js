@@ -1,15 +1,23 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-// Styled-components
-import { Container } from '../../styles/Navigation';
+// Styles
+import { Box, Text } from 'native-base';
+import { styles } from '../../styles/Navigation';
+
+// Data test 
+import data from '../../data/orders.json';
 
 const OrdersScreen = () => {
-    return (
-            <Container>
-                <Text>Orders screen content</Text>
-            </Container>
-        );
+  return (
+    <Box style={styles.container}>
+        // Mapping data from test json file
+      {data.orders.map((order) => (
+        <Box key={order.id} style={[styles.card, { width: '76%' }]}>
+          <Text style={styles.cardTitle}>{order.title}</Text>
+        </Box>
+      ))}
+    </Box>
+  );
 };
 
 export default OrdersScreen;

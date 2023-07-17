@@ -7,7 +7,6 @@ import { Feather } from '@expo/vector-icons';
 
 // Screens
 import HomeScreen from './Screens/HomeScreen';
-import NotificationsScreen from './Screens/NotificationsScreen';
 import OrdersScreen from './Screens/OrdersScreen';
 import SettingsScreen from './Screens/SettingsScreen';
 
@@ -45,15 +44,6 @@ const Navigation = ()  => {
               <Feather name ="home" color={color} size={size} />
             ),
         }}
-        />
-        <Tab.Screen
-          name="Notifications"
-          component={NotificationsScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Feather name="bell" color={color} size={size} />
-            ),
-          }}
         />
         <Tab.Screen
           name="Orders"

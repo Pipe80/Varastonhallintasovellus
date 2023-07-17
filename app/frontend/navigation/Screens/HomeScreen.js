@@ -1,15 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-// Styled-components
-import { Container } from '../../styles/Navigation';
+// Styles
+import { Box, Text } from 'native-base';
+import { styles } from '../../styles/Navigation';
 
 const HomeScreen = () => {
-    return (
-            <Container>
-                <Text>Home screen content</Text>
-            </Container>
-        );
+  return (
+    <Box style={styles.container}>
+      <Box style={styles.card}>
+        <Text style={styles.cardTitle}>Card Title</Text>
+        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+      </Box>
+      <Box style={styles.card}>
+        <Text style={styles.cardTitle}>Card Title</Text>
+        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
+      </Box>
+    </Box>
+  );
 };
 
 export default HomeScreen;
