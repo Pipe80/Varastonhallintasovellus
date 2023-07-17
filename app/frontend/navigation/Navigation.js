@@ -1,7 +1,4 @@
 import React from 'react';
-
-// Navigation 
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
@@ -12,60 +9,38 @@ import SettingsScreen from './Screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator();
 
-const Navigation = ()  => {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator
-       screenOptions={{
-        headerStyle: { 
-          backgroundColor: '#fff',
+const Navigation = () => (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          const icons = {
+            Home: 'home',
+            Orders: 'package',
+            Settings: 'settings',
+          };
+          const iconName = icons[route.name];
+          return <Feather name={iconName} color={color} size={size} />;
+        },
+      })}
+      tabBarOptions={{
+        activeTintColor: '#02718D',
+        inactiveTintColor: 'gray',
+        style: {
+          paddingVertical: 5,
+          borderTopLeftRadius: 15,
+          borderTopRightRadius: 15,
+          backgroundColor: 'white',
+          position: 'absolute',
           height: 100,
         },
-        headerTintColor: '#000',
-        tabBarActiveTintColor: '#02718D',
-        tabBarInactiveTintColor: 'gray',
-        tabBarStyle:{
-          paddingVertical: 5,
-          borderTopLeftRadius:15,
-          borderTopRightRadius:15,
-          backgroundColor:'white',
-          position:'absolute',
-          height:100,
-        },
-        tabBarLabelStyle: {
-          display: "none"
+        labelStyle: {
+          display: 'none',
         },
       }}>
-        <Tab.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Feather name ="home" color={color} size={size} />
-            ),
-        }}
-        />
-        <Tab.Screen
-          name="Orders"
-          component={OrdersScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Feather name="package" color={color} size={size} />
-            ),
-        }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={SettingsScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Feather name="settings" color={color} size={size} />
-            ),
-        }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-};
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Orders" component={OrdersScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
+);
 
 export default Navigation;

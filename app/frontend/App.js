@@ -12,18 +12,30 @@ import { createStackNavigator } from '@react-navigation/stack';
 // Screens
 import HomeScreen from './components/Home';
 import LoginScreen from './components/Login';
-import Barcode from './components/Barcode';
+// import Barcode from './components/Barcode';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NativeBaseProvider>
-      {/* <Navigation/> */} // For testing if Feather started working but it does not work at all
       <NavigationContainer>      
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MainApp"
+            component={Navigation}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer> 
     </NativeBaseProvider>
