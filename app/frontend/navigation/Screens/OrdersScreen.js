@@ -10,7 +10,6 @@ import data from '../../data/orders.json';
 const OrdersScreen = () => {
   return (
     <Box style={styles.container}>
-        // Mapping data from test json file
       {data.orders.map((order) => (
         <Box key={order.id} style={[styles.card, { width: '76%' }]}>
           <Text style={styles.cardTitle}>{order.title}</Text>
