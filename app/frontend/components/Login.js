@@ -10,6 +10,7 @@ const LoginScreen = () => {
   const handleLogin = () => {
     // Kirjautumisen käsittely
     navigation.navigate('MainApp');
+    console.log('Login successful');
   };
 
   const handleForgotPassword = () => {
