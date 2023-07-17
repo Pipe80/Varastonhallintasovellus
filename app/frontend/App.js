@@ -24,7 +24,7 @@ const App = () => {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ headerShown: false }}
+            options={{ headerShown: false }} // No header for screens like in mockup
           />
           <Stack.Screen
             name="Login"
