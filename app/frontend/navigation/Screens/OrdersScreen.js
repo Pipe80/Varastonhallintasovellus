@@ -11,7 +11,7 @@ const OrdersScreen = () => {
   return (
     <Box style={styles.container}>
       {data.orders.map((order) => (
-        <Box key={order.id} style={[styles.card, { width: '76%' }]}>
+        <Box key={order.id} style={styles.card}>
           <Text style={styles.cardTitle}>{order.title}</Text>
         </Box>
       ))}

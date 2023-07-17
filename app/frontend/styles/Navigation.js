@@ -23,7 +23,7 @@ export const styles = {
     shadowRadius: 4,
     borderRadius: 8,
     padding: 16,
-    width: '90%',
+    width: '80%',
     marginBottom: 10,
   },
   cardTitle: {
