@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from '../styles/Login';
+import styles from '../styles/Styles';
 import logo from '../assets/logo.png';
 
 const HomeScreen = () => {

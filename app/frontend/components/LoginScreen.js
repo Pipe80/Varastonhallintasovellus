@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
-import styles from '../styles/Login';
+import styles from '../styles/Styles';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
