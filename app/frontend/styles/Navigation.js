@@ -1,4 +1,5 @@
 import { colors } from './Colors';
+import { Fonts } from './Fonts';
 
 export const styles = {
   container: {
@@ -29,19 +30,22 @@ export const styles = {
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'left',
+    fontFamily: Fonts.LatoBold, 
   },
   cardContent: {
     fontSize: 14,
     color: colors.text,
+    fontFamily: Fonts.LatoRegular,
   },
   input: {
     width: '100%',
-    borderColor: 'gray.400',
     marginBottom: 10,
+    fontFamily: Fonts.LatoLight,
   },
   button: {
     width: '50%',
     marginTop: 4,
     justifyContent: 'flex-start',
+    fontFamily: Fonts.LatoRegular,
   },
 };

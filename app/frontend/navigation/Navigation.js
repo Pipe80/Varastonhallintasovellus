@@ -21,22 +21,19 @@ const Navigation = () => (
           const iconName = icons[route.name];
           return <Feather name={iconName} color={color} size={size} />;
         },
+        tabBarActiveTintColor: "#02718D",
+        tabBarInactiveTintColor: "gray",
+        tabBarLabelStyle: {
+          display: "none"
+        },
+        tabBarStyle: [
+          {
+            "display": "flex"
+          },
+          null
+        ]
       })}
-      tabBarOptions={{
-        activeTintColor: '#02718D',
-        inactiveTintColor: 'gray',
-        style: {
-          paddingVertical: 5,
-          borderTopLeftRadius: 15,
-          borderTopRightRadius: 15,
-          backgroundColor: 'white',
-          position: 'absolute',
-          height: 100,
-        },
-        labelStyle: {
-          display: 'none',
-        },
-      }}>
+      >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Orders" component={OrdersScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />

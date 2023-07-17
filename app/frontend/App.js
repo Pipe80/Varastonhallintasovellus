@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+// Fonts
+import { loadFonts } from './styles/Fonts';
 
 // Import NativeBase
 import { NativeBaseProvider } from 'native-base';
-// Import Navigation fro test
-import Navigation from './navigation/Navigation';
+import Navigation from './navigation/Navigation'; // Import Navigation for test
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,6 +19,11 @@ import LoginScreen from './components/Login';
 const Stack = createStackNavigator();
 
 const App = () => {
+
+  useEffect(() => {
+    loadFonts();
+  }, []);
+
   return (
     <NativeBaseProvider>
       <NavigationContainer>      
