@@ -2,9 +2,7 @@ import { useState, useRef } from 'react';
 import { Keyboard, Text, TextInput, View, TouchableOpacity } from 'react-native';
 import styles from '../styles/BarcodeStyles'
 
-export default function Barcode() {
-  // Decleare a variable for storing a barcode 
-  const [barcode, changeBarcode] = useState('')
+export default function Barcode(props) {  
   // Create a reference to be used in TextInput component that
   // receives the barcode
   const barcodeRef = useRef()
@@ -16,12 +14,12 @@ export default function Barcode() {
     // Clear TextInput component
     barcodeRef.current.clear()
     // Empty old barcodes stored in state
-    changeBarcode('')
+    props.changeBarcode('')
   }
 
   // This handles TextInput component for barcode reading
   const barcodeChanger = (barcode) => {
-    changeBarcode(barcode)
+    props.changeBarcode(barcode)
   }
 
   return (
@@ -40,7 +38,7 @@ export default function Barcode() {
       <TouchableOpacity style={styles.barcodeReaderButton} onPress={readBarcode}>
         <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
       </TouchableOpacity>      
-      <Text>Viivakoodi on: {barcode}</Text>
+      <Text>Viivakoodi on: {props.barcode}</Text>
     </View>
   );
 }
