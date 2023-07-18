@@ -2,14 +2,6 @@ import { extendTheme } from 'native-base';
 // import { colors } from './Colors';
 import { Fonts, loadFonts } from './Fonts';
 
-const colors = {
-  primary: '#02718D',
-  secondary: '#CCCCCC',
-  background: '#BAE7F7',
-  text: '#000000',
-  error: '#8D0101',
-};
-
 // Load the custom fonts
 loadFonts();
 
