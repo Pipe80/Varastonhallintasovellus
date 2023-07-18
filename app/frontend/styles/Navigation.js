@@ -1,5 +1,5 @@
-import { colors } from './Colors';
-import { Fonts } from './Fonts';
+import { colors } from '../themes/Colors';
+import { Fonts } from '../themes/Fonts';
 
 export const styles = {
   container: {
@@ -13,8 +13,8 @@ export const styles = {
     justifyContent: 'center',
   },
   card: {
-    backgroundColor: colors.elementBackground,
-    shadowColor: colors.shadow,
+    backgroundColor: '#FFFFFF',
+    shadowColor: '#000000',
     shadowOffset: {
       width: 0,
       height: 2,

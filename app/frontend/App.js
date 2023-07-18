@@ -1,31 +1,25 @@
-import React, { useEffect } from 'react';
-
-// Fonts
-import { loadFonts } from './styles/Fonts';
-
-// Import NativeBase
+import React from 'react';
 import { NativeBaseProvider } from 'native-base';
-import Navigation from './navigation/Navigation'; // Import Navigation for test
+
+// Global styles
+import { theme } from './themes/Theme';
+
+// Screens
+import HomeScreen from './screens/Welcome';
+import LoginScreen from './screens/Login';
+// import Barcode from './screens/Barcode';
+// other components here ...
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-// Screens
-import HomeScreen from './components/Home';
-import LoginScreen from './components/Login';
-// import Barcode from './components/Barcode';
+import Navigation from './navigation/Navigation'; 
 
 const Stack = createStackNavigator();
 
 const App = () => {
-
-  useEffect(() => {
-    loadFonts();
-  }, []);
-
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <NavigationContainer>      
         <Stack.Navigator>
           <Stack.Screen
