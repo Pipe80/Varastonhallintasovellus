@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import styles from '../styles/LoginStyles';
 
 const LoginScreen = () => {
@@ -9,7 +9,8 @@ const LoginScreen = () => {
 
   const handleLogin = () => {
     // Kirjautumisen käsittely
-    console.log('Kirjaudu sisään');
+    navigation.navigate('MainApp');
+    console.log('Login successful');
   };
 
   const handleForgotPassword = () => {
@@ -21,7 +22,7 @@ const LoginScreen = () => {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <AntDesign name="arrowleft" size={24} color="white" />
+          <Feather name="arrow-left" size={24} color="white" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Kirjaudu sisään</Text>
       </View>

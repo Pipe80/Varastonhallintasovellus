@@ -1,15 +1,42 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React, { useState } from 'react';
 
-// Styled-components
-import { Container } from '../../styles/Navigation';
+// Styles
+import { Box, Text, Input, VStack, Button } from 'native-base';
+import { styles } from '../../styles/Navigation';
+
+// NOTE
+// Work in progress in this file
 
 const SettingsScreen = () => {
-    return (
-            <Container>
-                <Text>Settings screen content</Text>
-            </Container>
-        );
+  const [password, setPassword] = useState('');
+
+  const handlePasswordChange = (value) => {
+    setPassword(value);
+  };
+
+  const saveSettings = () => {
+    console.log('Settings saved:', { password });
+  };
+
+  return (
+    <Box style={styles.container}>
+      <VStack style={styles.vStack}>
+        <Box>
+          <Text>Change your password</Text>
+          <Input
+            style={styles.input}
+            secureTextEntry
+            value={password}
+            onChangeText={handlePasswordChange}
+            placeholder="Enter new password"
+          />
+        </Box>
+        <Button onPress={saveSettings} style={styles.button}>
+          Save
+        </Button>
+      </VStack>
+    </Box>
+  );
 };
 
 export default SettingsScreen;
