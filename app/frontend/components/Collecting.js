@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Text, View, FlatList } from 'react-native';
-import styles from '../styles/BarcodeStyles'
+import { Text, View, FlatList, TouchableOpacity } from 'react-native';
+import Barcode from './Barcode';
+import styles from '../styles/CollectingStyles'
 
 export default function Collecting() {
   const [isLoading, setLoading] = useState(true);
-  const [order, setOrder] = useState({})
+  const [order, setOrder] = useState({});
+  // Decleare a variable for storing a barcode 
+  const [barcode, changeBarcode] = useState('2');
 
   // orderID comes from parent component, props?
   const orderID = '64a550ad189b5d629f56282b'
@@ -39,13 +42,19 @@ export default function Collecting() {
 
   // if loading is complete return data
   if (isLoading === false) {
-    return (
-      <View style={styles.container}>
-        <FlatList 
-          data={order.order.items.item}
-          renderItem={({item}) => <Text>tuote: {item.name}, id: {item.product_id}, {item.pcs} kappaletta</Text>}
-        />     
-      </View>
+    return (      
+        <View style={styles.container}>
+          <View style={styles.header}>        
+            <Text style={styles.headerTitle}>Keräily</Text>
+          </View>     
+          <FlatList style={styles.list}
+            data={order.order.items.item}
+            renderItem={
+              ({item}) => <Text style={styles.input}>tuote: {item.name}, id: {item.product_id}, {item.pcs} kappaletta</Text>}
+          />
+          <Barcode barcode={barcode} changeBarcode={changeBarcode}/>
+        </View>
+      
     );
   }
   
