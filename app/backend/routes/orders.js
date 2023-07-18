@@ -5,6 +5,7 @@ const {
   createOrderFromXML,
   getAllOrders,
   getOpenOrders,
+  getOrderById,
   collectingStarted,
   editOrder,
   collectedOrder,
@@ -19,6 +20,9 @@ router.get('/getAllOrders', getAllOrders)
 
 // route for getting all open orders in database
 router.get('/getOpenOrders', getOpenOrders)
+
+// route for getting a specific order in database
+router.get('/getOrderById/:id', getOrderById)
 
 // route for starting collecting
 // use this route when user selects an order for collecting
