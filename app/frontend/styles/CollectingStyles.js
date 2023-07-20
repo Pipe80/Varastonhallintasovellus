@@ -16,6 +16,17 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch', 
     height: 74,
   },
+  list: {
+    width: 292,
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    marginTop: 10,    
+    backgroundColor: 'white'
+  },
   backButton: {
     marginRight: 10,
   },
@@ -34,6 +45,20 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
     marginTop: 10,    
     backgroundColor: 'white'
+  },
+  barcodeReaderButton: {
+    backgroundColor: '#02718D',
+    paddingHorizontal: 41,
+    paddingVertical: 10,
+    borderRadius: 5,
+    alignSelf: 'center',
+    width: 200, 
+    height: 50, 
+  },
+  barcodeReaderButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
   }
 });
 
