@@ -19,7 +19,7 @@ export default function Barcode(props) {
 
   // This handles TextInput component for barcode reading
   const barcodeChanger = (barcode) => {
-    props.changeBarcode(barcode)
+      props.changeBarcode(barcode)
   }
 
   return (
@@ -38,7 +38,6 @@ export default function Barcode(props) {
       <TouchableOpacity style={styles.barcodeReaderButton} onPress={readBarcode}>
         <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
       </TouchableOpacity>      
-      <Text>Viivakoodi on: {props.barcode}</Text>
     </View>
   );
 }
