@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Text, TextInput, View, FlatList, TouchableOpacity, Keyboard } from 'react-native';
+import { Text, TextInput, View, FlatList, TouchableOpacity, Keyboard, Alert } from 'react-native';
 import styles from '../styles/CollectingStyles'
 
 export default function Collecting() {
@@ -58,6 +58,13 @@ export default function Collecting() {
         // Check if last pcs was collected
         if (changedOrder.order.items.item[i].pcs === 0) {
           changedOrder.order.items.item[i].item_status = 'Collected'
+          Alert.alert('Huomio!', `Viimeinen kappale tuotetta "${changedOrder.order.items.item[i].name}" kerätty.`, 
+            [
+              {
+                text: 'OK'
+              }
+            ]   
+            )
         }
         console.log(order.order.items.item[i].item_status)
       }
@@ -81,7 +88,6 @@ export default function Collecting() {
           <View style={styles.header}>        
             <Text style={styles.headerTitle}>Keräily</Text>
           </View>   
-            
           <FlatList
             data={order.order.items.item}
             renderItem={
