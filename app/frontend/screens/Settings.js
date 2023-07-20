@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // Styles
 import { Box, Text, Input, VStack, Button } from 'native-base';
-import { styles } from '../../styles/Navigation';
+import { styles } from '../styles/Navigation';
 
 // NOTE
 // Work in progress in this file
