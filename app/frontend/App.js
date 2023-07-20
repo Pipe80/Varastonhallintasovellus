@@ -1,6 +1,9 @@
 import React from 'react';
 import { NativeBaseProvider } from 'native-base';
 
+// Fonts
+import { loadFonts } from './styles/Fonts';
+
 // Global styles
 import { theme } from './themes/Theme';
 
@@ -18,6 +21,11 @@ import Navigation from './navigation/Navigation';
 const Stack = createStackNavigator();
 
 const App = () => {
+
+  useEffect(() => {
+    loadFonts();
+  }, []);
+
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>      
