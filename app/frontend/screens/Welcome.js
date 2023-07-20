@@ -11,6 +11,10 @@ const HomeScreen = () => {
     navigation.navigate('Login');
   };
 
+  const handleSignup = () => {
+    navigation.navigate('SignUp');
+  };
+
   return (
     <View style={styles.container}>
       <Image
@@ -23,7 +27,7 @@ const HomeScreen = () => {
         <Text style={styles.title}>Kirjaudu sisään</Text> 
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}
-                        onPress={() => console.log('Luo tili')}
+                        onPress={handleSignup} 
       >
         <Text style={styles.title}>Luo tili</Text>
       </TouchableOpacity>
