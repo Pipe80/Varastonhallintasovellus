@@ -52,8 +52,13 @@ export default function Collecting() {
         // Using just setOrder will modify data in the same memory
         // reference and will not cause a render.
         let changedOrder = {...order}
-        changedOrder.order.items.item[i].item_status = 'Collected'
+        // Remove on pcs
+        changedOrder.order.items.item[i].pcs += -1        
         setOrder(changedOrder)
+        // Check if last pcs was collected
+        if (changedOrder.order.items.item[i].pcs === 0) {
+          changedOrder.order.items.item[i].item_status = 'Collected'
+        }
         console.log(order.order.items.item[i].item_status)
       }
     }
@@ -72,9 +77,11 @@ export default function Collecting() {
   if (isLoading === false) {
     return (      
         <View style={styles.container}>
+
           <View style={styles.header}>        
             <Text style={styles.headerTitle}>Keräily</Text>
-          </View>     
+          </View>   
+            
           <FlatList
             data={order.order.items.item}
             renderItem={
@@ -91,8 +98,7 @@ export default function Collecting() {
             <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
               <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
             </TouchableOpacity>  
-          </View>
-          
+          </View>          
           
         </View>
       
