@@ -1,33 +1,24 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import styles from '../styles/LoginStyles';
 import logo from '../assets/logo.png';
 
-const HomeScreen = () => {
-  const navigation = useNavigation();
-
-  const handleLogin = () => {
-    navigation.navigate('Login');
-  };
-
-  const handleSignup = () => {
-    navigation.navigate('SignUp');
-  };
-
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
         style={styles.logo}
         source={logo}
       />
-      <TouchableOpacity style={styles.button}
-                        onPress={handleLogin} 
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate('Login')} 
       >
         <Text style={styles.title}>Kirjaudu sisään</Text> 
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}
-                        onPress={handleSignup} 
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate('SignUp')} 
       >
         <Text style={styles.title}>Luo tili</Text>
       </TouchableOpacity>
