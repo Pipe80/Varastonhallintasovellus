@@ -1,4 +1,4 @@
-// import { colors } from '../../themes/Colors';
+import { colors } from '../../themes/Colors';
 import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
@@ -6,5 +6,6 @@ export const styles = {
         width: '100%',
         marginBottom: 10,
         fontFamily: Fonts.LatoLight,
+        backgroundColor: colors.white,
     },
 };

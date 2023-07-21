@@ -3,8 +3,8 @@ import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
   card: {
-    backgroundColor: '#ffffff',
-    shadowColor: '#000000',
+    backgroundColor: colors.white,
+    shadowColor: colors.text,
     shadowOffset: {
       width: 0,
       height: 2,
