@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'native-base';
 import { styles } from './ButtonStyles';
 
-const Card = ({ children }) => {
+const CustomButton = ({ children }) => {
   return (
     <Button style={styles.button}>
         { children }
@@ -10,4 +10,4 @@ const Card = ({ children }) => {
   );
 };
 
-export default Card;
+export default CustomButton;

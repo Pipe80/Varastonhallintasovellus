@@ -5,8 +5,8 @@ import { Flex, VStack, Text } from 'native-base';
 // Work in progress in this file
 
 //Components
-import Button from '../components/Button/Button';
-import Input from '../components/Input/Input/';
+import CustomButton from '../components/Button/Button';
+import CustomInput from '../components/Input/Input';
 
 const SettingsScreen = () => {
   const [password, setPassword] = useState('');
@@ -23,15 +23,15 @@ const SettingsScreen = () => {
     <Flex>
       <VStack>
           <Text>Change your password</Text>
-          <Input
+          <CustomInput
             secureTextEntry
             value={password}
             onChangeText={handlePasswordChange}
             placeholder="Enter new password"
           />
-        <Button onPress={saveSettings}>
+        <CustomButton onPress={saveSettings}>
           Save
-        </Button>
+        </CustomButton>
       </VStack>
     </Flex>
   );
