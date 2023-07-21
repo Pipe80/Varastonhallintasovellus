@@ -73,8 +73,20 @@ export default function Collecting() {
 
   // This controls 'OK' button press from 'Kaikki tilauksen "order_id"
   // tuotteet on keräilty' alert
-  const collectingDone = () => {
-    console.log('Keräily valmis')
+  const collectingDone = async () => {
+    order.order.order_status = 'Collected'
+
+    // Request to backend:
+    //    - all items => 'Collected'
+    //    - order => 'Collected'
+    const requestOptions = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(order)
+    };
+    await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID, requestOptions)
+      .then(res => res.json())
+
   }
 
   // if still loading return 'Ladataan'
