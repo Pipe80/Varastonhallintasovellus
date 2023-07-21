@@ -13,20 +13,20 @@ Content-Type: text/xml
     <items>
       <item>
         <name>Nappi</name>
-        <pcs>10</pcs>
-        <product_id>1</product_id>
+        <pcs>2</pcs>
+        <product_id>048769</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
         <pcs>1</pcs>
-        <product_id>2</product_id>
+        <product_id>6414150096303</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
         <pcs>1</pcs>
-        <product_id>3</product_id>
+        <product_id>6416344004323</product_id>
         <item_status>Not collected</item_status>
       </item>
     </items>

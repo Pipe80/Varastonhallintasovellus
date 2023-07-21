@@ -32,7 +32,7 @@ router.put('/collectingStarted/:id', collectingStarted)
 // use this route to update each item that is collected
 router.put('/editOrder/:id', editOrder)
 
-// route for completelly collected orders
+// route for completely collected orders
 // use this route when user confirms that collecting is complete
 router.put('/collectedOrder/:id', collectedOrder)
 
