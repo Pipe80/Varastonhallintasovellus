@@ -71,6 +71,12 @@ export default function Collecting() {
     }
   }
 
+  // This controls 'OK' button press from 'Kaikki tilauksen "order_id"
+  // tuotteet on keräilty' alert
+  const collectingDone = () => {
+    console.log('Keräily valmis')
+  }
+
   // if still loading return 'Ladataan'
   if (isLoading === true) {
     return (
@@ -81,7 +87,24 @@ export default function Collecting() {
   }
 
   // if loading is complete return data
-  if (isLoading === false) {
+  if (isLoading === false) {    
+    let arrayLength = order.order.items.item.length
+    let collectingStatus = []
+    for (let i = 0; i < arrayLength; i++) {
+      collectingStatus.push(order.order.items.item[i].item_status)      
+    }
+    // Check if there are still items left for collecting
+    if (collectingStatus.indexOf('Not collected') === -1) {
+      Alert.alert('Huomio!', `Kaikki tilauksen "${order.order.order_id}" tuotteet on keräilty`,
+        [
+          {
+            text: 'OK',
+            onPress: collectingDone
+          }
+        ]
+      )
+    }
+
     return (      
         <View style={styles.container}>
 
