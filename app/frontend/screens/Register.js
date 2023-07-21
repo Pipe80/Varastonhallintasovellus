@@ -1,27 +1,29 @@
-
 import React, { useState } from 'react';
 import { View, TextInput, Button } from 'react-native';
+import { styles } from '../styles/Styles';
 
- 
 
-const RegisterScreen = () => {
+
+const RegisterScreen = (navigation) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
- 
-
   const handleRegister = () => {
-   
-    const user = {
+    const navigation = {
       username: username,
       email: email,
       password: password
     };
+
+    // Perform registration logic here (e.g., API call to register the user)
+
+    // Assuming successful registration, navigate to the "MainApp" screen
+    navigation.navigate('MainApp');
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <TextInput
         placeholder="Username"
         value={username}
@@ -40,6 +42,7 @@ const RegisterScreen = () => {
         secureTextEntry
       />
       <Button title="Register" onPress={handleRegister} />
+      onPress={() => navigation.navigate('Details')}
     </View>
   );
 };

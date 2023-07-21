@@ -9,6 +9,8 @@ import HomeScreen from './screens/Welcome';
 import LoginScreen from './screens/Login';
 // import Barcode from './screens/Barcode';
 // other components here ...
+import Register from './screens/Register';
+//import Recover from './screens/recover';
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
@@ -37,6 +39,12 @@ const App = () => {
             component={Navigation}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ headerShown: false }}
+          />
+     
         </Stack.Navigator>
       </NavigationContainer> 
     </NativeBaseProvider>
