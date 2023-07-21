@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-
-// Styles
-import { Box, Text, Input, VStack, Button } from 'native-base';
-import { styles } from '../styles/Navigation';
+import { Flex, VStack, Text } from 'native-base';
 
 // NOTE
 // Work in progress in this file
+
+//Components
+import Button from '../components/Button/Button';
+import Input from '../components/Input/Input/';
 
 const SettingsScreen = () => {
   const [password, setPassword] = useState('');
@@ -19,23 +20,20 @@ const SettingsScreen = () => {
   };
 
   return (
-    <Box style={styles.container}>
-      <VStack style={styles.vStack}>
-        <Box>
+    <Flex>
+      <VStack>
           <Text>Change your password</Text>
           <Input
-            style={styles.input}
             secureTextEntry
             value={password}
             onChangeText={handlePasswordChange}
             placeholder="Enter new password"
           />
-        </Box>
-        <Button onPress={saveSettings} style={styles.button}>
+        <Button onPress={saveSettings}>
           Save
         </Button>
       </VStack>
-    </Box>
+    </Flex>
   );
 };
 
