@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
-import { Text, TextInput, View, FlatList, TouchableOpacity, Keyboard, Alert } from 'react-native';
+import { TextInput, View, TouchableOpacity, Keyboard, Alert } from 'react-native';
 import styles from '../styles/CollectingStyles'
+import { Flex, Text, ScrollView } from 'native-base';
+import Card from '../components/Card/Card'
+
 
 export default function Collecting() {
   const [isLoading, setLoading] = useState(true);
@@ -9,7 +12,7 @@ export default function Collecting() {
   const barcodeRef = useRef()
 
   // orderID comes from parent component, props?
-  const orderID = '64a550ad189b5d629f56282b'
+  const orderID = '64a550e1189b5d629f562835'
   // get IPv4 for your Windows machine:
   //      - start terminal and type 'ipconfig'  
   const computerIPv4 = '192.168.100.105'
@@ -46,7 +49,16 @@ export default function Collecting() {
     for (let i = 0; i < arrayLength; i++) {
       console.log(order.order.items.item[1].item_status)
       const loopElement = order.order.items.item[i]
-      if (loopElement.product_id === barcode) {
+      if (loopElement.product_id === barcode && loopElement.pcs === 0) {
+        Alert.alert('Huomio!', `Tämä tuote on jo keräilty valmiiksi!`, 
+            [
+              {
+                text: 'OK'
+              }
+            ]   
+            )
+      }
+      if (loopElement.product_id === barcode && loopElement.pcs > 0) {
         // Create a copy of order with a new memory reference.
         // This is done to force a render with setOrder. 
         // Using just setOrder will modify data in the same memory
@@ -117,19 +129,16 @@ export default function Collecting() {
       )
     }
 
-    return (      
-        <View style={styles.container}>
-
+    return (
+      <ScrollView>
+        <Flex>
           <View style={styles.header}>        
             <Text style={styles.headerTitle}>Keräily</Text>
-          </View>   
-          <FlatList
-            data={order.order.items.item}
-            renderItem={
-              ({item}) => <Text style={styles.list}>{item.name}, id: {item.product_id}, {item.pcs} kpl, {item.item_status}</Text>}
-          />
-          
-          <View>
+          </View> 
+            {order.order.items.item.map((item) => (                      
+              <Card key={item.name} title={item.name}>{'id: ' + item.product_id + ', puuttuu: ' + item.pcs + 'kpl'}</Card>
+            ))}
+            
             <TextInput 
               style={styles.input}
               ref={barcodeRef}
@@ -138,13 +147,10 @@ export default function Collecting() {
             />
             <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
               <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </TouchableOpacity>  
-          </View>          
-          
-        </View>
-      
+            </TouchableOpacity> 
+        </Flex>
+      </ScrollView>
     );
   }
-  
 }
 
