@@ -7,9 +7,9 @@ import { theme } from './themes/Theme';
 // Screens
 import HomeScreen from './screens/Welcome';
 import LoginScreen from './screens/Login';
+import SignUpScreen from './screens/Register';
 // import Barcode from './screens/Barcode';
 // other components here ...
-import Register from './screens/Register';
 //import Recover from './screens/recover';
 
 // Navigation
@@ -20,6 +20,7 @@ import Navigation from './navigation/Navigation';
 const Stack = createStackNavigator();
 
 const App = () => {
+
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>      
@@ -40,11 +41,10 @@ const App = () => {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="Register"
-            component={Register}
+            name="SignUp"
+            component={SignUpScreen}
             options={{ headerShown: false }}
           />
-     
         </Stack.Navigator>
       </NavigationContainer> 
     </NativeBaseProvider>
