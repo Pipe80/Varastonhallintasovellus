@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { TextInput, View, Keyboard, Alert } from 'react-native';
+import { View, Keyboard, Alert } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import styles from '../styles/CollectingStyles'
-import { Flex, Text, ScrollView, Button } from 'native-base';
+import { Flex, Text, ScrollView, Button, Input } from 'native-base';
 import Card from '../components/Card/Card'
 import CustomButton from '../components/Button/Button'
 
@@ -154,20 +154,25 @@ export default function Collecting({ route, navigation }) {
               <Feather name="arrow-left" size={24} color="white" />
             </Button>       
             <Text style={styles.headerTitle}>Keräily</Text>
-          </View> 
-            {order.order.items.item.map((item) => (                      
-              <Card key={item.name} title={item.name}>{'id: ' + item.product_id + ', puuttuu: ' + item.pcs + 'kpl'}</Card>
-            ))}
-            
-            <TextInput 
-              style={styles.input}
-              ref={barcodeRef}
-              onFocus={Keyboard.dismiss}
-              onChangeText={(barcode) => barcodeChanger(barcode)}
-            />
-            <CustomButton  onPress={ChangeStatus}>
-              <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </CustomButton> 
+          </View>
+
+          {order.order.items.item.map((item) => (                      
+            <Card key={item.name} title={item.name}>{'id: ' + item.product_id + ', puuttuu: ' + item.pcs + 'kpl'}</Card>
+          ))}
+          
+          {/* 
+          Still using Input instead of Custom input as I can't 
+          pass useRef hook to Custom input component.
+          */}
+          <Input 
+            style={styles.input}
+            ref={barcodeRef}
+            onFocus={Keyboard.dismiss}
+            onChangeText={(barcode) => barcodeChanger(barcode)}
+          />
+          <CustomButton onPress={ChangeStatus}>
+            <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
+          </CustomButton> 
         </Flex>
       </ScrollView>
     );
