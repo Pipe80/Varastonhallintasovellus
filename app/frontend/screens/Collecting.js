@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { TextInput, View, TouchableOpacity, Keyboard, Alert } from 'react-native';
+import { TextInput, View, Keyboard, Alert } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import styles from '../styles/CollectingStyles'
 import { Flex, Text, ScrollView, Button } from 'native-base';
 import Card from '../components/Card/Card'
-//import Button from '../components/Button/Button'
-
+import CustomButton from '../components/Button/Button'
 
 export default function Collecting({ route, navigation }) {
   const [isLoading, setLoading] = useState(true);
@@ -134,7 +134,13 @@ export default function Collecting({ route, navigation }) {
     return (
       <ScrollView>
         <Flex>
-          <View style={styles.header}>        
+          <View style={styles.header}>
+            <Button 
+              style={styles.backButton} 
+              onPress={() => navigation.goBack()}
+            >
+              <Feather name="arrow-left" size={24} color="white" />
+            </Button>       
             <Text style={styles.headerTitle}>Keräily</Text>
           </View> 
             {order.order.items.item.map((item) => (                      
@@ -147,13 +153,9 @@ export default function Collecting({ route, navigation }) {
               onFocus={Keyboard.dismiss}
               onChangeText={(barcode) => barcodeChanger(barcode)}
             />
-            <Button onPress={ChangeStatus}>
+            <CustomButton  onPress={ChangeStatus}>
               <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </Button>
-            {/* <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
-              <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </TouchableOpacity>  */}
-
+            </CustomButton> 
         </Flex>
       </ScrollView>
     );
