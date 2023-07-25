@@ -53,12 +53,13 @@ export default function Collecting({ route, navigation }) {
       const loopElement = order.order.items.item[i]
       if (loopElement.product_id === barcode && loopElement.pcs === 0) {
         Alert.alert('Huomio!', `Tämä tuote on jo keräilty valmiiksi!`, 
-            [
-              {
-                text: 'OK'
-              }
-            ]   
-            )
+          [
+            {
+              text: 'OK'
+            }
+          ]   
+        )
+        break
       }
       if (loopElement.product_id === barcode && loopElement.pcs > 0) {
         // Create a copy of order with a new memory reference.
@@ -78,9 +79,20 @@ export default function Collecting({ route, navigation }) {
                 text: 'OK'
               }
             ]   
-            )
+          )
         }
         console.log(order.order.items.item[i].item_status)
+        break
+      }
+      if (loopElement.product_id !== barcode) {
+        Alert.alert('Huomio!', `Viivakoodilla ${barcode} ei löydy keräiltävää tuotetta!`, 
+          [
+            {
+              text: 'OK'
+            }
+          ]   
+        )
+        break
       }
     }
   }
