@@ -1,25 +1,27 @@
 import { useState, useEffect, useRef } from 'react';
 import { TextInput, View, TouchableOpacity, Keyboard, Alert } from 'react-native';
 import styles from '../styles/CollectingStyles'
-import { Flex, Text, ScrollView } from 'native-base';
+import { Flex, Text, ScrollView, Button } from 'native-base';
 import Card from '../components/Card/Card'
+//import Button from '../components/Button/Button'
 
 
-export default function Collecting() {
+export default function Collecting({ route, navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [order, setOrder] = useState({});
-  
+    
   const barcodeRef = useRef()
 
-  // orderID comes from parent component, props?
-  const orderID = '64a550e1189b5d629f562835'
+  // orderID is passed on by 'Orders' screen through route parameters
+  const { orderID } = route.params
+  
   // get IPv4 for your Windows machine:
   //      - start terminal and type 'ipconfig'  
   const computerIPv4 = '192.168.100.105'
   
   // fetch data asynchronously from backend
   const getItems = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID)
+    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID.orderID)
     .then(res => res.json())
     .then(json => setOrder(json))    
     .catch(error => console.log(error))
@@ -98,7 +100,7 @@ export default function Collecting() {
     };
     await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID, requestOptions)
       .then(res => res.json())
-
+      navigation.navigate('Orders')
   }
 
   // if still loading return 'Ladataan'
@@ -145,9 +147,13 @@ export default function Collecting() {
               onFocus={Keyboard.dismiss}
               onChangeText={(barcode) => barcodeChanger(barcode)}
             />
-            <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
+            <Button onPress={ChangeStatus}>
               <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </TouchableOpacity> 
+            </Button>
+            {/* <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
+              <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
+            </TouchableOpacity>  */}
+
         </Flex>
       </ScrollView>
     );
