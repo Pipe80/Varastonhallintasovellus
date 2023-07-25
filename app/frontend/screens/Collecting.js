@@ -84,16 +84,16 @@ export default function Collecting({ route, navigation }) {
         console.log(order.order.items.item[i].item_status)
         break
       }
-      if (loopElement.product_id !== barcode) {
-        Alert.alert('Huomio!', `Viivakoodilla ${barcode} ei löydy keräiltävää tuotetta!`, 
-          [
-            {
-              text: 'OK'
-            }
-          ]   
-        )
-        break
-      }
+      // if (loopElement.product_id !== barcode) {
+      //   Alert.alert('Huomio!', `Viivakoodilla ${barcode} ei löydy keräiltävää tuotetta!`, 
+      //     [
+      //       {
+      //         text: 'OK'
+      //       }
+      //     ]   
+      //   )
+      //   break
+      // }
     }
   }
 
@@ -110,7 +110,7 @@ export default function Collecting({ route, navigation }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(order)
     };
-    await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID, requestOptions)
+    await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID.orderID, requestOptions)
       .then(res => res.json())
       navigation.navigate('Orders')
   }
