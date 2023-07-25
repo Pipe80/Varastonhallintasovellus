@@ -11,9 +11,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    //paddingVertical: 20,
     backgroundColor: '#02718D',
-    alignSelf: 'stretch', 
+    alignSelf: 'stretch',
+    width: 360, 
     height: 74,
   },
   list: {
