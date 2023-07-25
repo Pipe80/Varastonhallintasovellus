@@ -11,7 +11,7 @@ import SignUpScreen from './screens/Register';
 // import Barcode from './screens/Barcode';
 // other components here ...
 import CollectingScreen from './screens/Collecting'
-import OrdersScreen from './screens/Orders'
+import OrdersScreen from './screens/OrdersLassi'
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
