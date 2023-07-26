@@ -8,9 +8,9 @@ import { theme } from './themes/Theme';
 import HomeScreen from './screens/Welcome';
 import LoginScreen from './screens/Login';
 import SignUpScreen from './screens/Register';
+import RecoverScreen from './screens/Recover';
 // import Barcode from './screens/Barcode';
 // other components here ...
-//import Recover from './screens/recover';
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
@@ -43,6 +43,11 @@ const App = () => {
           <Stack.Screen
             name="SignUp"
             component={SignUpScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Recover"
+            component={RecoverScreen}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

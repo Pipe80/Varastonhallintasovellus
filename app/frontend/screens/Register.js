@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button } from 'react-native';
-import { styles } from '../styles/Styles';
+import { styles } from '../styles/RegisterStyles';
 
 
 
@@ -24,18 +24,18 @@ const RegisterScreen = (navigation) => {
 
   return (
     <View style={styles.container}>
-      <TextInput
+      <TextInput style={styles.input}
         placeholder="Username"
         value={username}
         onChangeText={text => setUsername(text)}
       />
-      <TextInput
+      <TextInput style={styles.input}
         placeholder="Email"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"
       />
-      <TextInput
+      <TextInput style={styles.input}
         placeholder="Password"
         value={password}
         onChangeText={text => setPassword(text)}
