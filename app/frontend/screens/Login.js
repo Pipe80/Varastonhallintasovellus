@@ -38,7 +38,7 @@ const LoginScreen = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity 
         style={styles.loginButton} 
-        onPress={() => navigation.navigate('MainApp')}
+        onPress={() => navigation.navigate('Orders')}
       >
         <Text style={styles.loginButtonText}>
           Kirjaudu

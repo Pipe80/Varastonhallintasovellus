@@ -1,33 +1,39 @@
-PUT http://localhost:3000/api/editOrder/64a550ad189b5d629f56282b
+PUT http://localhost:3000/api/editOrder/64a550e1189b5d629f562835
 Content-Type: text/xml
 
 <order>
-    <order_id>1</order_id>
-    <order_status>Open</order_status>
-    <customer>Pentti</customer>
-    <address>Pentinkatu 2</address>
-    <postal_code>4567</postal_code>
-    <city>PenttiPolis</city>
-    <phone>456789123</phone>
-    <email>pentti@pentti.com</email>
-    <items>
-      <item>
-        <name>Nappi</name>
-        <pcs>2</pcs>
-        <product_id>048769</product_id>
-        <item_status>Not collected</item_status>
-      </item>
-      <item>
-        <name>Lanka</name>
-        <pcs>1</pcs>
-        <product_id>6414150096303</product_id>
-        <item_status>Not collected</item_status>
-      </item>
-      <item>
-        <name>Ohje</name>
-        <pcs>1</pcs>
-        <product_id>6416344004323</product_id>
-        <item_status>Not collected</item_status>
-      </item>
-    </items>
+  <order_id>2</order_id>
+  <order_status>In collection</order_status>
+  <customer>Sari</customer>
+  <address>Sarinkatu 1</address>
+  <postal_code>3456</postal_code>
+  <city>SariPolis</city>
+  <phone>345678912</phone>
+  <email>sari@sari.com</email>
+  <items>
+    <item>
+      <name>Auto</name>
+      <pcs>1</pcs>
+      <product_id>0040</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Mopo</name>
+      <pcs>1</pcs>
+      <product_id>0050</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Kevari</name>
+      <pcs>1</pcs>
+      <product_id>0060</product_id>
+      <item_status>Collected</item_status>
+    </item>
+    <item>
+      <name>Suklaalevy</name>
+      <pcs>3</pcs>
+      <product_id>0070</product_id>
+      <item_status>Not collected</item_status>
+    </item>
+  </items>
 </order>

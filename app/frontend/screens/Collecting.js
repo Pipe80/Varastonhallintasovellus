@@ -1,22 +1,27 @@
 import { useState, useEffect, useRef } from 'react';
-import { Text, TextInput, View, FlatList, TouchableOpacity, Keyboard, Alert } from 'react-native';
+import { View, Keyboard, Alert } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 import styles from '../styles/CollectingStyles'
+import { Flex, Text, ScrollView, Button, Input } from 'native-base';
+import Card from '../components/Card/Card'
+import CustomButton from '../components/Button/Button'
 
-export default function Collecting() {
+export default function Collecting({ route, navigation }) {
   const [isLoading, setLoading] = useState(true);
   const [order, setOrder] = useState({});
-  
+    
   const barcodeRef = useRef()
 
-  // orderID comes from parent component, props?
-  const orderID = '64a550ad189b5d629f56282b'
+  // orderID is passed on by 'Orders' screen through route parameters
+  const { orderID } = route.params
+  
   // get IPv4 for your Windows machine:
   //      - start terminal and type 'ipconfig'  
   const computerIPv4 = '192.168.100.105'
   
   // fetch data asynchronously from backend
   const getItems = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID)
+    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID.orderID)
     .then(res => res.json())
     .then(json => setOrder(json))    
     .catch(error => console.log(error))
@@ -46,7 +51,17 @@ export default function Collecting() {
     for (let i = 0; i < arrayLength; i++) {
       console.log(order.order.items.item[1].item_status)
       const loopElement = order.order.items.item[i]
-      if (loopElement.product_id === barcode) {
+      if (loopElement.product_id === barcode && loopElement.pcs === 0) {
+        Alert.alert('Huomio!', `Tämä tuote on jo keräilty valmiiksi!`, 
+          [
+            {
+              text: 'OK'
+            }
+          ]   
+        )
+        break
+      }
+      if (loopElement.product_id === barcode && loopElement.pcs > 0) {
         // Create a copy of order with a new memory reference.
         // This is done to force a render with setOrder. 
         // Using just setOrder will modify data in the same memory
@@ -64,10 +79,21 @@ export default function Collecting() {
                 text: 'OK'
               }
             ]   
-            )
+          )
         }
         console.log(order.order.items.item[i].item_status)
+        break
       }
+      // if (loopElement.product_id !== barcode) {
+      //   Alert.alert('Huomio!', `Viivakoodilla ${barcode} ei löydy keräiltävää tuotetta!`, 
+      //     [
+      //       {
+      //         text: 'OK'
+      //       }
+      //     ]   
+      //   )
+      //   break
+      // }
     }
   }
 
@@ -84,9 +110,9 @@ export default function Collecting() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(order)
     };
-    await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID, requestOptions)
+    await fetch('http://' + computerIPv4 + ':3000/api/collectedOrder/' + orderID.orderID, requestOptions)
       .then(res => res.json())
-
+      navigation.navigate('Orders')
   }
 
   // if still loading return 'Ladataan'
@@ -117,34 +143,39 @@ export default function Collecting() {
       )
     }
 
-    return (      
-        <View style={styles.container}>
-
-          <View style={styles.header}>        
+    return (
+      <ScrollView>
+        <Flex>
+          <View style={styles.header}>
+            <Button 
+              style={styles.backButton} 
+              onPress={() => navigation.goBack()}
+            >
+              <Feather name="arrow-left" size={24} color="white" />
+            </Button>       
             <Text style={styles.headerTitle}>Keräily</Text>
-          </View>   
-          <FlatList
-            data={order.order.items.item}
-            renderItem={
-              ({item}) => <Text style={styles.list}>{item.name}, id: {item.product_id}, {item.pcs} kpl, {item.item_status}</Text>}
+          </View>
+
+          {order.order.items.item.map((item) => (                      
+            <Card key={item.name} title={item.name}>{'id: ' + item.product_id + ', puuttuu: ' + item.pcs + 'kpl'}</Card>
+          ))}
+          
+          {/* 
+          Still using Input instead of Custom input as I can't 
+          pass useRef hook to Custom input component.
+          */}
+          <Input 
+            style={styles.input}
+            ref={barcodeRef}
+            onFocus={Keyboard.dismiss}
+            onChangeText={(barcode) => barcodeChanger(barcode)}
           />
-          
-          <View>
-            <TextInput 
-              style={styles.input}
-              ref={barcodeRef}
-              onFocus={Keyboard.dismiss}
-              onChangeText={(barcode) => barcodeChanger(barcode)}
-            />
-            <TouchableOpacity style={styles.barcodeReaderButton} onPress={ChangeStatus}>
-              <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-            </TouchableOpacity>  
-          </View>          
-          
-        </View>
-      
+          <CustomButton onPress={ChangeStatus}>
+            <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
+          </CustomButton> 
+        </Flex>
+      </ScrollView>
     );
   }
-  
 }
 

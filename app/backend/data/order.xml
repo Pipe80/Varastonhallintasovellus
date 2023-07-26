@@ -11,25 +11,25 @@
     <item>
       <name>Auto</name>
       <pcs>1</pcs>
-      <product_id>4</product_id>
+      <product_id>0040</product_id>
       <item_status>Collected</item_status>
     </item>
     <item>
       <name>Mopo</name>
       <pcs>1</pcs>
-      <product_id>5</product_id>
+      <product_id>0050</product_id>
       <item_status>Collected</item_status>
     </item>
     <item>
       <name>Kevari</name>
       <pcs>1</pcs>
-      <product_id>6</product_id>
+      <product_id>0060</product_id>
       <item_status>Collected</item_status>
     </item>
     <item>
       <name>Suklaalevy</name>
       <pcs>3</pcs>
-      <product_id>7</product_id>
+      <product_id>0070</product_id>
       <item_status>Not collected</item_status>
     </item>
   </items>

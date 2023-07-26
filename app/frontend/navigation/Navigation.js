@@ -5,7 +5,7 @@ import { Feather } from '@expo/vector-icons';
 
 // Screens import to bottom navigation
 import HomeScreen from '../screens/Home';
-import OrdersScreen from '../screens/Orders';
+import OrdersScreen from '../screens/OrdersLassi';
 import SettingsScreen from '../screens/Settings';
 
 const Tab = createBottomTabNavigator();

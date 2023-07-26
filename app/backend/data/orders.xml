@@ -12,26 +12,26 @@
       <item>
         <name>Nappi</name>
         <pcs>10</pcs>
-        <product_id>1</product_id>
+        <product_id>0010</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
         <pcs>1</pcs>
-        <product_id>2</product_id>
+        <product_id>0020</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
         <pcs>1</pcs>
-        <product_id>3</product_id>
+        <product_id>0030</product_id>
         <item_status>Not collected</item_status>
       </item>
     </items>
   </order>
   <order>
     <order_id>2</order_id>
-    <order_status>In collection</order_status>
+    <order_status>Open</order_status>
     <customer>Sari</customer>
     <address>Sarinkatu 1</address>
     <postal_code>3456</postal_code>
@@ -42,32 +42,32 @@
       <item>
         <name>Auto</name>
         <pcs>1</pcs>
-        <product_id>4</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0040</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Mopo</name>
         <pcs>1</pcs>
-        <product_id>5</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0050</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Kevari</name>
         <pcs>1</pcs>
-        <product_id>6</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0060</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Suklaalevy</name>
         <pcs>3</pcs>
-        <product_id>7</product_id>
+        <product_id>0070</product_id>
         <item_status>Not collected</item_status>
       </item>
     </items>
   </order>
   <order>
     <order_id>3</order_id>
-    <order_status>Collected</order_status>
+    <order_status>Open</order_status>
     <customer>Jouko</customer>
     <address>Joukonkatu 1</address>
     <postal_code>2345</postal_code>
@@ -78,20 +78,20 @@
       <item>
         <name>Tietokone</name>
         <pcs>1</pcs>
-        <product_id>8</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0080</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Hiiri</name>
         <pcs>1</pcs>
-        <product_id>9</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0090</product_id>
+        <item_status>Not collected</item_status>
       </item>
     </items>
   </order>
   <order>
     <order_id>4</order_id>
-    <order_status>Collected</order_status>
+    <order_status>Open</order_status>
     <customer>Taina</customer>
     <address>Tainankatu 1</address>
     <postal_code>1234</postal_code>
@@ -102,33 +102,93 @@
       <item>
         <name>Johto</name>
         <pcs>3</pcs>
-        <product_id>10</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0100</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Nappi</name>
         <pcs>74</pcs>
-        <product_id>1</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0010</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
         <pcs>15</pcs>
-        <product_id>2</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0020</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Ohje</name>
         <pcs>2</pcs>
-        <product_id>3</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0030</product_id>
+        <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Kevari</name>
         <pcs>1</pcs>
-        <product_id>6</product_id>
-        <item_status>Collected</item_status>
+        <product_id>0060</product_id>
+        <item_status>Not collected</item_status>
       </item>
     </items> 
+  </order>
+  <order>
+    <order_id>5</order_id>
+    <order_status>Open</order_status>
+    <customer>Riku Rikas</customer>
+    <address>Rikunkatu 1</address>
+    <postal_code>5555</postal_code>
+    <city>RikuPolis</city>
+    <phone>345678912</phone>
+    <email>riku@rahariku.com</email>
+    <items>
+      <item>
+        <name>Auto</name>
+        <pcs>1</pcs>
+        <product_id>0040</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Mopo</name>
+        <pcs>1</pcs>
+        <product_id>0050</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Kevari</name>
+        <pcs>1</pcs>
+        <product_id>0060</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Suklaalevy</name>
+        <pcs>3</pcs>
+        <product_id>0070</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Tuoli</name>
+        <pcs>1</pcs>
+        <product_id>0110</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Kaappi</name>
+        <pcs>1</pcs>
+        <product_id>0120</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Autotalli</name>
+        <pcs>1</pcs>
+        <product_id>0130</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+      <item>
+        <name>Pilvenpiirtäjä</name>
+        <pcs>1</pcs>
+        <product_id>0140</product_id>
+        <item_status>Not collected</item_status>
+      </item>
+    </items>
   </order>
 </orders>

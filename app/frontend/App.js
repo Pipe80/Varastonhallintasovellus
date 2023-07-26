@@ -11,6 +11,8 @@ import SignUpScreen from './screens/Register';
 import RecoverScreen from './screens/Recover';
 // import Barcode from './screens/Barcode';
 // other components here ...
+import CollectingScreen from './screens/Collecting'
+import OrdersScreen from './screens/OrdersLassi'
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
@@ -24,7 +26,7 @@ const App = () => {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>      
-        <Stack.Navigator>
+        <Stack.Navigator>         
           <Stack.Screen
             name="Home"
             component={HomeScreen}
@@ -38,6 +40,16 @@ const App = () => {
           <Stack.Screen
             name="MainApp"
             component={Navigation}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Orders"
+            component={OrdersScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Collecting"
+            component={CollectingScreen}
             options={{ headerShown: false }}
           />
           <Stack.Screen

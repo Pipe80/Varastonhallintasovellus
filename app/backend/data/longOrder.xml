@@ -1,6 +1,3 @@
-POST http://localhost:3000/api/createOrderFromXML
-Content-Type: text/xml
-
 <order>
   <order_id>5</order_id>
   <order_status>Open</order_status>
