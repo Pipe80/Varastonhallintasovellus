@@ -15,9 +15,6 @@ const OrdersScreen = ({ navigation }) => {
   const [isLoading, setLoading] = useState(true);
   const [openOrders, setOpenOrders] = useState({});
 
-  // orderID is just so that I can test Collecting screen. Regards: Lassi :)
-  const orderID = '64a550ad189b5d629f56282b'
-
   // get IPv4 for your Windows machine:
   //      - start terminal and type 'ipconfig'  
   const computerIPv4 = '192.168.100.105'
@@ -32,8 +29,10 @@ const OrdersScreen = ({ navigation }) => {
   }
 
   useEffect(() => {
-    setLoading(true);
-    getOpenOrders()
+    navigation.addListener('focus', () => {
+      setLoading(true)
+      getOpenOrders()
+    })    
   }, [])
 
   if (isLoading === true) {
