@@ -11,7 +11,7 @@
     <items>
       <item>
         <name>Nappi</name>
-        <pcs>10</pcs>
+        <pcs>2</pcs>
         <product_id>0010</product_id>
         <item_status>Not collected</item_status>
       </item>
@@ -59,7 +59,7 @@
       </item>
       <item>
         <name>Suklaalevy</name>
-        <pcs>3</pcs>
+        <pcs>2</pcs>
         <product_id>0070</product_id>
         <item_status>Not collected</item_status>
       </item>
@@ -101,19 +101,19 @@
     <items>
       <item>
         <name>Johto</name>
-        <pcs>3</pcs>
+        <pcs>2</pcs>
         <product_id>0100</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Nappi</name>
-        <pcs>74</pcs>
+        <pcs>2</pcs>
         <product_id>0010</product_id>
         <item_status>Not collected</item_status>
       </item>
       <item>
         <name>Lanka</name>
-        <pcs>15</pcs>
+        <pcs>2</pcs>
         <product_id>0020</product_id>
         <item_status>Not collected</item_status>
       </item>
@@ -161,7 +161,7 @@
       </item>
       <item>
         <name>Suklaalevy</name>
-        <pcs>3</pcs>
+        <pcs>2</pcs>
         <product_id>0070</product_id>
         <item_status>Not collected</item_status>
       </item>
