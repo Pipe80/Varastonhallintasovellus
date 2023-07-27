@@ -143,9 +143,9 @@ export default function Collecting({ route, navigation }) {
       )
     }
 
-    return (
-      <ScrollView>
-        <Flex>
+    return (      
+      <Flex>
+        <ScrollView>
           <View style={styles.header}>
             <Button 
               style={styles.backButton} 
@@ -173,8 +173,8 @@ export default function Collecting({ route, navigation }) {
           <CustomButton onPress={ChangeStatus}>
             <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
           </CustomButton> 
-        </Flex>
-      </ScrollView>
+        </ScrollView>
+      </Flex>      
     );
   }
 }
