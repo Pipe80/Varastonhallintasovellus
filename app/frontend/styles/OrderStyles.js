@@ -18,19 +18,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
-  },
-  input: {
-    width: 292,
-    height: 30,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-    marginTop: 10,    
-    backgroundColor: 'white'
-  },
-  barcodeReaderButtonText: {
+  },  
+  buttonText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',

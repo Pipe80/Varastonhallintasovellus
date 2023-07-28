@@ -1,32 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#BAE7F7',
-  },
-  logo: {
-    width: 300,
-    height: 200,
-    marginBottom: 10,
-  },
-  title: {
-    fontSize: 24,
-    color: '#ffffff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  button: {
-    backgroundColor: '#02718D',
-    width: 292,
-    height: 52,
-    marginVertical: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 5,
-  },
+const styles = StyleSheet.create({   
   header: {
     flexDirection: 'row',
     alignItems: 'center',

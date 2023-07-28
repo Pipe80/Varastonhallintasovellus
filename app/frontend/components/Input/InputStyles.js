@@ -3,7 +3,8 @@ import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
     input: {
-        width: '100%',
+        width: '80%',
+        margin: 15,
         fontFamily: Fonts.LatoLight,
         backgroundColor: colors.white,
         color: colors.secondary,

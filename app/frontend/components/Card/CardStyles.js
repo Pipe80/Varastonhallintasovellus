@@ -12,19 +12,23 @@ export const styles = {
     shadowOpacity: 0.2,
     shadowRadius: 4,
     borderRadius: 8,
-    padding: 16,
+    padding: 5,
     width: '80%',
-    marginBottom: 10,
+    marginTop: 10,
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'left',
+    textAlign: 'center',
     fontFamily: Fonts.LatoBold, 
   },
   cardContent: {
     fontSize: 14,
+    textAlign: 'center',
     color: colors.text,
     fontFamily: Fonts.LatoRegular,
- }
+  },
+  cardButton: {
+    alignItems: 'center',
+  }
 };
