@@ -143,9 +143,9 @@ export default function Collecting({ route, navigation }) {
       )
     }
 
-    return (      
-      <Flex>
-        <ScrollView>
+    return ( 
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>     
+        <Flex>        
           <View style={styles.header}>
             <Button 
               style={styles.backButton} 
@@ -157,7 +157,11 @@ export default function Collecting({ route, navigation }) {
           </View>
 
           {order.order.items.item.map((item) => (                      
-            <Card key={item.name} title={item.name}>{'id: ' + item.product_id + ', puuttuu: ' + item.pcs + 'kpl'}</Card>
+            <Card 
+              key={item.name} 
+              title={item.name}
+              content={'Viivakoodi: ' + item.product_id + ', Keräämättä: ' + item.pcs + 'kpl'}
+            />
           ))}
           
           {/* 
@@ -172,9 +176,9 @@ export default function Collecting({ route, navigation }) {
           />
           <CustomButton onPress={ChangeStatus}>
             <Text style={styles.barcodeReaderButtonText}>Lue viivakoodi</Text>
-          </CustomButton> 
-        </ScrollView>
-      </Flex>      
+          </CustomButton>        
+        </Flex>  
+      </ScrollView>   
     );
   }
 }
