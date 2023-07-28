@@ -3,9 +3,9 @@ import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
     button: {
-        width: '100%',
+        width: '60%',
         marginTop: 4,
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         color: '#858585',
         fontFamily: Fonts.LatoRegular,
       },

@@ -16,18 +16,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     width: 360, 
     height: 74,
-  },
-  list: {
-    width: 292,
-    height: 40,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-    marginTop: 10,    
-    backgroundColor: 'white'
-  },
+  }, 
   backButton: {
     marginRight: 10,
   },

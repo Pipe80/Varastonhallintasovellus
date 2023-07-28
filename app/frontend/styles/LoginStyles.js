@@ -31,11 +31,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingVertical: 20,
+    //paddingVertical: 20,
     backgroundColor: '#02718D',
-    width: 360,
+    alignSelf: 'stretch',
+    width: 360, 
     height: 74,
-  },
+  }, 
   backButton: {
     marginRight: 10,
   },
@@ -46,13 +47,14 @@ const styles = StyleSheet.create({
   },
   input: {
     width: 292,
-    height: 52,
+    height: 30,
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
-    marginBottom: 10,
-    alignSelf: 'center',
+    paddingVertical: 3,
+    marginTop: 10,    
+    backgroundColor: 'white'
   },
   forgotPassword: {
     marginTop: 10,
@@ -61,6 +63,7 @@ const styles = StyleSheet.create({
   forgotPasswordText: {
     color: '#888',
     textDecorationLine: 'underline',
+    marginBottom: 5
   },
   loginButton: {
     backgroundColor: '#02718D',
