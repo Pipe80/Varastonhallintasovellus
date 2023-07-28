@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Alert } from 'react-native';
+import { TextInput, Text, Alert, View } from 'react-native';
 import styles from '../styles/RegisterStyles';
+import { Flex, Button } from 'native-base';
+import CustomButton from '../components/Button/Button';
+import { Feather } from '@expo/vector-icons';
 
 const RegisterScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -38,29 +41,44 @@ const RegisterScreen = ({ navigation }) => {
 
  
   return (
-<View style={styles.container}>
-<TextInput
+    <Flex>
+      <View style={styles.header}>
+        <Button 
+          style={styles.backButton} 
+          onPress={() => navigation.goBack()}
+        >
+          <Feather name="arrow-left" size={24} color="white" />
+        </Button>       
+        <Text style={styles.headerTitle}>Luo tili</Text>
+      </View>
+
+      <TextInput
         style={styles.input}
         placeholder="Username"
         value={username}
         onChangeText={text => setUsername(text)}
       />
-<TextInput
+
+      <TextInput
         style={styles.input}
         placeholder="Email"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"
       />
-<TextInput
+
+      <TextInput
         style={styles.input}
         placeholder="Password"
         value={password}
         onChangeText={text => setPassword(text)}
         secureTextEntry
-      />
-<Button title="Register" onPress={handleRegister} />
-</View>
+      />  
+          
+      <CustomButton onPress={handleRegister}>
+        <Text style={styles.buttonText}>Rekisteröidy</Text>
+      </CustomButton> 
+    </Flex>
   );
 };
 
