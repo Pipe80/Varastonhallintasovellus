@@ -2,10 +2,12 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import styles from '../styles/LoginStyles';
+import { Flex } from 'native-base';
+import CustomButton from '../components/Button/Button'
 
 const LoginScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <Flex>
       <View style={styles.header}>
         <TouchableOpacity 
           style={styles.backButton} 
@@ -36,15 +38,15 @@ const LoginScreen = ({ navigation }) => {
           Unohtuiko salasana?
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity 
+      <CustomButton 
         style={styles.loginButton} 
         onPress={() => navigation.navigate('Orders')}
       >
         <Text style={styles.loginButtonText}>
           Kirjaudu
         </Text>
-      </TouchableOpacity>
-    </View>
+      </CustomButton>
+    </Flex>
   );
 };
 
