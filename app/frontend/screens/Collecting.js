@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { View, Keyboard, Alert } from 'react-native';
+import { View, Keyboard, Alert, TextInput } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import styles from '../styles/CollectingStyles'
-import { Flex, Text, ScrollView, Button, Input } from 'native-base';
+import { Flex, Text, ScrollView, Button } from 'native-base';
 import Card from '../components/Card/Card'
 import CustomButton from '../components/Button/Button'
 
@@ -164,7 +164,7 @@ export default function Collecting({ route, navigation }) {
           Still using Input instead of Custom input as I can't 
           pass useRef hook to Custom input component.
           */}
-          <Input 
+          <TextInput 
             style={styles.input}
             ref={barcodeRef}
             onFocus={Keyboard.dismiss}
