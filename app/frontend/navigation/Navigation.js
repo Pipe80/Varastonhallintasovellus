@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
 // Screens import to bottom navigation
-import HomeScreen from '../screens/Home';
-import OrdersScreen from '../screens/OrdersLassi';
+import HomeScreen from '../screens/Welcome';
+import OrdersScreen from '../screens/Orders';
 import SettingsScreen from '../screens/Settings';
 
 const Tab = createBottomTabNavigator();

@@ -9,10 +9,9 @@ import HomeScreen from './screens/Welcome';
 import LoginScreen from './screens/Login';
 import SignUpScreen from './screens/Register';
 import RecoverScreen from './screens/Recover';
-// import Barcode from './screens/Barcode';
 // other components here ...
 import CollectingScreen from './screens/Collecting'
-import OrdersScreen from './screens/OrdersLassi'
+import OrdersScreen from './screens/Orders'
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
