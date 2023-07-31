@@ -36,6 +36,7 @@ const App = () => {
           <Stack.Screen
             name="Orders"
             component={Navigation}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Collecting"
