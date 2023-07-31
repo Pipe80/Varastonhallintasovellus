@@ -1,10 +1,6 @@
 import React from 'react';
-import styles from '../styles/LoginStyles';
-import { Flex, Input, Heading } from 'native-base';
+import { Flex, Input, Heading, Button } from 'native-base';
 import CustomButton from '../components/Button/Button';
-
-// In progress...
-import { Text, TouchableOpacity } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
   return (
@@ -23,16 +19,13 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Password"
         secureTextEntry
       />
-      <TouchableOpacity 
-        style={styles.forgotPassword} 
+      <Button 
+        variant="link"
         onPress={() => navigation.navigate('Recover')}
       >
-        <Text style={styles.forgotPasswordText}>
-          Unohtuiko salasana?
-        </Text>
-      </TouchableOpacity>
+        Forgot Password?
+      </Button>
       <CustomButton 
-        style={styles.loginButton} 
         onPress={() => navigation.navigate('Orders')}
       >
         Log in
