@@ -8,7 +8,7 @@ import { Flex, Input, Text } from 'native-base';
 import CustomButton from '../components/Button/Button';
 // import CustomInput from '../components/Input/Input';
 
-const SettingsScreen = () => {
+const SettingsScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handlePasswordChange = (value) => {
@@ -28,10 +28,16 @@ const SettingsScreen = () => {
           onChangeText={handlePasswordChange}
           placeholder="Enter new password"
           variant="filled"
+          width="80%"
           padding={3}
         />
         <CustomButton onPress={saveSettings}>
           Save
+        </CustomButton>
+        <CustomButton
+          onPress={() => {navigation.navigate('Login');}}
+        >
+          Logout
         </CustomButton>
     </Flex>
   );
