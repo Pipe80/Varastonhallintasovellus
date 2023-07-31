@@ -27,6 +27,7 @@ const Navigation = () => (
       tabBarLabelStyle: {
         display: "none"
       },
+      headerShown: false,
       tabBarStyle: [
         {
           display: "flex",

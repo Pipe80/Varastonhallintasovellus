@@ -28,7 +28,7 @@ export const theme = extendTheme({
     Flex: {
       baseStyle: {
         flex: 1,
-        paddingTop: 30,
+        padding: 30,
         alignItems: 'center',
         backgroundColor: colors.background,
       },

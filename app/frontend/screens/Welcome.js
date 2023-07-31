@@ -7,7 +7,7 @@ import CustomButton from '../components/Button/Button';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <Flex>
+    <Flex justifyContent="center">
       <Image
         style={styles.logo}
         source={logo}

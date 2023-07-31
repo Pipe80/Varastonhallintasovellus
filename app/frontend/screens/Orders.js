@@ -19,7 +19,7 @@ const OrdersScreen = ({ navigation }) => {
   
   // fetch data asynchronously from backend
   const getOpenOrders = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/getOpenOrders/')
+    await fetch('http://' + computerIPv4 + ':3000/api/editOrder/')
     .then(res => res.json())
     .then(json => setOpenOrders(json))    
     .catch(error => console.log(error))
@@ -47,16 +47,6 @@ const OrdersScreen = ({ navigation }) => {
     return (
       <ScrollView>
         <Flex>
-          <View style={styles.header}>
-            <Button 
-              style={styles.backButton} 
-              onPress={() => navigation.goBack()}
-            >
-              <Feather name="arrow-left" size={24} color="white" />
-            </Button>       
-            <Text style={styles.headerTitle}>Avoimet tilaukset</Text>
-          </View>
-
           {/* 
           Map through open orders and create a new Card component
           for each open order.

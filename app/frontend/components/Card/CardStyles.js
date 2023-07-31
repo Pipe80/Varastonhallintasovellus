@@ -12,8 +12,8 @@ export const styles = {
     shadowOpacity: 0.2,
     shadowRadius: 4,
     borderRadius: 8,
-    padding: 5,
-    width: '80%',
+    padding: 10,
+    width: '100%',
     marginTop: 10,
   },
   cardTitle: {

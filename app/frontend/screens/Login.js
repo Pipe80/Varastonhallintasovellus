@@ -1,26 +1,15 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { Button } from 'native-base';
-import { Feather } from '@expo/vector-icons';
 import styles from '../styles/LoginStyles';
 import { Flex } from 'native-base';
 import CustomButton from '../components/Button/Button'
 
 const LoginScreen = ({ navigation }) => {
   return (
-    <Flex>
-      <View style={styles.header}>
-        <Button 
-          style={styles.backButton} 
-          onPress={() => navigation.goBack()}
-        >
-          <Feather name="arrow-left" size={24} color="white" />
-        </Button>
-        <Text style={styles.headerTitle}>
-          Kirjaudu sisään
-        </Text>
-      </View>
-
+    <Flex justifyContent="center" >
+      <Text style={styles.headerTitle}>
+        Kirjaudu sisään
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="Sähköposti"
@@ -45,7 +34,7 @@ const LoginScreen = ({ navigation }) => {
       
       <CustomButton 
         style={styles.loginButton} 
-        onPress={() => navigation.navigate('MainApp')}
+        onPress={() => navigation.navigate('Orders')}
       >
         <Text style={styles.loginButtonText}>
           Kirjaudu

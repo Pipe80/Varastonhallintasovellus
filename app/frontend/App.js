@@ -11,7 +11,6 @@ import SignUpScreen from './screens/Register';
 import RecoverScreen from './screens/Recover';
 // other components here ...
 import CollectingScreen from './screens/Collecting'
-import OrdersScreen from './screens/Orders'
 
 // Navigation
 import { NavigationContainer } from '@react-navigation/native';
@@ -34,17 +33,10 @@ const App = () => {
           <Stack.Screen
             name="Login"
             component={LoginScreen}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="MainApp"
-            component={Navigation}
-            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Orders"
-            component={OrdersScreen}
-            options={{ headerShown: false }}
+            component={Navigation}
           />
           <Stack.Screen
             name="Collecting"

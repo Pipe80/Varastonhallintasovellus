@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'white',
+    color: 'black',
   },
   input: {
     width: 292,
