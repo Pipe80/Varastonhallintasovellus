@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
 // Screens import to bottom navigation
-import HomeScreen from '../screens/Welcome';
+// import HomeScreen from '../screens/Welcome';
 import OrdersScreen from '../screens/Orders';
 import SettingsScreen from '../screens/Settings';
 
@@ -36,7 +36,7 @@ const Navigation = () => (
       ]
     })}
   >
-    <Tab.Screen name="Home" component={HomeScreen} />
+    {/* <Tab.Screen name="Home" component={HomeScreen} /> */}
     <Tab.Screen name="Orders" component={OrdersScreen} />
     <Tab.Screen name="Settings" component={SettingsScreen} />
   </Tab.Navigator>

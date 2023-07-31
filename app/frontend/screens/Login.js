@@ -45,7 +45,7 @@ const LoginScreen = ({ navigation }) => {
       
       <CustomButton 
         style={styles.loginButton} 
-        onPress={() => navigation.navigate('Orders')}
+        onPress={() => navigation.navigate('MainApp')}
       >
         <Text style={styles.loginButtonText}>
           Kirjaudu
