@@ -15,13 +15,7 @@ export const theme = extendTheme({
     'Lato-Bold': Fonts.LatoBold,
   },
   styles: {
-    global: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: colors.background,
-      fontFamily: Fonts.LatoRegular,
-    },
+
     
   },
   components: {
@@ -31,13 +25,21 @@ export const theme = extendTheme({
         padding: 30,
         alignItems: 'center',
         backgroundColor: colors.background,
+        fontFamily: Fonts.LatoRegular,
         gap: 3,
       },
-      Stack: {
-        space: 4,
-        justifyContent: 'center',
-        width: "75%"
+      Input: {
+        width: "80%"
       }
     },
+    Stack: {
+      space: 4,
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: "75%"
+    },
+    Input: {
+      width: "50%"
+    }
   },
 });

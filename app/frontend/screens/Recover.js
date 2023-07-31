@@ -23,6 +23,7 @@ const Register = () => {
         variant="filled"
         padding={3}
         placeholder="Email"
+        width="80%"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"

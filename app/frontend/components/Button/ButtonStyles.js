@@ -2,7 +2,7 @@ import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
   button: {
-    width: '70%',
+    width: '80%',
     justifyContent: 'center',
     alignSelf: 'center',
     fontFamily: Fonts.LatoRegular,

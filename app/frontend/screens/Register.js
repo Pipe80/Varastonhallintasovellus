@@ -45,6 +45,7 @@ const RegisterScreen = ({ navigation }) => {
       <Input
         variant="filled"
         padding={3}
+        width="80%"
         placeholder="Username"
         value={username}
         onChangeText={text => setUsername(text)}
@@ -52,6 +53,7 @@ const RegisterScreen = ({ navigation }) => {
       <Input
         variant="filled"
         padding={3}
+        width="80%"
         placeholder="Email"
         value={email}
         onChangeText={text => setEmail(text)}
@@ -60,6 +62,7 @@ const RegisterScreen = ({ navigation }) => {
       <Input
         variant="filled"
         padding={3}
+        width="80%"
         placeholder="Password"
         value={password}
         onChangeText={text => setPassword(text)}

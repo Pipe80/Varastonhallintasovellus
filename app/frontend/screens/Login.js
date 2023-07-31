@@ -11,11 +11,13 @@ const LoginScreen = ({ navigation }) => {
       <Input
         variant="filled"
         padding={3}
+        width="80%"
         placeholder="Email"
       />
       <Input
         variant="filled"
         padding={3}
+        width="80%"
         placeholder="Password"
         secureTextEntry
       />

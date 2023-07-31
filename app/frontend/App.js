@@ -28,7 +28,7 @@ const App = () => {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ headerShown: false }} // No header for screens like in mockup
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Login"
@@ -41,7 +41,6 @@ const App = () => {
           <Stack.Screen
             name="Collecting"
             component={CollectingScreen}
-            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="SignUp"
