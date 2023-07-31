@@ -13,8 +13,7 @@ export const styles = {
     shadowRadius: 4,
     borderRadius: 8,
     padding: 10,
-    width: '100%',
-    marginTop: 10,
+    width: '90%',
   },
   cardTitle: {
     fontSize: 16,

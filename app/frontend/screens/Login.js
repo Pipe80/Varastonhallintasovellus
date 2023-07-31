@@ -13,14 +13,12 @@ const LoginScreen = ({ navigation }) => {
       </Heading>
       <Input
         variant="filled"
-        padding={3}
-        width="80%"
+
         placeholder="Email"
       />
       <Input
         variant="filled"
         padding={3}
-        width="80%"
         type={show ? "text" : "password"} 
         InputRightElement={
           <Pressable onPress={() => setShow(!show)}>

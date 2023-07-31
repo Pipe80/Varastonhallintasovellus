@@ -6,7 +6,6 @@ import { Flex, Input, Text } from 'native-base';
 
 //Components
 import CustomButton from '../components/Button/Button';
-// import CustomInput from '../components/Input/Input';
 
 const SettingsScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');

@@ -4,7 +4,6 @@ import { Flex, ScrollView, Text } from 'native-base';
 
 // Components
 import Card from '../components/Card/Card';
-import CustomButton from '../components/Button/Button'
 
 const OrdersScreen = ({ navigation }) => {
   const [isLoading, setLoading] = useState(true);
@@ -44,38 +43,30 @@ const OrdersScreen = ({ navigation }) => {
     return (
       <ScrollView>
         <Flex>
-          {/* 
-          Map through open orders and create a new Card component
-          for each open order.
-          */}
           {openOrders.map((order) => (          
             <Card 
               key={order._id} 
               title={order.order.customer} 
               content={'tilausnumero: ' + order.order.order_id}
+              onPress={async () => {
+                let orderID = order._id
+                // Change order status to 'In collection'
+                order.order.order_status = 'In collection'
+                // Create PUT request
+                const requestOptions = {
+                  method: 'PUT',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(order)
+                };
+                // Make a PUT request to backend to update 
+                // order status 'Open' => 'In collection'
+                await fetch('http://' + computerIPv4 + ':3000/api/editOrder/' + orderID, requestOptions)
+                  .then(res => res.json())
+                  
+                // Navigate to 'Collecting' screen with orderID in props.
+                navigation.navigate('Collecting', { orderID: {orderID} })
+              }}
             >
-
-              <CustomButton                
-                onPress={async () => {
-                  let orderID = order._id
-                  // Change order status to 'In collection'
-                  order.order.order_status = 'In collection'
-                  // Create PUT request
-                  const requestOptions = {
-                    method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(order)
-                  };
-                  // Make a PUT request to backend to update 
-                  // order status 'Open' => 'In collection'
-                  await fetch('http://' + computerIPv4 + ':3000/api/editOrder/' + orderID, requestOptions)
-                    .then(res => res.json())
-                    
-                  // Navigate to 'Collecting' screen with orderID in props.
-                  navigation.navigate('Collecting', { orderID: {orderID} })
-                }}>
-                Valitse
-              </CustomButton>
             </Card>
             )
           )}
