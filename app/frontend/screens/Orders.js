@@ -1,9 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { View } from 'react-native';
-import { Flex, ScrollView, Text, Button } from 'native-base';
-import styles from '../styles/OrderStyles'
-import { Feather } from '@expo/vector-icons';
+import { Flex, ScrollView, Text } from 'native-base';
 
 // Components
 import Card from '../components/Card/Card';
@@ -77,7 +74,7 @@ const OrdersScreen = ({ navigation }) => {
                   // Navigate to 'Collecting' screen with orderID in props.
                   navigation.navigate('Collecting', { orderID: {orderID} })
                 }}>
-                <Text style={styles.buttonText}>Valitse</Text>
+                Valitse
               </CustomButton>
             </Card>
             )
