@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { TextInput, Text, Alert, View } from 'react-native';
-import styles from '../styles/RegisterStyles';
-import { Flex, Button } from 'native-base';
+import { Flex, Heading, Input, Alert } from 'native-base';
 import CustomButton from '../components/Button/Button';
-import { Feather } from '@expo/vector-icons';
 
 const RegisterScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -42,32 +39,34 @@ const RegisterScreen = ({ navigation }) => {
  
   return (
     <Flex justifyContent="center">    
-      <Text style={styles.headerTitle}>Luo tili</Text>
-      <TextInput
-        style={styles.input}
+      <Heading size="lg" color="black">
+        Register
+      </Heading>
+      <Input
+        variant="filled"
+        padding={3}
         placeholder="Username"
         value={username}
         onChangeText={text => setUsername(text)}
       />
-
-      <TextInput
-        style={styles.input}
+      <Input
+        variant="filled"
+        padding={3}
         placeholder="Email"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"
       />
-
-      <TextInput
-        style={styles.input}
+      <Input
+        variant="filled"
+        padding={3}
         placeholder="Password"
         value={password}
         onChangeText={text => setPassword(text)}
         secureTextEntry
-      />  
-          
+      />
       <CustomButton onPress={handleRegister}>
-        <Text style={styles.buttonText}>Rekisteröidy</Text>
+        Register
       </CustomButton> 
     </Flex>
   );

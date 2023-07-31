@@ -1,28 +1,28 @@
 import React from 'react';
-import { Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from '../styles/LoginStyles';
-import { Flex } from 'native-base';
-import CustomButton from '../components/Button/Button'
+import { Flex, Input, Heading } from 'native-base';
+import CustomButton from '../components/Button/Button';
+
+// In progress...
+import { Text, TouchableOpacity } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
   return (
     <Flex justifyContent="center" >
-      <Text style={styles.headerTitle}>
-        Kirjaudu sisään
-      </Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Sähköposti"
-        keyboardType="email-address"
-        autoCapitalize="none"
+      <Heading size="lg" color="black">
+        Log in
+      </Heading>
+      <Input
+        variant="filled"
+        padding={3}
+        placeholder="Email"
       />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Salasana"
+      <Input
+        variant="filled"
+        padding={3}
+        placeholder="Password"
         secureTextEntry
       />
-
       <TouchableOpacity 
         style={styles.forgotPassword} 
         onPress={() => navigation.navigate('Recover')}
@@ -31,14 +31,11 @@ const LoginScreen = ({ navigation }) => {
           Unohtuiko salasana?
         </Text>
       </TouchableOpacity>
-      
       <CustomButton 
         style={styles.loginButton} 
         onPress={() => navigation.navigate('Orders')}
       >
-        <Text style={styles.loginButtonText}>
-          Kirjaudu
-        </Text>
+        Log in
       </CustomButton>
     </Flex>
   );

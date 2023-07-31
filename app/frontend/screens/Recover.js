@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, Text } from 'react-native';
-import styles from '../styles/RegisterStyles';
-import { Flex } from 'native-base';
+import { Flex, Heading, Input } from 'native-base';
 import CustomButton from '../components/Button/Button';
 
 const Register = () => {
@@ -18,17 +16,19 @@ const Register = () => {
 
   return (
     <Flex justifyContent="center">
-        <Text style={styles.headerTitle}>Salasanan vaihto</Text>
-      <TextInput
+      <Heading size="lg" color="black">
+        Forgot password
+      </Heading>
+      <Input
+        variant="filled"
+        padding={3}
         placeholder="Email"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"
-        style={styles.input}
       />
-
       <CustomButton onPress={handleRegister}>
-        <Text style={styles.buttonText}>Rekisteröidy</Text>
+        Send password
       </CustomButton> 
     </Flex>
   );

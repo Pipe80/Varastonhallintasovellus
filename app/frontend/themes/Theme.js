@@ -31,12 +31,13 @@ export const theme = extendTheme({
         padding: 30,
         alignItems: 'center',
         backgroundColor: colors.background,
+        gap: 3,
       },
       Stack: {
         space: 4,
         justifyContent: 'center',
         width: "75%"
-      },
+      }
     },
   },
 });

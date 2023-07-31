@@ -1,16 +1,22 @@
 import React from 'react';
-import { Button } from 'native-base';
+import { Button, Text } from 'native-base';
 import { styles } from './ButtonStyles';
-import { colors } from '../../themes/Colors'
+import { colors } from '../../themes/Colors';
 
-const CustomButton = ({ children, onPress, title }) => {
+const CustomButton = ({ children, onPress, backgroundColor, textColor }) => {
   const buttonStyles = {
     ...styles.button,
-    backgroundColor: colors.primary,
+    backgroundColor: backgroundColor || colors.primary,
   };
+
+  const buttonTextStyles = {
+    ...styles.buttonText,
+    color: textColor || colors.white,
+  };
+
   return (
-    <Button style={buttonStyles} onPress={onPress} title={title}>
-      {children}
+    <Button style={buttonStyles} onPress={onPress}>
+      <Text style={buttonTextStyles}>{children}</Text>
     </Button>
   );
 };

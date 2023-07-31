@@ -1,24 +1,21 @@
 import React from 'react';
-import { Image, TouchableOpacity, Text } from 'react-native';
-import { Flex } from 'native-base'
-import styles from '../styles/WelcomeStyles';
 import logo from '../assets/logo.png';
 import CustomButton from '../components/Button/Button';
+import { Flex, Image } from 'native-base';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <Flex justifyContent="center">
       <Image
-        style={styles.logo}
+        width="200"
+        height="150"
         source={logo}
-      />
-            
+      />      
       <CustomButton onPress={() => navigation.navigate('Login')}>
-        <Text style={styles.buttonText}>Kirjaudu sisään</Text>
-      </CustomButton> 
-
+        Log in
+      </CustomButton>
       <CustomButton onPress={() => navigation.navigate('SignUp')}>
-        <Text style={styles.buttonText}>Luo tili</Text>
+        Create account
       </CustomButton>      
     </Flex>
   );
