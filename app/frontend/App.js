@@ -9,7 +9,6 @@ import HomeScreen from './screens/Welcome';
 import LoginScreen from './screens/Login';
 import SignUpScreen from './screens/Register';
 import RecoverScreen from './screens/Recover';
-// other components here ...
 import CollectingScreen from './screens/Collecting'
 
 // Navigation

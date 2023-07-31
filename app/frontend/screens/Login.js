@@ -1,10 +1,13 @@
-import React from 'react';
-import { Flex, Input, Heading, Button } from 'native-base';
+import React, { useState } from 'react';
+import { Flex, Input, Heading, Button, Icon, Pressable } from 'native-base';
+import { Feather } from '@expo/vector-icons'; 
 import CustomButton from '../components/Button/Button';
 
 const LoginScreen = ({ navigation }) => {
+  const [show, setShow] = useState(false);
+
   return (
-    <Flex justifyContent="center" >
+    <Flex justifyContent="center">
       <Heading size="lg" color="black">
         Log in
       </Heading>
@@ -18,16 +21,26 @@ const LoginScreen = ({ navigation }) => {
         variant="filled"
         padding={3}
         width="80%"
+        type={show ? "text" : "password"} 
+        InputRightElement={
+          <Pressable onPress={() => setShow(!show)}>
+            <Icon
+              as={<Feather name={show ? "eye" : "eye-off"} />} 
+              size={5}
+              mr="2"
+              color="muted.400"
+            />
+          </Pressable>
+        }
         placeholder="Password"
-        secureTextEntry
       />
-      <Button 
+      <Button
         variant="link"
         onPress={() => navigation.navigate('Recover')}
       >
         Forgot Password?
       </Button>
-      <CustomButton 
+      <CustomButton
         onPress={() => navigation.navigate('Orders')}
       >
         Log in
