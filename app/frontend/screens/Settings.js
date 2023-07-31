@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flex, VStack, Text } from 'native-base';
+import { Flex, Stack, Text } from 'native-base';
 
 // NOTE
 // Work in progress in this file
@@ -21,7 +21,6 @@ const SettingsScreen = () => {
 
   return (
     <Flex>
-      <VStack>
           <Text>Change your password</Text>
           <CustomInput
             secureTextEntry
@@ -32,7 +31,6 @@ const SettingsScreen = () => {
         <CustomButton onPress={saveSettings}>
           Save
         </CustomButton>
-      </VStack>
     </Flex>
   );
 };

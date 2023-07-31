@@ -1,10 +1,9 @@
 import React from 'react';
 import { Input } from 'native-base';
-import { styles } from './InputStyles';
 
-const CustomInput = ({ placeholder, ...rest }) => {
+const CustomInput = () => {
   return (
-    <Input style={styles.input} placeholder={placeholder} {...rest} />
+    <Input variant="filled" placeholder="Filled"/>
   );
 };
 

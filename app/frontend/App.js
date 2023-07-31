@@ -46,12 +46,10 @@ const App = () => {
           <Stack.Screen
             name="SignUp"
             component={SignUpScreen}
-            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="Recover"
             component={RecoverScreen}
-            options={{ headerShown: false }}
           />
         </Stack.Navigator>
       </NavigationContainer> 

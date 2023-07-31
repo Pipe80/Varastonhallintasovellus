@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Text } from 'native-base';
+import { Box, Text } from 'native-base';
 import { styles } from './CardStyles';
 
 const Card = ({ title, content, children }) => {

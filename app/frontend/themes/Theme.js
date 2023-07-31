@@ -32,9 +32,10 @@ export const theme = extendTheme({
         alignItems: 'center',
         backgroundColor: colors.background,
       },
-      vStack: {
+      Stack: {
         space: 4,
         justifyContent: 'center',
+        width: "75%"
       },
     },
   },

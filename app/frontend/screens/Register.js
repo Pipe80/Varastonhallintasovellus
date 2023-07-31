@@ -41,17 +41,8 @@ const RegisterScreen = ({ navigation }) => {
 
  
   return (
-    <Flex>
-      <View style={styles.header}>
-        <Button 
-          style={styles.backButton} 
-          onPress={() => navigation.goBack()}
-        >
-          <Feather name="arrow-left" size={24} color="white" />
-        </Button>       
-        <Text style={styles.headerTitle}>Luo tili</Text>
-      </View>
-
+    <Flex justifyContent="center">    
+      <Text style={styles.headerTitle}>Luo tili</Text>
       <TextInput
         style={styles.input}
         placeholder="Username"

@@ -19,7 +19,7 @@ const OrdersScreen = ({ navigation }) => {
   
   // fetch data asynchronously from backend
   const getOpenOrders = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/editOrder/')
+    await fetch('http://localhost:3000/api/getOpenOrders/')
     .then(res => res.json())
     .then(json => setOpenOrders(json))    
     .catch(error => console.log(error))

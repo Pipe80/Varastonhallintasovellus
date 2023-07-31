@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, TouchableOpacity, Text } from 'react-native';
-import { styles } from '../styles/RecoverStyles';
-import { AntDesign } from '@expo/vector-icons';
+import { TextInput, Text } from 'react-native';
+import styles from '../styles/RegisterStyles';
+import { Flex } from 'native-base';
+import CustomButton from '../components/Button/Button';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -12,23 +13,12 @@ const Register = () => {
       email: email,
       salasana: salasana,
     };
-
     console.log(user); 
   };
 
-  const handleBackButton = () => {
-    
-  };
-
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={handleBackButton} style={styles.backButton}>
-          <Text style={styles.headerTitle}><AntDesign name="arrowleft" size={24} color="white" /></Text>
-        </TouchableOpacity>
+    <Flex justifyContent="center">
         <Text style={styles.headerTitle}>Salasanan vaihto</Text>
-      </View>
-
       <TextInput
         placeholder="Email"
         value={email}
@@ -37,12 +27,10 @@ const Register = () => {
         style={styles.input}
       />
 
-      <Button
-        title="Lähetä"
-        onPress={handleRegister}
-        color="#02718D"
-      />
-    </View>
+      <CustomButton onPress={handleRegister}>
+        <Text style={styles.buttonText}>Rekisteröidy</Text>
+      </CustomButton> 
+    </Flex>
   );
 };
 

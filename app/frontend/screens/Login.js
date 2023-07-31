@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from '../styles/LoginStyles';
 import { Flex } from 'native-base';
 import CustomButton from '../components/Button/Button'
@@ -25,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
 
       <TouchableOpacity 
         style={styles.forgotPassword} 
-        onPress={() => console.log('Forgot Password')}
+        onPress={() => navigation.navigate('Recover')}
       >
         <Text style={styles.forgotPasswordText}>
           Unohtuiko salasana?
