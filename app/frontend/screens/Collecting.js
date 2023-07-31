@@ -21,7 +21,7 @@ export default function Collecting({ route, navigation }) {
   
   // fetch data asynchronously from backend
   const getItems = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID.orderID)
+    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/')
     .then(res => res.json())
     .then(json => setOrder(json))    
     .catch(error => console.log(error))
