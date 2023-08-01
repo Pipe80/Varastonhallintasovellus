@@ -2,6 +2,9 @@ import { colors } from '../../themes/Colors';
 import { Fonts } from '../../themes/Fonts';
 
 export const styles = {
+  touchable: {
+    width: "90%",
+  },
   card: {
     backgroundColor: colors.white,
     shadowColor: colors.text,
@@ -13,7 +16,6 @@ export const styles = {
     shadowRadius: 4,
     borderRadius: 8,
     padding: 10,
-    width: '90%',
   },
   cardTitle: {
     fontSize: 16,
