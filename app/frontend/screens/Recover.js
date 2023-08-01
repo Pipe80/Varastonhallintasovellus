@@ -4,7 +4,6 @@ import CustomButton from '../components/Button/Button';
 
 const Register = () => {
   const [email, setEmail] = useState('');
-  //const [salasana, setSalasana] = useState('');
 
   const handleRegister = () => {
     const user = {
@@ -23,7 +22,6 @@ const Register = () => {
         variant="filled"
         padding={3}
         placeholder="Email"
-        width="80%"
         value={email}
         onChangeText={text => setEmail(text)}
         keyboardType="email-address"

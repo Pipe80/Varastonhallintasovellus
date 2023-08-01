@@ -13,7 +13,6 @@ const LoginScreen = ({ navigation }) => {
       </Heading>
       <Input
         variant="filled"
-
         placeholder="Email"
       />
       <Input
@@ -38,9 +37,7 @@ const LoginScreen = ({ navigation }) => {
       >
         Forgot Password?
       </Button>
-      <CustomButton
-        onPress={() => navigation.navigate('Orders')}
-      >
+      <CustomButton onPress={() => navigation.navigate('Orders')}>
         Log in
       </CustomButton>
     </Flex>
