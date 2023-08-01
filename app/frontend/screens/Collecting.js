@@ -21,7 +21,7 @@ export default function Collecting({ route, navigation }) {
   
   // fetch data asynchronously from backend
   const getItems = async () => {
-    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/')
+    await fetch('http://' + computerIPv4 + ':3000/api/getOrderById/' + orderID.orderID)
     .then(res => res.json())
     .then(json => setOrder(json))    
     .catch(error => console.log(error))
@@ -145,17 +145,7 @@ export default function Collecting({ route, navigation }) {
 
     return ( 
       <ScrollView contentContainerStyle={{flexGrow: 1}}>     
-        <Flex>        
-          <View style={styles.header}>
-            <Button 
-              style={styles.backButton} 
-              onPress={() => navigation.goBack()}
-            >
-              <Feather name="arrow-left" size={24} color="white" />
-            </Button>       
-            <Text style={styles.headerTitle}>Keräily</Text>
-          </View>
-
+        <Flex>
           {order.order.items.item.map((item) => (                      
             <Card 
               key={item.name} 
