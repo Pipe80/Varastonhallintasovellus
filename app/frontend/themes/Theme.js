@@ -25,6 +25,11 @@ export const theme = extendTheme({
         gap: 3,
       },
     },
+    ScrollView: {
+      baseStyle: {
+        backgroundColor: colors.background,
+      }
+    },
     Button: {
       baseStyle: {
         width: "80%",
