@@ -10,6 +10,7 @@ const HomeScreen = ({ navigation }) => {
         width="200"
         height="150"
         source={logo}
+        alt='logo'
       />      
       <CustomButton onPress={() => navigation.navigate('Login')}>
         Log in
