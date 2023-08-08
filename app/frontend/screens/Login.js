@@ -4,7 +4,15 @@ import { Feather } from '@expo/vector-icons';
 import CustomButton from '../components/Button/Button';
 
 const LoginScreen = ({ navigation }) => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   const [show, setShow] = useState(false);
+
+  const logIn = async () => {
+    //console.log(username)
+    //console.log(password)
+    //navigation.navigate('Orders')
+  }
 
   return (
     <Flex justifyContent="center">
@@ -13,7 +21,8 @@ const LoginScreen = ({ navigation }) => {
       </Heading>
       <Input
         variant="filled"
-        placeholder="Email"
+        placeholder="username"
+        onChangeText={setUsername}
       />
       <Input
         variant="filled"
@@ -30,6 +39,7 @@ const LoginScreen = ({ navigation }) => {
           </Pressable>
         }
         placeholder="Password"
+        onChangeText={setPassword}
       />
       <Button
         variant="link"
@@ -37,7 +47,7 @@ const LoginScreen = ({ navigation }) => {
       >
         Forgot Password?
       </Button>
-      <CustomButton onPress={() => navigation.navigate('Orders')}>
+      <CustomButton onPress={logIn}>
         Log in
       </CustomButton>
     </Flex>

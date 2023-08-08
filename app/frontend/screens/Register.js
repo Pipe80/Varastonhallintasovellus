@@ -1,3 +1,14 @@
+
+
+
+//////////////////////////////////////////
+//////////////////////////////////////////
+//                                      //
+//  Next job, create register new user  //
+//                                      //
+//////////////////////////////////////////
+//////////////////////////////////////////
+
 import React, { useState } from 'react';
 import { Flex, Heading, Input, Alert, Icon, Pressable } from 'native-base';
 import { Feather } from '@expo/vector-icons';
